@@ -7,6 +7,10 @@
 4. Ensuite, mettre le projet Tp1 comme projet par defaut en faisant clique droit puis "set as startUp project".
 5. Finalement, ré-importer les addons de openframeworks. Pour cela, vous devez faire clique droit sur Tp1, puis selectionner "openFrameworks Addons" Décochez les addons puis enregistrer. Refaire la même maneuvre que sitée plus haut mais en rechochant les addons précèdement décochés.
 
+## Construit avec
+
+* [OpenframeWorks](http://openframeworks.cc/)
+
 ## Auteurs
 
 * **Rémy Tremblay**
