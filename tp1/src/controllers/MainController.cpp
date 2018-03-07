@@ -17,8 +17,8 @@ void MainController::draw()
 			center_x = DRAWING_ZONE_WIDTH / 2.0f + DRAWING_ZONE_X_LIMIT;
 			center_y = DRAWING_ZONE_HEIGHT / 2.0f + DRAWING_ZONE_Y_LIMIT;
 			models[i].setPosition(
-				center_x,
-				center_y,
+				center_x - 300,
+				center_y - 100,
 				-150);
 			switch (mesh_render_mode)
 			{
@@ -30,7 +30,7 @@ void MainController::draw()
 				models[i].draw(OF_MESH_WIREFRAME);
 				break;
 
-			case MeshRenderMode::vertex:
+			case MeshRenderMode::points:
 				models[i].draw(OF_MESH_POINTS);
 			}
 		}
@@ -110,8 +110,8 @@ void MainController::switchMeshWireframe() {
 	mesh_render_mode = MeshRenderMode::wireframe;
 }
 
-void MainController::switchMeshVertex() {
-	mesh_render_mode = MeshRenderMode::vertex;
+void MainController::switchMeshPoints() {
+	mesh_render_mode = MeshRenderMode::points;
 }
 
 	

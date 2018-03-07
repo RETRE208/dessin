@@ -19,8 +19,8 @@ void MainPanel::setup(MainController* mainController) {
 	leftMenu.add(meshFill.setup("Fill", true));
 	meshWireframe.addListener(this, &MainPanel::toggleMeshWireframe);
 	leftMenu.add(meshWireframe.setup("Wireframe", false));
-	meshVertex.addListener(this, &MainPanel::toggleMeshVertex);
-	leftMenu.add(meshVertex.setup("Vertex", false));
+	meshPoints.addListener(this, &MainPanel::toggleMeshPoints);
+	leftMenu.add(meshPoints.setup("Points", false));
 }
 
 void MainPanel::draw() {
@@ -32,7 +32,7 @@ void MainPanel::toggleMeshFill(bool& pressed) {
 		ofLog() << "Switching to Mesh Fill";
 		mainControllerInstance->switchMeshFill();
 		meshWireframe = false;
-		meshVertex = false;
+		meshPoints = false;
 	}
 }
 
@@ -41,14 +41,14 @@ void MainPanel::toggleMeshWireframe(bool& pressed) {
 		ofLog() << "Switching to Mesh Wireframe";
 		mainControllerInstance->switchMeshWireframe();
 		meshFill = false;
-		meshVertex = false;
+		meshPoints = false;
 	}
 }
 
-void MainPanel::toggleMeshVertex(bool& pressed) {
+void MainPanel::toggleMeshPoints(bool& pressed) {
 	if (pressed == true) {
 		ofLog() << "Switching to Mesh Vertex";
-		mainControllerInstance->switchMeshVertex();
+		mainControllerInstance->switchMeshPoints();
 		meshFill = false;
 		meshWireframe = false;
 	}

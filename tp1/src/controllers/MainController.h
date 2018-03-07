@@ -10,7 +10,7 @@
 #include "../views/MainPanel.h"
 #include "ofxAssimpModelLoader.h"
 
-enum class MeshRenderMode { fill, wireframe, vertex };
+enum class MeshRenderMode { fill, wireframe, points};
 
 class MainController
 {
@@ -36,7 +36,7 @@ public:
 	float center_y;
 	void switchMeshFill();
 	void switchMeshWireframe();
-	void switchMeshVertex();
+	void switchMeshPoints();
 	MeshRenderMode mesh_render_mode;
 
 	Files files;

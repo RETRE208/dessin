@@ -19,7 +19,7 @@ public:
 	void toggle3DMode(bool& pressed);
 	void toggleMeshFill(bool& pressed);
 	void toggleMeshWireframe(bool& pressed);
-	void toggleMeshVertex(bool& pressed);
+	void toggleMeshPoints(bool& pressed);
 
 	MainController* mainControllerInstance;
 
@@ -32,7 +32,7 @@ public:
 	ofxLabel meshLabel;
 	ofxToggle meshFill;
 	ofxToggle meshWireframe;
-	ofxToggle meshVertex;
+	ofxToggle meshPoints;
 };
 
 #endif
