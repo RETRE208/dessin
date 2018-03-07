@@ -1,4 +1,4 @@
-# Infographie - tp1
+# Dessin
 
 ## Installation
 1. Pour pull le projet vous devez faire les étapes suivantes :
