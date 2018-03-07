@@ -24,15 +24,19 @@ void MainController::draw()
 }
 
 void MainController::exportImage() {
-	ofImage image;
-	string time_stamp = ofGetTimestampString("_%y%m%d-%H%M%S-%i");
-	string file_name = "image" + time_stamp + ".png";
+	try {
+		ofImage image;
+		string fileName = files.setFile() + ".png";
 
-	image.grabScreen(DRAWING_ZONE_X_LIMIT, DRAWING_ZONE_Y_LIMIT, DRAWING_ZONE_WIDTH, DRAWING_ZONE_HEIGHT);
+		image.grabScreen(DRAWING_ZONE_X_LIMIT, DRAWING_ZONE_Y_LIMIT, DRAWING_ZONE_WIDTH, DRAWING_ZONE_HEIGHT);
 
-	image.save(file_name);
+		image.save(fileName);
 
-	ofLog() << "<export image: " << file_name << ">";
+		ofLog() << "<export image: " << fileName << ">";
+	}
+	catch (exception& e) {
+		ofLog() << e.what();
+	}
 }
 
 void MainController::importImage() {
@@ -41,6 +45,8 @@ void MainController::importImage() {
 		ofImage newImage;
 		newImage.load(imagePath);
 		images.push_back(newImage);
+
+		ofLog() << "<import image: " << imagePath << ">";
 	}
 	catch (exception& e) {
 		ofLog() << e.what();
