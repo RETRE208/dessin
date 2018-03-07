@@ -95,16 +95,14 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxGui\src;
-C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;
-C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;
+C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -117,17 +115,15 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;%(AdditionalInclu
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxGui\src;
-C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;
-C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>
+C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -139,9 +135,8 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;%(AdditionalInclu
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxGui\src;
-C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;
-C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;
+C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -152,7 +147,6 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;%(AdditionalInclu
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -164,9 +158,8 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;%(AdditionalInclu
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxGui\src;
-C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;
-C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;
+C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
@@ -176,7 +169,6 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;%(AdditionalInclu
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -199,6 +191,7 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;%(AdditionalInclu
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="src\primitives\Circle.cpp" />
+    <ClCompile Include="src\system\files.cpp" />
     <ClCompile Include="src\views\MainPanel.cpp" />
     <ClCompile Include="src\views\PrimitivePanel.cpp" />
   </ItemGroup>
@@ -217,6 +210,7 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;%(AdditionalInclu
     <ClInclude Include="src\controllers\MainController.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="src\primitives\Circle.h" />
+    <ClInclude Include="src\system\files.h" />
     <ClInclude Include="src\views\MainPanel.h" />
     <ClInclude Include="src\views\PrimitivePanel.h" />
   </ItemGroup>
