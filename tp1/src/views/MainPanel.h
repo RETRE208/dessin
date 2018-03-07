@@ -16,13 +16,14 @@ public:
 	void draw();
 	void importImage();
 	void exportImage();
+	void toggle3DMode(bool& pressed);
 
 	MainController* mainControllerInstance;
 
-	ofxPanel gui;
+	ofxPanel leftMenu;
 	ofxIntSlider intSlider;
 	ofxFloatSlider floatSlider;
-	ofxToggle toggle;
+	ofxToggle mode3DToggle;
 	ofxButton importBtn;
 	ofxButton exportBtn;
 };

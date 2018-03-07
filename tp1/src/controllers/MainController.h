@@ -8,12 +8,15 @@
 #include "../system/files.h"
 #include <vector>
 #include "../views/MainPanel.h"
+#include "ofxAssimpModelLoader.h"
 
 class MainController
 {
 public:
 
-	int DRAWING_ZONE_X_LIMIT = 50;
+	bool mode3DState = false;
+
+	int DRAWING_ZONE_X_LIMIT = 200;
 	int DRAWING_ZONE_Y_LIMIT = 200;
 	int DRAWING_ZONE_WIDTH = 964;
 	int DRAWING_ZONE_HEIGHT = 539;
@@ -23,9 +26,16 @@ public:
 
 	void exportImage();
 	void importImage();
+	void switch3DMode();
+	void switch2DMode();
+
+	ofLight light;
+	float center_x;
+	float center_y;
 
 	Files files;
 	std::vector<ofImage> images;
+	std::vector<ofxAssimpModelLoader> models;
 
 	MainPanel mainPanel;
 	PrimitivePanel primitivePanel;
