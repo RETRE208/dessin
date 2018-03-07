@@ -43,6 +43,10 @@
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp">
       <Filter>addons\ofxXmlSettings\libs</Filter>
     </ClCompile>
+    <ClCompile Include="src\views\MainPanel.cpp" />
+    <ClCompile Include="src\views\PrimitivePanel.cpp" />
+    <ClCompile Include="src\primitives\Circle.cpp" />
+    <ClCompile Include="src\controllers\MainController.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -104,6 +108,10 @@
     <ClInclude Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxml.h">
       <Filter>addons\ofxXmlSettings\libs</Filter>
     </ClInclude>
+    <ClInclude Include="src\views\MainPanel.h" />
+    <ClInclude Include="src\views\PrimitivePanel.h" />
+    <ClInclude Include="src\primitives\Circle.h" />
+    <ClInclude Include="src\controllers\MainController.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />
