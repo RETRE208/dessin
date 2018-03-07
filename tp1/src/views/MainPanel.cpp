@@ -14,6 +14,8 @@ void MainPanel::setup(MainController* mainController) {
 	exportBtn.addListener(this, &MainPanel::exportImage);
 	leftMenu.add(exportBtn.setup("Export"));
 
+	instanciateBtn.addListener(this, &MainPanel::instanciateNewModel);
+	leftMenu.add(instanciateBtn.setup("Instanciate New Model"));
 	leftMenu.add(meshLabel.setup("Mesh", "", 200, 20));
 	meshFill.addListener(this, &MainPanel::toggleMeshFill);
 	leftMenu.add(meshFill.setup("Fill", true));
@@ -25,6 +27,15 @@ void MainPanel::setup(MainController* mainController) {
 
 void MainPanel::draw() {
 	leftMenu.draw();
+}
+
+void MainPanel::instanciateNewModel() {
+	try {
+		mainControllerInstance->instanciateNewModel();
+	}
+	catch (exception& e) {
+		ofLog() << e.what();
+	}
 }
 
 void MainPanel::toggleMeshFill(bool& pressed) {

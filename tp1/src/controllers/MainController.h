@@ -30,6 +30,7 @@ public:
 	void importImage();
 	void switch3DMode();
 	void switch2DMode();
+	void instanciateNewModel();
 
 	ofLight light;
 	float center_x;

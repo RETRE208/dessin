@@ -1,4 +1,13 @@
 #include "MainController.h"
+#include <cstdlib>
+
+class myexception : public exception
+{
+	virtual const char* what() const throw()
+	{
+		return "There is no models loaded yet";
+	}
+} NO_MODELS;
 
 void MainController::setup()
 {
@@ -8,18 +17,9 @@ void MainController::setup()
 
 void MainController::draw()
 {
-	mainPanel.draw();
-	primitivePanel.draw();
-
 	if (mode3DState) {
 		ofEnableDepthTest();
 		for (int i = 0; i < models.size(); i++) {
-			center_x = DRAWING_ZONE_WIDTH / 2.0f + DRAWING_ZONE_X_LIMIT;
-			center_y = DRAWING_ZONE_HEIGHT / 2.0f + DRAWING_ZONE_Y_LIMIT;
-			models[i].setPosition(
-				center_x - 300,
-				center_y - 100,
-				-150);
 			switch (mesh_render_mode)
 			{
 			case MeshRenderMode::fill:
@@ -48,6 +48,8 @@ void MainController::draw()
 				imageHeight);
 		}
 	}
+	mainPanel.draw();
+	primitivePanel.draw();
 }
 
 void MainController::exportImage() {
@@ -75,9 +77,15 @@ void MainController::importImage() {
 			images.push_back(newImage);
 			ofLog() << "<import image: " << imagePath << ">";
 		}
-		else if (imagePath.back() == 'j') {
+		else if (imagePath.back() == 'j' || imagePath.back() == 'e') {
 			ofxAssimpModelLoader newModel;
 			newModel.loadModel(imagePath);
+			center_x = DRAWING_ZONE_WIDTH / 2.0f + DRAWING_ZONE_X_LIMIT;
+			center_y = DRAWING_ZONE_HEIGHT / 2.0f + DRAWING_ZONE_Y_LIMIT;
+			newModel.setPosition(
+				center_x,
+				center_y,
+				0);
 			models.push_back(newModel);
 			ofLog() << "<import model: " << imagePath << ">";
 		}
@@ -112,6 +120,28 @@ void MainController::switchMeshWireframe() {
 
 void MainController::switchMeshPoints() {
 	mesh_render_mode = MeshRenderMode::points;
+}
+
+void MainController::instanciateNewModel() {
+	if (models.size() > 0) {
+		ofxAssimpModelLoader newModel = models[0];
+		center_x = DRAWING_ZONE_WIDTH / 2.0f + DRAWING_ZONE_X_LIMIT;
+		center_y = DRAWING_ZONE_HEIGHT / 2.0f + DRAWING_ZONE_Y_LIMIT;
+		newModel.setPosition(
+			center_x + (rand() % DRAWING_ZONE_WIDTH) - (DRAWING_ZONE_WIDTH / 2.0f),
+			center_y + (rand() % DRAWING_ZONE_HEIGHT) - (DRAWING_ZONE_HEIGHT / 2.0f),
+			0);
+		float scale = ofRandom(0.01f, 1.50f);
+		newModel.setScale(scale, scale, scale);
+		float rotationX = ofRandom(0.0f, 360.0f);
+		float rotationY = ofRandom(0.0f, 360.0f);
+		float rotationZ = ofRandom(0.0f, 360.0f);
+		newModel.setRotation(rotationX, rotationY, rotationZ, 1.0f, 0.0f);
+		models.push_back(newModel);
+	}
+	else {
+		throw NO_MODELS;
+	}
 }
 
 	

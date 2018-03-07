@@ -20,6 +20,7 @@ public:
 	void toggleMeshFill(bool& pressed);
 	void toggleMeshWireframe(bool& pressed);
 	void toggleMeshPoints(bool& pressed);
+	void instanciateNewModel();
 
 	MainController* mainControllerInstance;
 
@@ -29,6 +30,7 @@ public:
 	ofxToggle mode3DToggle;
 	ofxButton importBtn;
 	ofxButton exportBtn;
+	ofxButton instanciateBtn;
 	ofxLabel meshLabel;
 	ofxToggle meshFill;
 	ofxToggle meshWireframe;

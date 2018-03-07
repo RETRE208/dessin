@@ -14,7 +14,7 @@ class myexception : public exception
 string Files::getFile() {
 	COMDLG_FILTERSPEC aFileTypes[] = {
 		{ L"Images", L"*.jpg;*.jpeg;*.png" },
-		{ L"3D model", L"*.obj" }
+		{ L"3D model", L"*.obj;*.dae" }
 	};
 
 	HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED |
