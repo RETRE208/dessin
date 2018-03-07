@@ -12,6 +12,7 @@ void MainController::draw()
 	primitivePanel.draw();
 
 	if (mode3DState) {
+		ofEnableDepthTest();
 		for (int i = 0; i < models.size(); i++) {
 			center_x = DRAWING_ZONE_WIDTH / 2.0f + DRAWING_ZONE_X_LIMIT;
 			center_y = DRAWING_ZONE_HEIGHT / 2.0f + DRAWING_ZONE_Y_LIMIT;
@@ -33,6 +34,7 @@ void MainController::draw()
 				models[i].draw(OF_MESH_POINTS);
 			}
 		}
+		ofDisableDepthTest();
 	}
 	else {
 		for (int i = 0; i < images.size(); i++) {
@@ -88,13 +90,11 @@ void MainController::importImage() {
 void MainController::switch2DMode() {
 	mode3DState = false;
 	ofDisableLighting();
-	ofDisableDepthTest();
 }
 
 void MainController::switch3DMode() {
 	mode3DState = true;
 	ofEnableLighting();
-	ofEnableDepthTest();
 
 	light.setAmbientColor(ofColor(255, 255, 255));
 	light.setDiffuseColor(ofColor(255, 255, 255));
