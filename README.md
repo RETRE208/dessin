@@ -18,4 +18,4 @@
 * **Damien Arroyo**
 * **Marc-André Tremblay**
 
-Voir la liste des [contributors](https://github.com/your/project/contributors) qui ont participés au projet.
+Voir la liste des [contributeurs](https://github.com/RETRE208/infographie-tp1/graphs/contributors) qui ont participés au projet.
