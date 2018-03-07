@@ -10,6 +10,8 @@
 #include "../views/MainPanel.h"
 #include "ofxAssimpModelLoader.h"
 
+enum class MeshRenderMode { fill, wireframe, vertex };
+
 class MainController
 {
 public:
@@ -32,6 +34,10 @@ public:
 	ofLight light;
 	float center_x;
 	float center_y;
+	void switchMeshFill();
+	void switchMeshWireframe();
+	void switchMeshVertex();
+	MeshRenderMode mesh_render_mode;
 
 	Files files;
 	std::vector<ofImage> images;

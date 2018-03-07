@@ -19,7 +19,19 @@ void MainController::draw()
 				center_x,
 				center_y,
 				-150);
-			models[i].draw(OF_MESH_FILL);
+			switch (mesh_render_mode)
+			{
+			case MeshRenderMode::fill:
+				models[i].draw(OF_MESH_FILL);
+				break;
+
+			case MeshRenderMode::wireframe:
+				models[i].draw(OF_MESH_WIREFRAME);
+				break;
+
+			case MeshRenderMode::vertex:
+				models[i].draw(OF_MESH_POINTS);
+			}
 		}
 	}
 	else {
@@ -88,6 +100,18 @@ void MainController::switch3DMode() {
 	light.setDiffuseColor(ofColor(255, 255, 255));
 	light.setPosition(0.0f, 0.0f, 1000.0f);
 	light.enable();
+}
+
+void MainController::switchMeshFill() {
+	mesh_render_mode = MeshRenderMode::fill;
+}
+
+void MainController::switchMeshWireframe() {
+	mesh_render_mode = MeshRenderMode::wireframe;
+}
+
+void MainController::switchMeshVertex() {
+	mesh_render_mode = MeshRenderMode::vertex;
 }
 
 	

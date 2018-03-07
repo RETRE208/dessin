@@ -17,6 +17,9 @@ public:
 	void importImage();
 	void exportImage();
 	void toggle3DMode(bool& pressed);
+	void toggleMeshFill(bool& pressed);
+	void toggleMeshWireframe(bool& pressed);
+	void toggleMeshVertex(bool& pressed);
 
 	MainController* mainControllerInstance;
 
@@ -26,6 +29,10 @@ public:
 	ofxToggle mode3DToggle;
 	ofxButton importBtn;
 	ofxButton exportBtn;
+	ofxLabel meshLabel;
+	ofxToggle meshFill;
+	ofxToggle meshWireframe;
+	ofxToggle meshVertex;
 };
 
 #endif
