@@ -60,6 +60,8 @@
     <ClCompile Include="..\..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpTexture.cpp">
       <Filter>addons\ofxAssimpModelLoader\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\primitives3D\Sphere.cpp" />
+    <ClCompile Include="src\primitives3D\Cube.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -270,6 +272,8 @@
     <ClInclude Include="..\..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler\pushpack1.h">
       <Filter>addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler</Filter>
     </ClInclude>
+    <ClInclude Include="src\primitives3D\Sphere.h" />
+    <ClInclude Include="src\primitives3D\Cube.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

@@ -1,7 +1,7 @@
 #include "MainController.h"
 #include <cstdlib>
 
-class myexception : public exception
+class noModelsExeption : public exception
 {
 	virtual const char* what() const throw()
 	{

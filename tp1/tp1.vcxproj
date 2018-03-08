@@ -210,6 +210,8 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxmlerror.cpp" />
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp" />
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.cpp" />
+    <ClCompile Include="src\primitives3D\Cube.cpp" />
+    <ClCompile Include="src\primitives3D\Sphere.cpp" />
     <ClCompile Include="src\controllers\MainController.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
@@ -271,6 +273,8 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\
     <ClInclude Include="..\..\..\..\addons\ofxGui\src\ofxToggle.h" />
     <ClInclude Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxml.h" />
     <ClInclude Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
+    <ClInclude Include="src\primitives3D\Cube.h" />
+    <ClInclude Include="src\primitives3D\Sphere.h" />
     <ClInclude Include="src\controllers\MainController.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="src\primitives\Circle.h" />

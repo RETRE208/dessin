@@ -3,7 +3,7 @@
 #include <windows.h>
 #include <shobjidl.h>
 
-class myexception : public exception
+class cancelFileException : public exception
 {
 	virtual const char* what() const throw()
 	{
