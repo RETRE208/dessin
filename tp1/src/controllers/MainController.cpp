@@ -136,7 +136,9 @@ void MainController::instanciateNewModel() {
 		float rotationX = ofRandom(0.0f, 360.0f);
 		float rotationY = ofRandom(0.0f, 360.0f);
 		float rotationZ = ofRandom(0.0f, 360.0f);
-		newModel.setRotation(rotationX, rotationY, rotationZ, 1.0f, 0.0f);
+		newModel.setRotation(0.0f, rotationX, 1.0f, 0.0f, 0.0f);
+		newModel.setRotation(0.0f, rotationY, 0.0f, 1.0f, 0.0f);
+		newModel.setRotation(0.0f, rotationZ, 0.0f, 0.0f, 1.0f);
 		models.push_back(newModel);
 	}
 	else {
