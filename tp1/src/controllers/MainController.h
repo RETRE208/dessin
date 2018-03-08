@@ -8,6 +8,8 @@
 #include "../system/files.h"
 #include <vector>
 #include "../views/MainPanel.h"
+#include "../views/controllerPanel.h"
+#include "../views/CirclePanel.h"
 #include "ofxAssimpModelLoader.h"
 
 enum class MeshRenderMode { fill, wireframe, points};
@@ -31,6 +33,7 @@ public:
 	void switch3DMode();
 	void switch2DMode();
 	void instanciateNewModel();
+	void openNewPrimitvePanel(string primitiveName);
 
 	ofLight light;
 	float center_x;
@@ -45,6 +48,7 @@ public:
 	std::vector<ofxAssimpModelLoader> models;
 
 	MainPanel mainPanel;
+	controllerPanel controlPanel;
 	PrimitivePanel primitivePanel;
 };
 

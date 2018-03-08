@@ -11,8 +11,9 @@ class noModelsExeption : public exception
 
 void MainController::setup()
 {
-	primitivePanel.setup();
+	//primitivePanel.setup();
 	mainPanel.setup(this);
+	controlPanel.setup(this);
 }
 
 void MainController::draw()
@@ -48,8 +49,8 @@ void MainController::draw()
 				imageHeight);
 		}
 	}
-	mainPanel.draw();
-	primitivePanel.draw();
+	//mainPanel.draw();
+	//primitivePanel.draw();
 }
 
 void MainController::exportImage() {
@@ -144,4 +145,9 @@ void MainController::instanciateNewModel() {
 	}
 }
 
-	
+void MainController::openNewPrimitvePanel(string primitiveName) {
+	cout << "the primitive " << primitiveName << " was selected " << endl;
+	CirclePanel* circlePanel = new CirclePanel();
+	circlePanel->setup();
+	circlePanel->draw();
+}

@@ -5,15 +5,12 @@
 class Circle
 {
 public:
-	void setup();
+	Circle(int radius);
+	bool inside(ofPoint mouse);
 	void draw();
+	
+	float x;
+	float y;
+	int mRadius;
 
-	ofParameterGroup circleParameters;
-	ofParameter<int> red;
-	ofParameter<int> green;
-	ofParameter<int> blue;
-
-	ofParameter<int> posX;
-	ofParameter<int> posY;
-	ofParameter<int> radius;
 };
