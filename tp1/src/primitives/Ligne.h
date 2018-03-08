@@ -2,16 +2,17 @@
 
 #include "ofMain.h"
 
-class Circle
+class Ligne
 {
 public:
-	Circle(int radius);
+	Ligne();
 	bool inside(ofPoint mouse);
 	void draw();
-	
-	float x;
-	float y;
-	int mRadius;
-	ofColor color;
 
+	float p1x;
+	float p1y;
+	float p2x;
+	float p2y;
+	ofColor color;
 };
+

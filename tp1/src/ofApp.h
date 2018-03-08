@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxGui.h"
+#include "ofxDatGui.h"
 
 #include "controllers/MainController.h"
 

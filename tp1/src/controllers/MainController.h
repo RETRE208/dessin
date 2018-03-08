@@ -8,6 +8,11 @@
 #include "../system/files.h"
 #include <vector>
 #include "../views/MainPanel.h"
+#include "../views/controllerPanel.h"
+#include "../views/CirclePanel.h"
+#include "../views/RectanglePanel.h"
+#include "../views/LinePanel.h"
+#include "../views/EllipsePanel.h"
 #include "ofxAssimpModelLoader.h"
 
 enum class MeshRenderMode { fill, wireframe, points};
@@ -15,7 +20,6 @@ enum class MeshRenderMode { fill, wireframe, points};
 class MainController
 {
 public:
-
 	bool mode3DState = false;
 
 	int DRAWING_ZONE_X_LIMIT = 200;
@@ -31,6 +35,7 @@ public:
 	void switch3DMode();
 	void switch2DMode();
 	void instanciateNewModel();
+	void openNewPrimitvePanel(string primitiveName);
 
 	ofLight light;
 	float center_x;
@@ -43,8 +48,13 @@ public:
 	Files files;
 	std::vector<ofImage> images;
 	std::vector<ofxAssimpModelLoader> models;
+	std::vector<CirclePanel*> circlePrimivites;
+	std::vector<RectanglePanel*> rectanglePrimivites;
+	std::vector<LinePanel*> linePrimivites;
+	std::vector<EllipsePanel*> ellipsePrimivites;
 
 	MainPanel mainPanel;
+	controllerPanel controlPanel;
 	PrimitivePanel primitivePanel;
 };
 
