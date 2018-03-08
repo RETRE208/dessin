@@ -23,7 +23,39 @@ void ofApp::keyPressed(int key){
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
+	switch (key)
+	{
+	case 49:  // key 1
+		texture.kernel_type = ConvolutionKernel::identity;
+		texture.kernel_name = "identité";
 
+		break;
+
+	case 50:  // key 2
+		texture.kernel_type = ConvolutionKernel::emboss;
+		texture.kernel_name = "bosseler";
+		
+		break;
+
+	case 51:  // key 3
+		texture.kernel_type = ConvolutionKernel::sharpen;
+		texture.kernel_name = "aiguiser";
+		break;
+
+	case 52:  // key 4
+		texture.kernel_type = ConvolutionKernel::edge_detect;
+		texture.kernel_name = "détection de bordure";
+		break;
+
+	case 53:  // key 5
+		texture.kernel_type = ConvolutionKernel::blur;
+		texture.kernel_name = "flou";
+		break;
+
+	default:
+		break;
+	}
+	texture.filter();
 }
 
 //--------------------------------------------------------------
