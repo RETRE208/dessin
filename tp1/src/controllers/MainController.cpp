@@ -11,7 +11,6 @@ class noModelsExeption : public exception
 
 void MainController::setup()
 {
-	//primitivePanel.setup();
 	mainPanel.setup(this);
 	controlPanel.setup(this);
 }
@@ -51,9 +50,16 @@ void MainController::draw()
 		for (int i = 0; i < circlePrimivites.size(); i++) {
 			circlePrimivites[i] -> draw();
 		}
+		for (int i = 0; i < rectanglePrimivites.size(); i++) {
+			rectanglePrimivites[i]->draw();
+		}
+		for (int i = 0; i < linePrimivites.size(); i++) {
+			linePrimivites[i]->draw();
+		}
+		for (int i = 0; i < ellipsePrimivites.size(); i++) {
+			ellipsePrimivites[i]->draw();
+		}
 	}
-	//mainPanel.draw();
-	//primitivePanel.draw();
 }
 
 void MainController::exportImage() {
@@ -150,8 +156,28 @@ void MainController::instanciateNewModel() {
 
 void MainController::openNewPrimitvePanel(string primitiveName) {
 	cout << "the primitive " << primitiveName << " was selected " << endl;
-	CirclePanel* circlePanel = new CirclePanel();
-	circlePanel->setup();
-	circlePanel->draw();
-	circlePrimivites.push_back(circlePanel);
+
+	if (primitiveName == "Circle") {
+		CirclePanel* circlePanel = new CirclePanel();
+		circlePanel->setup();
+		circlePrimivites.push_back(circlePanel);
+	}
+	if (primitiveName == "Rectangle") {
+		RectanglePanel* rectanglePanel = new RectanglePanel();
+		rectanglePanel->setup();
+		rectanglePrimivites.push_back(rectanglePanel);
+	}
+	if (primitiveName == "Line") {
+		LinePanel* linePanel = new LinePanel();
+		linePanel->setup();
+		linePrimivites.push_back(linePanel);
+	}
+	if (primitiveName == "Ellipse") {
+		EllipsePanel* ellipsePanel = new EllipsePanel();
+		ellipsePanel->setup();
+		ellipsePrimivites.push_back(ellipsePanel);
+	}
+	if (primitiveName == "Sqaure") {
+	}
+	
 }

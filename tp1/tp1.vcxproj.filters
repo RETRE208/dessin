@@ -74,6 +74,12 @@
     <ClCompile Include="..\..\..\..\addons\ofxDatGui\src\libs\ofxSmartFont\ofxSmartFont.cpp">
       <Filter>addons\ofxDatGui\src\libs\ofxSmartFont</Filter>
     </ClCompile>
+    <ClCompile Include="src\primitives\Rectangle.cpp" />
+    <ClCompile Include="src\views\RectanglePanel.cpp" />
+    <ClCompile Include="src\primitives\Ligne.cpp" />
+    <ClCompile Include="src\views\LinePanel.cpp" />
+    <ClCompile Include="src\primitives\Ellipse.cpp" />
+    <ClCompile Include="src\views\EllipsePanel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -83,61 +89,61 @@
       <UniqueIdentifier>{db15fa8e-dbe0-4d02-9b36-a8147add7f76}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader">
-      <UniqueIdentifier>{54c31a56-b1e2-4d01-9c28-16ca9c498f7d}</UniqueIdentifier>
+      <UniqueIdentifier>{ce4198d0-060e-48de-82b1-0965bb06e299}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader\src">
-      <UniqueIdentifier>{31d9ff36-d7b3-44a8-8333-fddb8cd07813}</UniqueIdentifier>
+      <UniqueIdentifier>{fad0021e-838a-4436-805e-ff2a15491e95}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader\libs">
-      <UniqueIdentifier>{330b71f3-512c-4c7a-872e-3247b1c22ff1}</UniqueIdentifier>
+      <UniqueIdentifier>{abab4994-3407-407e-9d8c-ef591812d380}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader\libs\assimp">
-      <UniqueIdentifier>{b0934242-f1a2-4508-a52f-b18d9e5756c5}</UniqueIdentifier>
+      <UniqueIdentifier>{10bc6fd8-b0df-420b-9b86-5e3442025c48}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\include">
-      <UniqueIdentifier>{cee55d85-133e-4c77-9582-d2e9291aeb43}</UniqueIdentifier>
+      <UniqueIdentifier>{b40459c7-b650-4504-9279-0fca261a9787}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\include\assimp">
-      <UniqueIdentifier>{c9c0b1f1-e8a5-41df-b91f-059993a62d9b}</UniqueIdentifier>
+      <UniqueIdentifier>{2a4bf1b6-5e77-4a64-a4df-d379ed55f6c3}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler">
-      <UniqueIdentifier>{452d510e-d570-4af1-a72d-ed98791dd832}</UniqueIdentifier>
+      <UniqueIdentifier>{0bc359c8-bcd5-4f22-886f-2e5e2f5ad070}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxGui">
-      <UniqueIdentifier>{8fee6aaa-29a1-4925-aca7-7b041c54a243}</UniqueIdentifier>
+      <UniqueIdentifier>{9cc4dccb-4baf-4933-9c35-dea94041972d}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxGui\src">
-      <UniqueIdentifier>{882aed02-8436-4b94-8c5f-e927f3d04889}</UniqueIdentifier>
+      <UniqueIdentifier>{5a8db7ca-bfee-4095-838f-ed867d068810}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxXmlSettings">
-      <UniqueIdentifier>{735c2853-8444-4bff-89b1-ff1c7cd3bb5e}</UniqueIdentifier>
+      <UniqueIdentifier>{e189b48a-dc66-45d6-ba2e-4a2cdab3a4bd}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxXmlSettings\src">
-      <UniqueIdentifier>{ced1e419-6b88-4aac-bd8d-26e40de9c99b}</UniqueIdentifier>
+      <UniqueIdentifier>{5c5c919f-ecfd-440c-8cb2-990632466266}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxXmlSettings\libs">
-      <UniqueIdentifier>{655b2606-4712-45d2-885c-f719a81d128a}</UniqueIdentifier>
+      <UniqueIdentifier>{309ae791-8442-4d4b-b31e-d8e6feddb31a}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxDatGui">
-      <UniqueIdentifier>{c79d4df3-e405-438a-85f4-b82a75be2a09}</UniqueIdentifier>
+      <UniqueIdentifier>{1ad181cf-29ca-4282-a29a-b2803ee31d54}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxDatGui\src">
-      <UniqueIdentifier>{3e3ba8dc-3784-4ba9-b557-0dd29f54b1ee}</UniqueIdentifier>
+      <UniqueIdentifier>{4dc652f2-c9dd-4508-8998-d9caafd18888}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxDatGui\src\components">
-      <UniqueIdentifier>{6c4e19fe-3d06-45cc-8188-5b9df751656f}</UniqueIdentifier>
+      <UniqueIdentifier>{8ec5eb55-00ce-42fe-970c-13fa62eab4b4}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxDatGui\src\core">
-      <UniqueIdentifier>{66a63a23-8300-4ad2-8f01-eaf56b3cf777}</UniqueIdentifier>
+      <UniqueIdentifier>{245576fd-27fd-4883-8f0a-bae5659ca78e}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxDatGui\src\libs">
-      <UniqueIdentifier>{8a7ac2d0-82aa-4b0b-a4ce-79b449464a9d}</UniqueIdentifier>
+      <UniqueIdentifier>{7b81d27f-d585-4645-9955-f8182f45e041}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxDatGui\src\libs\ofxSmartFont">
-      <UniqueIdentifier>{05e42f8d-f66b-4e82-a973-28b71aa6a126}</UniqueIdentifier>
+      <UniqueIdentifier>{451163ff-a23c-4086-8aff-52dca1ddc9d6}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxDatGui\src\themes">
-      <UniqueIdentifier>{5210587b-48a1-47bd-86dd-992d3077b15e}</UniqueIdentifier>
+      <UniqueIdentifier>{98db9d00-a91b-4e7f-aa7a-2cccb5778ee7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -372,6 +378,12 @@
     <ClInclude Include="..\..\..\..\addons\ofxDatGui\src\themes\ofxDatGuiThemes.h">
       <Filter>addons\ofxDatGui\src\themes</Filter>
     </ClInclude>
+    <ClInclude Include="src\primitives\Rectangle.h" />
+    <ClInclude Include="src\views\RectanglePanel.h" />
+    <ClInclude Include="src\primitives\Ligne.h" />
+    <ClInclude Include="src\views\LinePanel.h" />
+    <ClInclude Include="src\primitives\Ellipse.h" />
+    <ClInclude Include="src\views\EllipsePanel.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

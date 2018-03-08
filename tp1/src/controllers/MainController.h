@@ -10,6 +10,9 @@
 #include "../views/MainPanel.h"
 #include "../views/controllerPanel.h"
 #include "../views/CirclePanel.h"
+#include "../views/RectanglePanel.h"
+#include "../views/LinePanel.h"
+#include "../views/EllipsePanel.h"
 #include "ofxAssimpModelLoader.h"
 
 enum class MeshRenderMode { fill, wireframe, points};
@@ -46,6 +49,9 @@ public:
 	std::vector<ofImage> images;
 	std::vector<ofxAssimpModelLoader> models;
 	std::vector<CirclePanel*> circlePrimivites;
+	std::vector<RectanglePanel*> rectanglePrimivites;
+	std::vector<LinePanel*> linePrimivites;
+	std::vector<EllipsePanel*> ellipsePrimivites;
 
 	MainPanel mainPanel;
 	controllerPanel controlPanel;

@@ -4,6 +4,7 @@ Circle::Circle(int radius) {
 	x = 100;
 	y = 100;
 	mRadius = radius;
+	color = ofColor::red;
 }
 
 bool Circle::inside(ofPoint mouse)
@@ -12,6 +13,6 @@ bool Circle::inside(ofPoint mouse)
 }
 
 void Circle::draw() {
-	ofSetColor(ofColor::red);
+	ofSetColor(color);
 	ofDrawCircle(x, y, mRadius);
 }

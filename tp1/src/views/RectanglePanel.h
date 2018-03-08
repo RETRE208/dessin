@@ -1,10 +1,9 @@
 #pragma once
 
 #include "ofxDatGui.h"
-#include "../primitives/Circle.h"
-#include "PrimitivePanel.h"
+#include "../primitives/Rectangle.h"
 
-class CirclePanel : public PrimitivePanel
+class RectanglePanel
 {
 public:
 	void setup();
@@ -13,11 +12,12 @@ public:
 
 	void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
 	bool mDragging;
-	Circle* circle;
+	tp1::Rectangle* rectangle;
 	ofxDatGui* gui;
 	ofxDatGuiColorPicker* picker;
 	ofxDatGuiSlider* sx;
 	ofxDatGuiSlider* sy;
-	ofxDatGuiSlider* sr;
+	ofxDatGuiSlider* swidth;
+	ofxDatGuiSlider* sheight;
 };
 

@@ -18,7 +18,7 @@ public:
 	ofxDatGui* gui = new ofxDatGui(ofxDatGuiAnchor::TOP_LEFT);
 	void onDropdownEvent(ofxDatGuiDropdownEvent e);
 	
-	std::vector<std::string> options = { "Circle", "Square", "Dot", "Line", "Triangle" };
+	std::vector<std::string> options = { "Circle", "Rectangle", "Ellipse", "Line", "Triangle" };
 };
 #endif
 
