@@ -17,7 +17,6 @@ enum class MeshRenderMode { fill, wireframe, points};
 class MainController
 {
 public:
-
 	bool mode3DState = false;
 
 	int DRAWING_ZONE_X_LIMIT = 200;
@@ -46,6 +45,7 @@ public:
 	Files files;
 	std::vector<ofImage> images;
 	std::vector<ofxAssimpModelLoader> models;
+	std::vector<CirclePanel*> circlePrimivites;
 
 	MainPanel mainPanel;
 	controllerPanel controlPanel;

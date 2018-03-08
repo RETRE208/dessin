@@ -13,5 +13,5 @@ bool Circle::inside(ofPoint mouse)
 
 void Circle::draw() {
 	ofSetColor(ofColor::red);
-	ofCircle(this->x, this->y, mRadius);
+	ofDrawCircle(x, y, mRadius);
 }

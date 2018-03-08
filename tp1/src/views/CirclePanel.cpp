@@ -31,5 +31,6 @@ void CirclePanel::update()
 void CirclePanel::draw()
 {
 	circle->draw();
+	update();
 }
 

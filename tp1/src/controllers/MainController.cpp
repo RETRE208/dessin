@@ -48,6 +48,9 @@ void MainController::draw()
 				imageWidth,
 				imageHeight);
 		}
+		for (int i = 0; i < circlePrimivites.size(); i++) {
+			circlePrimivites[i] -> draw();
+		}
 	}
 	//mainPanel.draw();
 	//primitivePanel.draw();
@@ -150,4 +153,5 @@ void MainController::openNewPrimitvePanel(string primitiveName) {
 	CirclePanel* circlePanel = new CirclePanel();
 	circlePanel->setup();
 	circlePanel->draw();
+	circlePrimivites.push_back(circlePanel);
 }

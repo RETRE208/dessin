@@ -1,9 +1,10 @@
 #pragma once
 
 #include "ofxDatGui.h"
-#include "../primitives/Circle.h";
+#include "../primitives/Circle.h"
+#include "PrimitivePanel.h"
 
-class CirclePanel
+class CirclePanel : public PrimitivePanel
 {
 public:
 	void setup();
