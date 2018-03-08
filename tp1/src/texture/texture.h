@@ -65,16 +65,16 @@ public:
 
 	ofImage image_source;
 	ofImage image_destination;
-	ofImage image3;
-	ofImage image4;
 
 	int image_width;
 	int image_height;
 
 	int offset_vertical;
 	int offset_horizontal;
+	ofImage imageSource;
+	ofImage imageDest;
 
 	void setup();
-	void filter();
+	void filter(ofImage* image);
 };
 

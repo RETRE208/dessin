@@ -24,14 +24,15 @@ void Texture::setup()
 	// sélectionner le filtre de convolution par défaut
 	kernel_type = ConvolutionKernel::identity;
 	kernel_name = "identity";
-
-	// appliquer le filtre de convolution par défaut
-	filter();
 }
 
 // fonction de filtrage par convolution
-void Texture::filter()
+void Texture::filter(ofImage* image)
 {
+	// dimensions de l'image source
+	image_width = image->getWidth();
+	image_height = image->getHeight();
+
 	// résolution du kernel de convolution
 	const int kernel_size = 3;
 
@@ -63,10 +64,10 @@ void Texture::filter()
 	float kernel_value;
 
 	// extraire les pixels de l'image source
-	ofPixels pixel_array_src = image_source.getPixels();
+	ofPixels pixel_array_src = image->getPixels();
 
 	// extraire les pixels de l'image de destination
-	ofPixels pixel_array_dst = image_destination.getPixels();
+	ofPixels pixel_array_dst = image->getPixels();
 
 	// couleur du pixel lu dans l'image source
 	ofColor pixel_color_src;
@@ -78,10 +79,10 @@ void Texture::filter()
 	float sum[color_component_count];
 
 	// itération sur les rangées des pixels de l'image source
-	for (y = 0; y < image_height; ++y)
+	for (y = 1; y < image_height - 1; ++y)
 	{
 		// itération sur les colonnes des pixels de l'image source
-		for (x = 0; x < image_width; ++x)
+		for (x = 1; x < image_width - 1; ++x)
 		{
 			// initialiser le tableau où les valeurs de filtrage sont accumulées
 			for (c = 0; c < color_component_count; ++c)
@@ -155,7 +156,7 @@ void Texture::filter()
 	}
 
 	// écrire les pixels dans l'image de destination
-	image_destination.setFromPixels(pixel_array_dst);
+	image->setFromPixels(pixel_array_dst);
 
 	ofLog() << "<convolution filter done>";
 }

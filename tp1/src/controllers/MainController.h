@@ -8,6 +8,7 @@
 #include "../system/files.h"
 #include <vector>
 #include "../views/MainPanel.h"
+#include "../texture/texture.h"
 
 class MainController
 {
@@ -23,12 +24,14 @@ public:
 
 	void exportImage();
 	void importImage();
+	void applyTexture(int keyPressed);
 
 	Files files;
-	std::vector<ofImage> images;
+	std::vector<ofImage*> images;
 
 	MainPanel mainPanel;
 	PrimitivePanel primitivePanel;
+	Texture texture;
 };
 
 #endif
