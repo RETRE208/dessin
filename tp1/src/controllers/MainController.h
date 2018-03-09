@@ -17,6 +17,7 @@
 #include "../views/CubePanel.h"
 #include "../views/ModelPanel.h"
 #include "ofxAssimpModelLoader.h"
+#include "../views/SelectorPanel.h"
 
 class MainController
 {
@@ -42,6 +43,7 @@ public:
 	void instanciateNewModel(ofxAssimpModelLoader model);
 	void openNewPrimitvePanel(string primitiveName);
 	void openNewPrimitve3DPanel(string primitiveName);
+	void removeSelectedPrimitives();
 
 	ofLight light;
 	float center_x;
@@ -55,6 +57,7 @@ public:
 	std::vector<SpherePanel*> spherePrimivites;
 	std::vector<CubePanel*> cubePrimivites;
 
+	SelectorPanel selectorPanel;
 	controllerPanel controlPanel;
 	PrimitivePanel primitivePanel;
 	Texture texture;

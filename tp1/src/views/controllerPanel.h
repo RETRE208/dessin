@@ -19,6 +19,8 @@ public:
 	
 	ofxDatGuiButton* importBtn;
 	ofxDatGuiButton* exportBtn;
+	ofxDatGuiButton* removeSelected;
+	ofxDatGuiButton* instanciate;
 	ofxDatGuiToggle* mode3DToggle;
 
 	bool mode2D = true;

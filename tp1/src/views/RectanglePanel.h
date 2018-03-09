@@ -6,9 +6,10 @@
 class RectanglePanel
 {
 public:
-	void setup();
+	void setup(string name);
+	void update();
 	void draw();
-
+	string panelName;
 	void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
 	bool mDragging;
 	tp1::Rectangle* rectangle;

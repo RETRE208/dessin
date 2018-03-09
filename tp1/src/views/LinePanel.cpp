@@ -1,9 +1,9 @@
 #include "LinePanel.h"
 
-void LinePanel::setup()
+void LinePanel::setup(string name)
 {
 	line = new Ligne();
-
+	panelName = name;
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
 	gui->addHeader("Line Panel");
 	sp1x = gui->addSlider("LINE POINT 1 X", 0, ofGetWidth());
