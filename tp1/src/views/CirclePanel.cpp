@@ -1,9 +1,9 @@
 #include "CirclePanel.h"
 
-void CirclePanel::setup()
+void CirclePanel::setup(string name)
 {
 	circle = new Circle(150);
-
+	panelName = name;
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
 	gui->addHeader("Circle Panel");
 	sx = gui->addSlider("CIRCLE X", 0, ofGetWidth());

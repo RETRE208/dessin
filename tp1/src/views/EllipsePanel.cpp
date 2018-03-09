@@ -1,9 +1,9 @@
 #include "EllipsePanel.h"
 
-void EllipsePanel::setup()
+void EllipsePanel::setup(string name)
 {
 	ellipse = new tp1::Ellipse();
-
+	panelName = name;
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
 	gui->addHeader("Ellipse Panel");
 	sx = gui->addSlider("Ellipse X", 0, ofGetWidth());

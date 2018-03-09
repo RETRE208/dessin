@@ -6,12 +6,13 @@
 class CirclePanel
 {
 public:
-	void setup();
+	void setup(string name);
 	void update();
 	void draw();
 
 	void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
 	bool mDragging;
+	string panelName;
 	Circle* circle;
 	ofxDatGui* gui;
 	ofxDatGuiColorPicker* picker;

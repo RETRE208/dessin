@@ -7,7 +7,6 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\views\MainPanel.cpp" />
     <ClCompile Include="src\views\PrimitivePanel.cpp" />
     <ClCompile Include="src\primitives\Circle.cpp" />
     <ClCompile Include="src\controllers\MainController.cpp" />
@@ -16,7 +15,6 @@
     <ClCompile Include="src\primitives3D\Cube.cpp" />
     <ClCompile Include="src\views\controllerPanel.cpp" />
     <ClCompile Include="src\views\CirclePanel.cpp" />
-    <ClCompile Include="CIRCLEPANEL.CPP" />
     <ClCompile Include="src\primitives\Rectangle.cpp" />
     <ClCompile Include="src\views\RectanglePanel.cpp" />
     <ClCompile Include="src\primitives\Ligne.cpp" />
@@ -82,6 +80,7 @@
     </ClCompile>
     <ClCompile Include="src\views\SpherePanel.cpp" />
     <ClCompile Include="src\views\CubePanel.cpp" />
+    <ClCompile Include="src\views\SelectorPanel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -152,7 +151,6 @@
     <ClInclude Include="src\ofApp.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\views\MainPanel.h" />
     <ClInclude Include="src\views\PrimitivePanel.h" />
     <ClInclude Include="src\primitives\Circle.h" />
     <ClInclude Include="src\controllers\MainController.h" />
@@ -388,6 +386,7 @@
     </ClInclude>
     <ClInclude Include="src\views\SpherePanel.h" />
     <ClInclude Include="src\views\CubePanel.h" />
+    <ClInclude Include="src\views\SelectorPanel.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

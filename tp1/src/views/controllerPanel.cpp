@@ -7,6 +7,7 @@ void controllerPanel::setup(MainController* mainController)
 	gui->addLabel("Control Panel");
 	importBtn = gui->addButton("Import");
 	exportBtn = gui->addButton("Export");
+	removeSelected = gui->addButton("Remove selected");
 	mode3DToggle = gui->addToggle("3D Mode");
 	instanciate = gui->addToggle("Instanciate New Model");
 	gui->addLabel("Mesh : ");
@@ -29,6 +30,10 @@ void controllerPanel::onButtonEvent(ofxDatGuiButtonEvent e) {
 	else if (e.target == exportBtn) {
 		cout << "Exporting Image..." << endl;
 		mainControllerInstance->exportImage();
+	}
+	else if (e.target == removeSelected) {
+		cout << "Removing selected..." << endl;
+		mainControllerInstance->removeSelectedPrimitives();
 	}
 	else if (e.target == mode3DToggle) {
 		if (mode2D == true) {

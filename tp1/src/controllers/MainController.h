@@ -7,7 +7,6 @@
 #include "../views/PrimitivePanel.h"
 #include "../system/files.h"
 #include <vector>
-#include "../views/MainPanel.h"
 #include "../views/controllerPanel.h"
 #include "../views/CirclePanel.h"
 #include "../views/RectanglePanel.h"
@@ -16,6 +15,7 @@
 #include "../views/SpherePanel.h"
 #include "../views/CubePanel.h"
 #include "ofxAssimpModelLoader.h"
+#include "../views/SelectorPanel.h"
 
 enum class MeshRenderMode { fill, wireframe, points};
 
@@ -39,6 +39,7 @@ public:
 	void instanciateNewModel();
 	void openNewPrimitvePanel(string primitiveName);
 	void openNewPrimitve3DPanel(string primitiveName);
+	void removeSelectedPrimitives();
 
 	ofLight light;
 	float center_x;
@@ -58,7 +59,7 @@ public:
 	std::vector<SpherePanel*> spherePrimivites;
 	std::vector<CubePanel*> cubePrimivites;
 
-	MainPanel mainPanel;
+	SelectorPanel selectorPanel;
 	controllerPanel controlPanel;
 	PrimitivePanel primitivePanel;
 };

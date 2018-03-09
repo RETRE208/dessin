@@ -7,10 +7,10 @@ using namespace tp1;
 class EllipsePanel
 {
 public:
-	void setup();
+	void setup(string name);
 	void update();
 	void draw();
-
+	string panelName;
 	void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
 	bool mDragging;
 	tp1::Ellipse* ellipse;
