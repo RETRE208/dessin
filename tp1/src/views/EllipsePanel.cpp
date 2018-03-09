@@ -22,22 +22,9 @@ void EllipsePanel::setup()
 	ellipse->y = ofGetHeight() / 2;
 }
 
-void EllipsePanel::update()
-{
-	// drag the circle around if the mouse is pressed while over it //
-	if (ofGetMousePressed() && gui->getMouseDown() == false) {
-		ofPoint mouse = ofPoint(ofGetMouseX(), ofGetMouseY());
-		if (ellipse->inside(mouse)) {
-			ellipse->x = mouse.x;
-			ellipse->y = mouse.y;
-		}
-	}
-}
-
 void EllipsePanel::draw()
 {
 	ellipse->draw();
-	update();
 }
 
 void EllipsePanel::onColorPickerEvent(ofxDatGuiColorPickerEvent e)

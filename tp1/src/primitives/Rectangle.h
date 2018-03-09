@@ -7,7 +7,6 @@ namespace tp1{
 	{
 	public:
 		Rectangle();
-		bool inside(ofPoint mouse);
 		void draw();
 
 		float x;

@@ -7,7 +7,6 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\views\MainPanel.cpp" />
     <ClCompile Include="src\views\PrimitivePanel.cpp" />
     <ClCompile Include="src\primitives\Circle.cpp" />
     <ClCompile Include="src\controllers\MainController.cpp" />
@@ -85,6 +84,7 @@
     </ClCompile>
     <ClCompile Include="src\views\SpherePanel.cpp" />
     <ClCompile Include="src\views\CubePanel.cpp" />
+    <ClCompile Include="src\views\ModelPanel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -155,7 +155,6 @@
     <ClInclude Include="src\ofApp.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\views\MainPanel.h" />
     <ClInclude Include="src\views\PrimitivePanel.h" />
     <ClInclude Include="src\primitives\Circle.h" />
     <ClInclude Include="src\controllers\MainController.h" />
@@ -394,6 +393,7 @@
     </ClInclude>
     <ClInclude Include="src\views\SpherePanel.h" />
     <ClInclude Include="src\views\CubePanel.h" />
+    <ClInclude Include="src\views\ModelPanel.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

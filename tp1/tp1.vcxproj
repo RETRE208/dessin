@@ -49,19 +49,19 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+    <Import Project="C:\Users\Rémy\of_v0.9.8_vs_release\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+    <Import Project="C:\Users\Rémy\of_v0.9.8_vs_release\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+    <Import Project="C:\Users\Rémy\of_v0.9.8_vs_release\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+    <Import Project="C:\Users\Rémy\of_v0.9.8_vs_release\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -224,6 +224,7 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp" />
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.cpp" />
     <ClCompile Include="CIRCLEPANEL.CPP" />
+    <ClCompile Include="src\views\ModelPanel.cpp" />
     <ClCompile Include="src\views\CubePanel.cpp" />
     <ClCompile Include="src\views\SpherePanel.cpp" />
     <ClCompile Include="src\views\EllipsePanel.cpp" />
@@ -242,7 +243,6 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\
     <ClCompile Include="src\primitives\Circle.cpp" />
     <ClCompile Include="src\system\files.cpp" />
     <ClCompile Include="src\texture\texture.cpp" />
-    <ClCompile Include="src\views\MainPanel.cpp" />
     <ClCompile Include="src\views\PrimitivePanel.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -319,6 +319,7 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\
     <ClInclude Include="..\..\..\..\addons\ofxGui\src\ofxToggle.h" />
     <ClInclude Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxml.h" />
     <ClInclude Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
+    <ClInclude Include="src\views\ModelPanel.h" />
     <ClInclude Include="src\views\CubePanel.h" />
     <ClInclude Include="src\views\SpherePanel.h" />
     <ClInclude Include="src\views\EllipsePanel.h" />
@@ -336,7 +337,6 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\
     <ClInclude Include="src\primitives\Circle.h" />
     <ClInclude Include="src\system\files.h" />
     <ClInclude Include="src\texture\texture.h" />
-    <ClInclude Include="src\views\MainPanel.h" />
     <ClInclude Include="src\views\PrimitivePanel.h" />
   </ItemGroup>
   <ItemGroup>

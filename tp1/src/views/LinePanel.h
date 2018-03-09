@@ -7,7 +7,6 @@ class LinePanel
 {
 public:
 	void setup();
-	void update();
 	void draw();
 
 	void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
@@ -19,5 +18,6 @@ public:
 	ofxDatGuiSlider* sp1y;
 	ofxDatGuiSlider* sp2x;
 	ofxDatGuiSlider* sp2y;
+	ofxDatGuiSlider* lineWidth;
 };
 

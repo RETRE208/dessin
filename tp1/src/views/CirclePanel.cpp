@@ -20,22 +20,9 @@ void CirclePanel::setup()
 	circle->y = ofGetHeight() / 2;
 }
 
-void CirclePanel::update()
-{
-	// drag the circle around if the mouse is pressed while over it //
-	if (ofGetMousePressed() && gui->getMouseDown() == false) {
-		ofPoint mouse = ofPoint(ofGetMouseX(), ofGetMouseY());
-		if (circle->inside(mouse)) {
-			circle->x = mouse.x;
-			circle->y = mouse.y;
-		}
-	}
-}
-
 void CirclePanel::draw()
 {
 	circle -> draw();
-	update();
 }
 
 void CirclePanel::onColorPickerEvent(ofxDatGuiColorPickerEvent e)

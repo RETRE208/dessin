@@ -6,7 +6,6 @@ class Sphere
 {
 public:
 	Sphere(int radius);
-	bool inside(ofPoint mouse);
 	void draw();
 
 	float x;

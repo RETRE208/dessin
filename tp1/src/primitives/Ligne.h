@@ -6,9 +6,9 @@ class Ligne
 {
 public:
 	Ligne();
-	bool inside(ofPoint mouse);
 	void draw();
 
+	int lineWidth;
 	float p1x;
 	float p1y;
 	float p2x;
