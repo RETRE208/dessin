@@ -4,10 +4,21 @@ Circle::Circle(int radius) {
 	x = 100;
 	y = 100;
 	mRadius = radius;
-	color = ofColor::red;
+	primaryColor = ofColor::red;
+	secondaryColor = ofColor::red;
+	isFill = false;
 }
 
 void Circle::draw() {
-	ofSetColor(color);
+	if (isFill)
+	{
+		ofFill();
+		ofSetColor(primaryColor);
+		ofDrawCircle(x, y, mRadius);
+	}
+
+	ofNoFill();
+	ofSetColor(secondaryColor);
+	ofSetLineWidth(lineWidth);
 	ofDrawCircle(x, y, mRadius);
 }

@@ -8,11 +8,14 @@ namespace tp1 {
 		Ellipse();
 		void draw();
 
+		bool isFill;
 		float x;
 		float y;
 		float width;
 		float height;
-		ofColor color;
+		float lineWidth;
+		ofColor primaryColor;
+		ofColor secondaryColor;
 	};
 }
 

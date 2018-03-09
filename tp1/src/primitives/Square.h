@@ -1,18 +1,18 @@
 #pragma once
 
 #include "ofMain.h"
-
-class Circle
+class Square
 {
 public:
-	Circle(int radius);
+	Square();
 	void draw();
-	
+
 	bool isFill;
 	float x;
 	float y;
-	int mRadius;
+	int height;
 	float lineWidth;
 	ofColor primaryColor;
 	ofColor secondaryColor;
 };
+

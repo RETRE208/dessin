@@ -201,7 +201,11 @@ void MainController::openNewPrimitvePanel(string primitiveName) {
 		primitives2DPanels.push_back(ellipsePanel);
 		selectorPanel.addToggle("Ellipse " + to_string(primitives2DPanels.size() - 1));
 	}
-	if (primitiveName == "Sqaure") {
+	if (primitiveName == "Square") {
+		SquarePanel* squarePanel = new SquarePanel();
+		squarePanel->setup("Square " + to_string(primitives2DPanels.size()));
+		primitives2DPanels.push_back(squarePanel);
+		selectorPanel.addToggle("Square " + to_string(primitives2DPanels.size() - 1));
 	}
 }
 

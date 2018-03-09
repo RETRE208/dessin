@@ -1,10 +1,10 @@
 #pragma once
 
 #include "ofxDatGui.h"
-#include "../primitives/Circle.h"
+#include "../primitives/Square.h"
 #include "PrimitivePanel.h"
 
-class CirclePanel : public PrimitivePanel
+class SquarePanel : public PrimitivePanel
 {
 public:
 	void setup(string name);
@@ -13,18 +13,17 @@ public:
 	string getPanelName();
 	void deletePanel();
 
+	string panelName;
 	void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
 	void onButtonEvent(ofxDatGuiButtonEvent e);
 	bool mDragging;
-	string panelName;
-	Circle* circle;
+	Square* square;
 	ofxDatGui* gui;
 	ofxDatGuiColorPicker* primaryPicker;
 	ofxDatGuiColorPicker* secondaryPicker;
 	ofxDatGuiSlider* sx;
 	ofxDatGuiSlider* sy;
-	ofxDatGuiSlider* sr;
+	ofxDatGuiSlider* sheight;
 	ofxDatGuiSlider* slineWidth;
 	ofxDatGuiToggle* isFillToggle;
 };
-
