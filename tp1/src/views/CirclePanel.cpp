@@ -34,7 +34,7 @@ void CirclePanel::update()
 
 void CirclePanel::draw()
 {
-	circle->draw();
+	circle -> draw();
 	update();
 }
 

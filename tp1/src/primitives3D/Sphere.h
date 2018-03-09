@@ -5,17 +5,15 @@
 class Sphere
 {
 public:
-	void setup();
+	Sphere(int radius);
+	bool inside(ofPoint mouse);
 	void draw();
 
-	ofParameterGroup sphereParameters;
-	ofParameter<int> red;
-	ofParameter<int> green;
-	ofParameter<int> blue;
+	float x;
+	float y;
+	float z;
 
-	ofParameter<int> posX;
-	ofParameter<int> posY;
-	ofParameter<int> posZ;
-	ofParameter<int> radius;
+	int mRadius;
+	ofColor color;
 };
 
