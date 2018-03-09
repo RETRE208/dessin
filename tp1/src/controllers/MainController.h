@@ -7,6 +7,7 @@
 #include "../views/PrimitivePanel.h"
 #include "../system/files.h"
 #include <vector>
+#include "../texture/texture.h"
 #include "../views/controllerPanel.h"
 #include "../views/CirclePanel.h"
 #include "../views/RectanglePanel.h"
@@ -14,10 +15,9 @@
 #include "../views/EllipsePanel.h"
 #include "../views/SpherePanel.h"
 #include "../views/CubePanel.h"
+#include "../views/ModelPanel.h"
 #include "ofxAssimpModelLoader.h"
 #include "../views/SelectorPanel.h"
-
-enum class MeshRenderMode { fill, wireframe, points};
 
 class MainController
 {
@@ -34,9 +34,13 @@ public:
 
 	void exportImage();
 	void importImage();
+	void applyTexture(int keyPressed);
+
+	Files files;
+	std::vector<ofImage*> images;
 	void switch3DMode();
 	void switch2DMode();
-	void instanciateNewModel();
+	void instanciateNewModel(ofxAssimpModelLoader model);
 	void openNewPrimitvePanel(string primitiveName);
 	void openNewPrimitve3DPanel(string primitiveName);
 	void removeSelectedPrimitives();
@@ -44,14 +48,8 @@ public:
 	ofLight light;
 	float center_x;
 	float center_y;
-	void switchMeshFill();
-	void switchMeshWireframe();
-	void switchMeshPoints();
-	MeshRenderMode mesh_render_mode;
 
-	Files files;
-	std::vector<ofImage> images;
-	std::vector<ofxAssimpModelLoader> models;
+	std::vector<ModelPanel*> modelsPanels;
 	std::vector<CirclePanel*> circlePrimivites;
 	std::vector<RectanglePanel*> rectanglePrimivites;
 	std::vector<LinePanel*> linePrimivites;
@@ -62,6 +60,7 @@ public:
 	SelectorPanel selectorPanel;
 	controllerPanel controlPanel;
 	PrimitivePanel primitivePanel;
+	Texture texture;
 };
 
 #endif

@@ -224,6 +224,7 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp" />
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.cpp" />
     <ClCompile Include="CIRCLEPANEL.CPP" />
+    <ClCompile Include="src\views\ModelPanel.cpp" />
     <ClCompile Include="src\views\CubePanel.cpp" />
     <ClCompile Include="src\views\SpherePanel.cpp" />
     <ClCompile Include="src\views\EllipsePanel.cpp" />
@@ -241,7 +242,7 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="src\primitives\Circle.cpp" />
     <ClCompile Include="src\system\files.cpp" />
-    <ClCompile Include="src\views\MainPanel.cpp" />
+    <ClCompile Include="src\texture\texture.cpp" />
     <ClCompile Include="src\views\PrimitivePanel.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -318,6 +319,7 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\
     <ClInclude Include="..\..\..\..\addons\ofxGui\src\ofxToggle.h" />
     <ClInclude Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxml.h" />
     <ClInclude Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
+    <ClInclude Include="src\views\ModelPanel.h" />
     <ClInclude Include="src\views\CubePanel.h" />
     <ClInclude Include="src\views\SpherePanel.h" />
     <ClInclude Include="src\views\EllipsePanel.h" />
@@ -334,7 +336,7 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="src\primitives\Circle.h" />
     <ClInclude Include="src\system\files.h" />
-    <ClInclude Include="src\views\MainPanel.h" />
+    <ClInclude Include="src\texture\texture.h" />
     <ClInclude Include="src\views\PrimitivePanel.h" />
   </ItemGroup>
   <ItemGroup>

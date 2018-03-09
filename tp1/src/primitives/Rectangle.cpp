@@ -9,11 +9,6 @@ Rectangle::Rectangle() {
 	color = ofColor::red;
 }
 
-bool Rectangle::inside(ofPoint mouse)
-{
-	return mouse.distance(ofPoint(x, y)) <= height;
-}
-
 void Rectangle::draw() {
 	
 	ofSetColor(color);

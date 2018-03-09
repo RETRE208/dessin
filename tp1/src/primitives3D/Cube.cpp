@@ -12,11 +12,6 @@ Cube::Cube(int cubeWidth, int cubeHeight, int cubeDepth) {
 	color = ofColor::red;
 }
 
-bool Cube::inside(ofPoint mouse)
-{
-	return mouse.distance(ofPoint(x, y, z)) <= width;
-}
-
 void Cube::draw() {
 	ofSetColor(color);
 	ofBoxPrimitive box = ofBoxPrimitive();

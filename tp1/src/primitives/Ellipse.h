@@ -6,7 +6,6 @@ namespace tp1 {
 	{
 	public:
 		Ellipse();
-		bool inside(ofPoint mouse);
 		void draw();
 
 		float x;

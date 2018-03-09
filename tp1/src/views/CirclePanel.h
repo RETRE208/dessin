@@ -8,6 +8,7 @@ class CirclePanel
 public:
 	void setup(string name);
 	void update();
+	void setup();
 	void draw();
 
 	void onColorPickerEvent(ofxDatGuiColorPickerEvent e);

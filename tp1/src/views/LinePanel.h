@@ -19,5 +19,6 @@ public:
 	ofxDatGuiSlider* sp1y;
 	ofxDatGuiSlider* sp2x;
 	ofxDatGuiSlider* sp2y;
+	ofxDatGuiSlider* lineWidth;
 };
 

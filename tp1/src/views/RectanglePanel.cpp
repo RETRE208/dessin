@@ -22,21 +22,9 @@ void RectanglePanel::setup(string name)
 	rectangle->y = ofGetHeight() / 2;
 }
 
-void RectanglePanel::update()
-{
-	if (ofGetMousePressed() && gui->getMouseDown() == false) {
-		ofPoint mouse = ofPoint(ofGetMouseX(), ofGetMouseY());
-		if (rectangle->inside(mouse)) {
-			rectangle->x = mouse.x;
-			rectangle->y = mouse.y;
-		}
-	}
-}
-
 void RectanglePanel::draw()
 {
 	rectangle->draw();
-	update();
 }
 
 void RectanglePanel::onColorPickerEvent(ofxDatGuiColorPickerEvent e)

@@ -9,11 +9,7 @@ void controllerPanel::setup(MainController* mainController)
 	exportBtn = gui->addButton("Export");
 	removeSelected = gui->addButton("Remove selected");
 	mode3DToggle = gui->addToggle("3D Mode");
-	instanciate = gui->addToggle("Instanciate New Model");
-	gui->addLabel("Mesh : ");
-	meshFillToggle = gui->addToggle("   Fill");
-	meshWireframeToggle = gui->addToggle("   Wireframe");
-	meshPointsToggle = gui->addToggle("   Points");
+
 	primitives2D = gui->addDropdown("Primitives 2D", options);
 	primitives3D = gui->addDropdown("Primitives 3D", options3D);
 	gui->addBreak();
@@ -45,32 +41,6 @@ void controllerPanel::onButtonEvent(ofxDatGuiButtonEvent e) {
 			ofLog() << "Switching to 2D mode";
 			mainControllerInstance->switch2DMode();
 			mode2D = true;
-		}
-	}
-	else if (e.target == meshFillToggle) {
-		ofLog() << "Switching to Mesh Fill";
-		mainControllerInstance -> switchMeshFill();
-		meshWireframeToggle -> setChecked(false);
-		meshPointsToggle -> setChecked(false);
-	}
-	else if (e.target == meshWireframeToggle) {
-		ofLog() << "Switching to Mesh Wireframe";
-		mainControllerInstance->switchMeshWireframe();
-		meshFillToggle -> setChecked(false);
-		meshPointsToggle -> setChecked(false);
-	}
-	else if (e.target == meshPointsToggle) {
-		ofLog() << "Switching to Mesh Vertex";
-		mainControllerInstance->switchMeshPoints();
-		meshFillToggle -> setChecked(false);
-		meshWireframeToggle -> setChecked(false);
-	}
-	else if (e.target == instanciate) {
-		try {
-			mainControllerInstance->instanciateNewModel();
-		}
-		catch (exception& e) {
-			ofLog() << e.what();
 		}
 	}
 }
