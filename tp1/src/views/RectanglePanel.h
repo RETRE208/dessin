@@ -2,13 +2,17 @@
 
 #include "ofxDatGui.h"
 #include "../primitives/Rectangle.h"
+#include "PrimitivePanel.h"
 
-class RectanglePanel
+class RectanglePanel : public PrimitivePanel
 {
 public:
 	void setup(string name);
-	void update();
 	void draw();
+	void setColor(ofColor color);
+	string getPanelName();
+	void deletePanel();
+
 	string panelName;
 	void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
 	bool mDragging;

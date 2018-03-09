@@ -5,7 +5,7 @@ void CirclePanel::setup(string name)
 	circle = new Circle(150);
 	panelName = name;
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
-	gui->addHeader("Circle Panel");
+	gui->addHeader(name);
 	sx = gui->addSlider("CIRCLE X", 0, ofGetWidth());
 	sy = gui->addSlider("CIRCLE Y", 0, ofGetHeight());
 	sr = gui->addSlider("CIRCLE RADUIS", 0, ofGetWidth()/2);
@@ -22,11 +22,24 @@ void CirclePanel::setup(string name)
 
 void CirclePanel::draw()
 {
-	circle -> draw();
+	circle-> draw();
 }
 
 void CirclePanel::onColorPickerEvent(ofxDatGuiColorPickerEvent e)
 {
 	circle->color = e.color;
+}
+
+void CirclePanel::setColor(ofColor color) {
+	circle->color = color;
+}
+
+string CirclePanel::getPanelName() {
+	return panelName;
+}
+
+void CirclePanel::deletePanel()
+{
+	gui->~ofxDatGui();
 }
 

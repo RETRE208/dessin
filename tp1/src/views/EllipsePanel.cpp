@@ -5,7 +5,7 @@ void EllipsePanel::setup(string name)
 	ellipse = new tp1::Ellipse();
 	panelName = name;
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
-	gui->addHeader("Ellipse Panel");
+	gui->addHeader(name);
 	sx = gui->addSlider("Ellipse X", 0, ofGetWidth());
 	sy = gui->addSlider("Ellipse Y", 0, ofGetHeight());
 	swidth = gui->addSlider("Ellipse width", 0, ofGetWidth() / 2);
@@ -30,5 +30,18 @@ void EllipsePanel::draw()
 void EllipsePanel::onColorPickerEvent(ofxDatGuiColorPickerEvent e)
 {
 	ellipse->color = e.color;
+}
+
+void EllipsePanel::setColor(ofColor color) {
+	ellipse->color = color;
+}
+
+string EllipsePanel::getPanelName() {
+	return panelName;
+}
+
+void EllipsePanel::deletePanel()
+{
+	gui->~ofxDatGui();
 }
 

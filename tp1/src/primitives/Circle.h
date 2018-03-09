@@ -12,5 +12,4 @@ public:
 	float y;
 	int mRadius;
 	ofColor color;
-
 };

@@ -109,7 +109,8 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;%(AdditionalIncl
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32\assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32\assimp.lib;
+;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
     </PostBuildEvent>
@@ -223,9 +224,9 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxmlerror.cpp" />
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp" />
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.cpp" />
-    <ClCompile Include="CIRCLEPANEL.CPP" />
     <ClCompile Include="src\views\ModelPanel.cpp" />
     <ClCompile Include="src\views\CubePanel.cpp" />
+    <ClCompile Include="src\views\SelectorPanel.cpp" />
     <ClCompile Include="src\views\SpherePanel.cpp" />
     <ClCompile Include="src\views\EllipsePanel.cpp" />
     <ClCompile Include="src\primitives\Ellipse.cpp" />
@@ -321,6 +322,7 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\
     <ClInclude Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
     <ClInclude Include="src\views\ModelPanel.h" />
     <ClInclude Include="src\views\CubePanel.h" />
+    <ClInclude Include="src\views\SelectorPanel.h" />
     <ClInclude Include="src\views\SpherePanel.h" />
     <ClInclude Include="src\views\EllipsePanel.h" />
     <ClInclude Include="src\primitives\Ellipse.h" />
