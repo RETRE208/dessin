@@ -5,4 +5,5 @@
 class Files {
 public:
 	string getFile();
+	string setFile();
 };

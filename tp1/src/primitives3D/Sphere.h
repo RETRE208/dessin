@@ -2,16 +2,18 @@
 
 #include "ofMain.h"
 
-class Circle
+class Sphere
 {
 public:
-	Circle(int radius);
+	Sphere(int radius);
 	bool inside(ofPoint mouse);
 	void draw();
-	
+
 	float x;
 	float y;
+	float z;
+
 	int mRadius;
 	ofColor color;
-
 };
+

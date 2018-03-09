@@ -4,18 +4,76 @@
 
 void MainPanel::setup(MainController* mainController) {
 	mainControllerInstance = mainController;
-	gui.setup();
-	gui.add(intSlider.setup("int slider", 0, 0, 300));
-	gui.add(floatSlider.setup("float slider", 33.33, 0.0, 66.66));
-	gui.add(toggle.setup("toggle", false));
+	leftMenu.setup();
+	leftMenu.setPosition(0, 0);
+	leftMenu.setDefaultWidth(200);
+	mode3DToggle.addListener(this, &MainPanel::toggle3DMode);
+	leftMenu.add(mode3DToggle.setup("3D Mode", false));
 	importBtn.addListener(this, &MainPanel::importImage);
-	gui.add(importBtn.setup("Import"));
+	leftMenu.add(importBtn.setup("Import"));
 	exportBtn.addListener(this, &MainPanel::exportImage);
-	gui.add(exportBtn.setup("Export"));
+	leftMenu.add(exportBtn.setup("Export"));
+
+	instanciateBtn.addListener(this, &MainPanel::instanciateNewModel);
+	leftMenu.add(instanciateBtn.setup("Instanciate New Model"));
+	leftMenu.add(meshLabel.setup("Mesh", "", 200, 20));
+	meshFill.addListener(this, &MainPanel::toggleMeshFill);
+	leftMenu.add(meshFill.setup("Fill", true));
+	meshWireframe.addListener(this, &MainPanel::toggleMeshWireframe);
+	leftMenu.add(meshWireframe.setup("Wireframe", false));
+	meshPoints.addListener(this, &MainPanel::toggleMeshPoints);
+	leftMenu.add(meshPoints.setup("Points", false));
 }
 
 void MainPanel::draw() {
-	gui.draw();
+	leftMenu.draw();
+}
+
+void MainPanel::instanciateNewModel() {
+	try {
+		mainControllerInstance->instanciateNewModel();
+	}
+	catch (exception& e) {
+		ofLog() << e.what();
+	}
+}
+
+void MainPanel::toggleMeshFill(bool& pressed) {
+	if (pressed == true) {
+		ofLog() << "Switching to Mesh Fill";
+		mainControllerInstance->switchMeshFill();
+		meshWireframe = false;
+		meshPoints = false;
+	}
+}
+
+void MainPanel::toggleMeshWireframe(bool& pressed) {
+	if (pressed == true) {
+		ofLog() << "Switching to Mesh Wireframe";
+		mainControllerInstance->switchMeshWireframe();
+		meshFill = false;
+		meshPoints = false;
+	}
+}
+
+void MainPanel::toggleMeshPoints(bool& pressed) {
+	if (pressed == true) {
+		ofLog() << "Switching to Mesh Vertex";
+		mainControllerInstance->switchMeshPoints();
+		meshFill = false;
+		meshWireframe = false;
+	}
+}
+
+void MainPanel::toggle3DMode(bool& pressed) {
+	if (pressed == true) {
+		ofLog() << "Switching to 3D mode";
+		mainControllerInstance -> switch3DMode();
+	}
+	else {
+		ofLog() << "Switching to 2D mode";
+		mainControllerInstance -> switch2DMode();
+	}
 }
 
 void MainPanel::importImage() {

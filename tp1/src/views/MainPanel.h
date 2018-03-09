@@ -16,15 +16,25 @@ public:
 	void draw();
 	void importImage();
 	void exportImage();
+	void toggle3DMode(bool& pressed);
+	void toggleMeshFill(bool& pressed);
+	void toggleMeshWireframe(bool& pressed);
+	void toggleMeshPoints(bool& pressed);
+	void instanciateNewModel();
 
 	MainController* mainControllerInstance;
 
-	ofxPanel gui;
+	ofxPanel leftMenu;
 	ofxIntSlider intSlider;
 	ofxFloatSlider floatSlider;
-	ofxToggle toggle;
+	ofxToggle mode3DToggle;
 	ofxButton importBtn;
 	ofxButton exportBtn;
+	ofxButton instanciateBtn;
+	ofxLabel meshLabel;
+	ofxToggle meshFill;
+	ofxToggle meshWireframe;
+	ofxToggle meshPoints;
 };
 
 #endif

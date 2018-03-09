@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "ofxGui.h"
 #include "texture/texture.h"
+#include "ofxDatGui.h"
 #include "controllers/MainController.h"
 
 class ofApp : public ofBaseApp {
