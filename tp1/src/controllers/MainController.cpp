@@ -231,3 +231,7 @@ void MainController::openNewPrimitve3DPanel(string primitiveName) {
 		spherePrimivites.push_back(spherePanel);
 	}
 }
+
+void MainController::changeImageOpacity(ofImage* image, int alpha) {
+	texture.changeOpacity(image, alpha);
+}

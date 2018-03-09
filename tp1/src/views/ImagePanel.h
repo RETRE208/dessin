@@ -21,17 +21,20 @@ public:
 	int imageHeight;
 	int x;
 	int y;
+	int alpha;
 	ofxDatGui* gui;
 	ofxDatGuiSlider* alphaSlider;
 	ofxDatGuiSlider* sliderX;
 	ofxDatGuiSlider* sliderY;
 	ofxDatGuiSlider* sliderWidth;
 	ofxDatGuiSlider* sliderHeight;
+	ofxDatGuiSlider* sliderAlpha;
 
 	ofxDatGuiButton* embossBtn;
 	ofxDatGuiButton* sharpenBtn;
 	ofxDatGuiButton* edgeDetectBtn;
 	ofxDatGuiButton* blurBtn;
+	ofxDatGuiButton* alphaBtn;
 };
 #endif
 

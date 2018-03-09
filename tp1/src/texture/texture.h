@@ -76,5 +76,6 @@ public:
 
 	void setup();
 	void filter(ofImage* image);
+	void changeOpacity(ofImage* image, int alpha);
 };
 

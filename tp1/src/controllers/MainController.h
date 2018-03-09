@@ -44,6 +44,7 @@ public:
 	void instanciateNewModel();
 	void openNewPrimitvePanel(string primitiveName);
 	void openNewPrimitve3DPanel(string primitiveName);
+	void changeImageOpacity(ofImage* image, int alpha);
 
 	ofLight light;
 	float center_x;
