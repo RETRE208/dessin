@@ -36,7 +36,7 @@ public:
 
 	void exportImage();
 	void importImage();
-	void applyTexture(int keyPressed);
+	void applyTexture(int typeTexture, ofImage* image);
 
 	Files files;
 	void switch3DMode();

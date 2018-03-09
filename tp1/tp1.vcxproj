@@ -124,7 +124,7 @@ C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\li
       <WarningLevel>Level3</WarningLevel>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64\assimp.lib;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64\assimp.lib;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;
+      <AdditionalIncludeDirectories>C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64\assimp.lib $(NOINHERIT);C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;
 C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src;
 C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;
 C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;
@@ -137,7 +137,8 @@ C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;%(
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64\assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64\assimp.lib;
+;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
     </PostBuildEvent>
@@ -225,7 +226,6 @@ C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\li
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxmlerror.cpp" />
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp" />
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.cpp" />
-    <ClCompile Include="CIRCLEPANEL.CPP" />
     <ClCompile Include="src\views\CubePanel.cpp" />
     <ClCompile Include="src\views\ImagePanel.cpp" />
     <ClCompile Include="src\views\SpherePanel.cpp" />

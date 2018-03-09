@@ -1,16 +1,21 @@
 #pragma once
 
+#ifndef ImagePanel_Included
+#define ImagePanel_Included
+
 #include "ofxDatGui.h"
+
+class MainController;
 
 class ImagePanel
 {
 public:
-	void setup(string path);
-	void update();
+	void setup(string path, MainController* mainController);
 	void draw();
+	void onButtonEvent(ofxDatGuiButtonEvent e);
 
+	MainController* mainControllerInstance;
 	ofImage newImage;
-	bool mDragging;
 
 	int imageWidth;
 	int imageHeight;
@@ -22,5 +27,11 @@ public:
 	ofxDatGuiSlider* sliderY;
 	ofxDatGuiSlider* sliderWidth;
 	ofxDatGuiSlider* sliderHeight;
+
+	ofxDatGuiButton* embossBtn;
+	ofxDatGuiButton* sharpenBtn;
+	ofxDatGuiButton* edgeDetectBtn;
+	ofxDatGuiButton* blurBtn;
 };
+#endif
 

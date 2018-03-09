@@ -83,7 +83,7 @@ void MainController::importImage() {
 		string imagePath = files.getFile();
 		if (imagePath.back() == 'g') {
 			ImagePanel* imagePanel = new ImagePanel();
-			imagePanel->setup(imagePath);
+			imagePanel->setup(imagePath, this);
 			imagesPanels.push_back(imagePanel);
 			ofLog() << "<import image: " << imagePath << ">";
 		}
@@ -105,32 +105,30 @@ void MainController::importImage() {
 	}
 }
 
-void MainController::applyTexture(int keyPressed) {
-	switch (keyPressed)
+void MainController::applyTexture(int typeTexture, ofImage* image) {
+	switch (typeTexture)
 	{
-	case 49:  // key 1
+	case 1:
 		texture.kernel_type = ConvolutionKernel::identity;
 		texture.kernel_name = "identité";
-
 		break;
 
-	case 50:  // key 2
+	case 2:
 		texture.kernel_type = ConvolutionKernel::emboss;
 		texture.kernel_name = "bosseler";
-
 		break;
 
-	case 51:  // key 3
+	case 3:
 		texture.kernel_type = ConvolutionKernel::sharpen;
 		texture.kernel_name = "aiguiser";
 		break;
 
-	case 52:  // key 4
+	case 4:
 		texture.kernel_type = ConvolutionKernel::edge_detect;
-		texture.kernel_name = "d�tection de bordure";
+		texture.kernel_name = "détection de bordure";
 		break;
 
-	case 53:  // key 5
+	case 5:
 		texture.kernel_type = ConvolutionKernel::blur;
 		texture.kernel_name = "flou";
 		break;
@@ -138,6 +136,7 @@ void MainController::applyTexture(int keyPressed) {
 	default:
 		break;
 	}
+	texture.filter(image);
 }
 	
 void MainController::switch2DMode() {

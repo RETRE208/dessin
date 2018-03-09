@@ -1,7 +1,9 @@
 #include "ImagePanel.h"
+#include "../controllers/MainController.h"
 
-void ImagePanel::setup(string path)
+void ImagePanel::setup(string path, MainController* mainController)
 {
+	mainControllerInstance = mainController;
 	newImage.load(path);
 
 	x = 200;
@@ -15,21 +17,35 @@ void ImagePanel::setup(string path)
 	sliderY = gui->addSlider("Image Y", 0, ofGetHeight(), 200);
 	sliderWidth = gui->addSlider("Image WIDTH", 0, ofGetWidth(), newImage.getWidth());
 	sliderHeight = gui->addSlider("Image HEIGHT", 0, ofGetHeight(), newImage.getHeight());
+	embossBtn = gui->addButton("Emboss");
+	sharpenBtn = gui->addButton("Sharpen");
+	edgeDetectBtn = gui->addButton("Edge Detect");
+	blurBtn = gui->addButton("Blur");
 
 	sliderX->bind(x);
 	sliderY->bind(y);
 	sliderWidth->bind(imageWidth);
 	sliderHeight->bind(imageHeight);
+
+	gui->onButtonEvent(this, &ImagePanel::onButtonEvent);
 }
 
-void ImagePanel::update()
-{
-	if (ofGetMousePressed() && gui->getMouseDown() == false) {
-		ofPoint mouse = ofPoint(ofGetMouseX(), ofGetMouseY());
-		if (mouse.distance(ofPoint(x, y)) <= imageHeight) {
-			x = mouse.x;
-			y = mouse.y;
-		}
+void ImagePanel::onButtonEvent(ofxDatGuiButtonEvent e) {
+	if (e.target == embossBtn) {
+		ofLog() << "Button emboss pressed";
+		mainControllerInstance->applyTexture(2, &newImage);
+	}
+	else if (e.target == sharpenBtn) {
+		ofLog() << "Button sharpen pressed";
+		mainControllerInstance->applyTexture(3, &newImage);
+	}
+	else if (e.target == edgeDetectBtn) {
+		ofLog() << "Button edge detect pressed";
+		mainControllerInstance->applyTexture(4, &newImage);
+	}
+	else if (e.target == blurBtn) {
+		ofLog() << "Button blur pressed";
+		mainControllerInstance->applyTexture(5, &newImage);
 	}
 }
 
