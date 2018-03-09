@@ -43,15 +43,8 @@ void MainController::draw()
 		ofDisableDepthTest();
 	}
 	else {
-    for (int i = 0; i < images.size(); i++) {
-      int imageWidth = images[i]->getWidth();
-      int imageHeight = images[i]->getHeight();
-
-      images[i]->draw(
-        DRAWING_ZONE_X_LIMIT,
-        DRAWING_ZONE_Y_LIMIT,
-        imageWidth,
-        imageHeight);
+		for (int i = 0; i < imagesPanels.size(); i++) {
+			imagesPanels[i]->draw();
 		}
 		for (int i = 0; i < circlePrimivites.size(); i++) {
 			circlePrimivites[i] -> draw();
@@ -65,6 +58,7 @@ void MainController::draw()
 		for (int i = 0; i < ellipsePrimivites.size(); i++) {
 			ellipsePrimivites[i]->draw();
 		}
+		ofSetColor(255, 255, 255);
 	}
 }
 
@@ -88,9 +82,9 @@ void MainController::importImage() {
 	try {
 		string imagePath = files.getFile();
 		if (imagePath.back() == 'g') {
-		ofImage *newImage = new ofImage;
-		newImage->load(imagePath);
-		images.push_back(newImage);
+			ImagePanel* imagePanel = new ImagePanel();
+			imagePanel->setup(imagePath);
+			imagesPanels.push_back(imagePanel);
 			ofLog() << "<import image: " << imagePath << ">";
 		}
 		else if (imagePath.back() == 'j' || imagePath.back() == 'e') {
@@ -116,7 +110,7 @@ void MainController::applyTexture(int keyPressed) {
 	{
 	case 49:  // key 1
 		texture.kernel_type = ConvolutionKernel::identity;
-		texture.kernel_name = "identit�";
+		texture.kernel_name = "identité";
 
 		break;
 
@@ -144,7 +138,6 @@ void MainController::applyTexture(int keyPressed) {
 	default:
 		break;
 	}
-	texture.filter(images[0]);
 }
 	
 void MainController::switch2DMode() {

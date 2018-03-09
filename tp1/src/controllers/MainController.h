@@ -16,6 +16,7 @@
 #include "../views/EllipsePanel.h"
 #include "../views/SpherePanel.h"
 #include "../views/CubePanel.h"
+#include "../views/ImagePanel.h"
 #include "ofxAssimpModelLoader.h"
 
 enum class MeshRenderMode { fill, wireframe, points};
@@ -38,7 +39,6 @@ public:
 	void applyTexture(int keyPressed);
 
 	Files files;
-	std::vector<ofImage*> images;
 	void switch3DMode();
 	void switch2DMode();
 	void instanciateNewModel();
@@ -60,6 +60,7 @@ public:
 	std::vector<EllipsePanel*> ellipsePrimivites;
 	std::vector<SpherePanel*> spherePrimivites;
 	std::vector<CubePanel*> cubePrimivites;
+	std::vector<ImagePanel*> imagesPanels;
 
 	MainPanel mainPanel;
 	controllerPanel controlPanel;
