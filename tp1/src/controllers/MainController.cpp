@@ -55,15 +55,35 @@ void MainController::draw()
 				imageHeight);
 		}
 		for (int i = 0; i < circlePrimivites.size(); i++) {
+			if (selectorPanel.getIfSelected(circlePrimivites[i]->panelName)) {
+				circlePrimivites[i]->circle->color.r = selectorPanel.redSlider;
+				circlePrimivites[i]->circle->color.g = selectorPanel.greenSlider;
+				circlePrimivites[i]->circle->color.b = selectorPanel.blueSlider;
+			}
 			circlePrimivites[i] -> draw();
 		}
 		for (int i = 0; i < rectanglePrimivites.size(); i++) {
+			if (selectorPanel.getIfSelected(rectanglePrimivites[i]->panelName)) {
+				rectanglePrimivites[i]->rectangle->color.r = selectorPanel.redSlider;
+				rectanglePrimivites[i]->rectangle->color.g = selectorPanel.greenSlider;
+				rectanglePrimivites[i]->rectangle->color.b = selectorPanel.blueSlider;
+			}
 			rectanglePrimivites[i]->draw();
 		}
 		for (int i = 0; i < linePrimivites.size(); i++) {
+			if (selectorPanel.getIfSelected(linePrimivites[i]->panelName)) {
+				linePrimivites[i]->line->color.r = selectorPanel.redSlider;
+				linePrimivites[i]->line->color.g = selectorPanel.greenSlider;
+				linePrimivites[i]->line->color.b = selectorPanel.blueSlider;
+			}
 			linePrimivites[i]->draw();
 		}
 		for (int i = 0; i < ellipsePrimivites.size(); i++) {
+			if (selectorPanel.getIfSelected(ellipsePrimivites[i]->panelName)) {
+				ellipsePrimivites[i]->ellipse->color.r = selectorPanel.redSlider;
+				ellipsePrimivites[i]->ellipse->color.g = selectorPanel.greenSlider;
+				ellipsePrimivites[i]->ellipse->color.b = selectorPanel.blueSlider;
+			}
 			ellipsePrimivites[i]->draw();
 		}
 	}

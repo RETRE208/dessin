@@ -14,6 +14,9 @@ public:
 
 	ofxPanel selectorPanel;
 	ofxToggle* toggle;
+	ofxIntSlider redSlider;
+	ofxIntSlider greenSlider;
+	ofxIntSlider blueSlider;
 
 	vector<ofxToggle*> toggleList;
 };

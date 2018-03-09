@@ -2,6 +2,9 @@
 
 void SelectorPanel::setup() {
 	selectorPanel.setup();
+	selectorPanel.add(redSlider.setup("red", 0, 0, 255));
+	selectorPanel.add(greenSlider.setup("green", 0, 0, 255));
+	selectorPanel.add(blueSlider.setup("blue", 0, 0, 255));
 	selectorPanel.setPosition(0, 310);
 }
 
@@ -27,6 +30,10 @@ void SelectorPanel::removeToggle(string name) {
 	}
 
 	selectorPanel.clear();
+	selectorPanel.add(redSlider.setup("red", redSlider, 0, 255));
+	selectorPanel.add(greenSlider.setup("green", greenSlider, 0, 255));
+	selectorPanel.add(blueSlider.setup("blue", blueSlider, 0, 255));
+
 	for (int i = 0; i < toggleList.size(); i++) {
 		selectorPanel.add(toggleList[i]);
 	}
