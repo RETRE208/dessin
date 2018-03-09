@@ -8,6 +8,7 @@
 #include "../system/files.h"
 #include <vector>
 #include "../views/MainPanel.h"
+#include "../texture/texture.h"
 #include "../views/controllerPanel.h"
 #include "../views/CirclePanel.h"
 #include "../views/RectanglePanel.h"
@@ -34,6 +35,10 @@ public:
 
 	void exportImage();
 	void importImage();
+	void applyTexture(int keyPressed);
+
+	Files files;
+	std::vector<ofImage*> images;
 	void switch3DMode();
 	void switch2DMode();
 	void instanciateNewModel();
@@ -48,8 +53,6 @@ public:
 	void switchMeshPoints();
 	MeshRenderMode mesh_render_mode;
 
-	Files files;
-	std::vector<ofImage> images;
 	std::vector<ofxAssimpModelLoader> models;
 	std::vector<CirclePanel*> circlePrimivites;
 	std::vector<RectanglePanel*> rectanglePrimivites;
@@ -61,6 +64,7 @@ public:
 	MainPanel mainPanel;
 	controllerPanel controlPanel;
 	PrimitivePanel primitivePanel;
+	Texture texture;
 };
 
 #endif

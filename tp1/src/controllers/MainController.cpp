@@ -25,7 +25,7 @@ void MainController::draw()
 			case MeshRenderMode::fill:
 				models[i].draw(OF_MESH_FILL);
 				break;
-
+          
 			case MeshRenderMode::wireframe:
 				models[i].draw(OF_MESH_WIREFRAME);
 				break;
@@ -43,15 +43,15 @@ void MainController::draw()
 		ofDisableDepthTest();
 	}
 	else {
-		for (int i = 0; i < images.size(); i++) {
-			int imageWidth = images[i].getWidth();
-			int imageHeight = images[i].getHeight();
+    for (int i = 0; i < images.size(); i++) {
+      int imageWidth = images[i]->getWidth();
+      int imageHeight = images[i]->getHeight();
 
-			images[i].draw(
-				DRAWING_ZONE_X_LIMIT,
-				DRAWING_ZONE_Y_LIMIT,
-				imageWidth,
-				imageHeight);
+      images[i]->draw(
+        DRAWING_ZONE_X_LIMIT,
+        DRAWING_ZONE_Y_LIMIT,
+        imageWidth,
+        imageHeight);
 		}
 		for (int i = 0; i < circlePrimivites.size(); i++) {
 			circlePrimivites[i] -> draw();
@@ -88,9 +88,9 @@ void MainController::importImage() {
 	try {
 		string imagePath = files.getFile();
 		if (imagePath.back() == 'g') {
-			ofImage newImage;
-			newImage.load(imagePath);
-			images.push_back(newImage);
+		ofImage *newImage = new ofImage;
+		newImage->load(imagePath);
+		images.push_back(newImage);
 			ofLog() << "<import image: " << imagePath << ">";
 		}
 		else if (imagePath.back() == 'j' || imagePath.back() == 'e') {
@@ -111,6 +111,42 @@ void MainController::importImage() {
 	}
 }
 
+void MainController::applyTexture(int keyPressed) {
+	switch (keyPressed)
+	{
+	case 49:  // key 1
+		texture.kernel_type = ConvolutionKernel::identity;
+		texture.kernel_name = "identit�";
+
+		break;
+
+	case 50:  // key 2
+		texture.kernel_type = ConvolutionKernel::emboss;
+		texture.kernel_name = "bosseler";
+
+		break;
+
+	case 51:  // key 3
+		texture.kernel_type = ConvolutionKernel::sharpen;
+		texture.kernel_name = "aiguiser";
+		break;
+
+	case 52:  // key 4
+		texture.kernel_type = ConvolutionKernel::edge_detect;
+		texture.kernel_name = "d�tection de bordure";
+		break;
+
+	case 53:  // key 5
+		texture.kernel_type = ConvolutionKernel::blur;
+		texture.kernel_name = "flou";
+		break;
+
+	default:
+		break;
+	}
+	texture.filter(images[0]);
+}
+	
 void MainController::switch2DMode() {
 	mode3DState = false;
 	ofDisableLighting();
