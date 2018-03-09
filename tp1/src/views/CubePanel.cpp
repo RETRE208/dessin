@@ -32,21 +32,9 @@ void CubePanel::setup()
 	cube->y = ofGetHeight() / 2;
 }
 
-void CubePanel::update()
-{
-	if (ofGetMousePressed() && gui->getMouseDown() == false) {
-		ofPoint mouse = ofPoint(ofGetMouseX(), ofGetMouseY());
-		if (cube->inside(mouse)) {
-			cube->x = mouse.x;
-			cube->y = mouse.y;
-		}
-	}
-}
-
 void CubePanel::draw()
 {
 	cube->draw();
-	update();
 }
 
 void CubePanel::onColorPickerEvent(ofxDatGuiColorPickerEvent e)

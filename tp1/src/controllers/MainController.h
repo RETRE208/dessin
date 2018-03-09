@@ -7,7 +7,6 @@
 #include "../views/PrimitivePanel.h"
 #include "../system/files.h"
 #include <vector>
-#include "../views/MainPanel.h"
 #include "../texture/texture.h"
 #include "../views/controllerPanel.h"
 #include "../views/CirclePanel.h"
@@ -17,9 +16,9 @@
 #include "../views/SpherePanel.h"
 #include "../views/CubePanel.h"
 #include "../views/ImagePanel.h"
+#include "../views/ModelPanel.h"
 #include "ofxAssimpModelLoader.h"
-
-enum class MeshRenderMode { fill, wireframe, points};
+#include "../views/SelectorPanel.h"
 
 class MainController
 {
@@ -41,7 +40,7 @@ public:
 	Files files;
 	void switch3DMode();
 	void switch2DMode();
-	void instanciateNewModel();
+	void instanciateNewModel(ofxAssimpModelLoader model);
 	void openNewPrimitvePanel(string primitiveName);
 	void openNewPrimitve3DPanel(string primitiveName);
 	void changeImageOpacity(ofImage* image, int alpha);
@@ -49,21 +48,13 @@ public:
 	ofLight light;
 	float center_x;
 	float center_y;
-	void switchMeshFill();
-	void switchMeshWireframe();
-	void switchMeshPoints();
-	MeshRenderMode mesh_render_mode;
 
-	std::vector<ofxAssimpModelLoader> models;
-	std::vector<CirclePanel*> circlePrimivites;
-	std::vector<RectanglePanel*> rectanglePrimivites;
-	std::vector<LinePanel*> linePrimivites;
-	std::vector<EllipsePanel*> ellipsePrimivites;
+	std::vector<ModelPanel*> modelsPanels;
 	std::vector<SpherePanel*> spherePrimivites;
 	std::vector<CubePanel*> cubePrimivites;
 	std::vector<ImagePanel*> imagesPanels;
 
-	MainPanel mainPanel;
+	SelectorPanel selectorPanel;
 	controllerPanel controlPanel;
 	PrimitivePanel primitivePanel;
 	Texture texture;

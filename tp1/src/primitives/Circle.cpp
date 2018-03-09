@@ -7,11 +7,6 @@ Circle::Circle(int radius) {
 	color = ofColor::red;
 }
 
-bool Circle::inside(ofPoint mouse)
-{
-	return mouse.distance(ofPoint(x, y)) <= mRadius;
-}
-
 void Circle::draw() {
 	ofSetColor(color);
 	ofDrawCircle(x, y, mRadius);

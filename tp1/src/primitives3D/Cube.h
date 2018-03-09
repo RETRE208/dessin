@@ -6,7 +6,6 @@ class Cube
 {
 public:
 	Cube(int cubeWidth, int cubeHeight, int cubeDepth);
-	bool inside(ofPoint mouse);
 	void draw();
 
 	float x;

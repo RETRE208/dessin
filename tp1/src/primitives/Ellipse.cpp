@@ -9,11 +9,6 @@ Ellipse::Ellipse() {
 	color = ofColor::green;
 }
 
-bool Ellipse::inside(ofPoint mouse)
-{
-	return mouse.distance(ofPoint(x, y)) <= width;
-}
-
 void Ellipse::draw() {
 	ofSetColor(color);
 	ofDrawEllipse(x, y, width, height);

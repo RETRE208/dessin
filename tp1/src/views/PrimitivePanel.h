@@ -2,12 +2,17 @@
 
 #include "ofMain.h"
 #include "ofxGui.h"
-#include "../primitives/Circle.h";
-#include "../primitives3D/Sphere.h";
-#include "../primitives3D/Cube.h";
+#include "../primitives/Circle.h"
+#include "../primitives/Rectangle.h"
+#include "../primitives/Ligne.h"
+#include "../primitives/Ellipse.h"
 
 class PrimitivePanel
 {
 public:
-	void draw();
+	virtual void draw();
+	virtual void setup(string name);
+	virtual void setColor(ofColor color);
+	virtual string getPanelName();
+	virtual void deletePanel();
 };

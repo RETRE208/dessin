@@ -19,15 +19,11 @@ public:
 	
 	ofxDatGuiButton* importBtn;
 	ofxDatGuiButton* exportBtn;
+	ofxDatGuiButton* removeSelected;
 	ofxDatGuiButton* instanciate;
 	ofxDatGuiToggle* mode3DToggle;
-	ofxDatGuiToggle* meshFillToggle;
-	ofxDatGuiToggle* meshWireframeToggle;
-	ofxDatGuiToggle* meshPointsToggle;
+
 	bool mode2D = true;
-	bool meshFillState = false;
-	bool meshWireframeState = false;
-	bool meshPointsState = false;
 	void onButtonEvent(ofxDatGuiButtonEvent e);
 
 	ofxDatGuiDropdown* primitives2D;

@@ -2,15 +2,19 @@
 
 #include "ofxDatGui.h"
 #include "../primitives/Ellipse.h"
+#include "PrimitivePanel.h"
 using namespace tp1;
 
-class EllipsePanel
+class EllipsePanel : public PrimitivePanel
 {
 public:
-	void setup();
-	void update();
+	void setup(string name);
 	void draw();
+	void setColor(ofColor color);
+	string getPanelName();
+	void deletePanel();
 
+	string panelName;
 	void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
 	bool mDragging;
 	tp1::Ellipse* ellipse;

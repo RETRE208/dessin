@@ -22,21 +22,9 @@ void SpherePanel::setup()
 	sphere -> y = ofGetHeight() / 2;
 }
 
-void SpherePanel::update()
-{
-	if (ofGetMousePressed() && gui->getMouseDown() == false) {
-		ofPoint mouse = ofPoint(ofGetMouseX(), ofGetMouseY());
-		if (sphere->inside(mouse)) {
-			sphere->x = mouse.x;
-			sphere->y = mouse.y;
-		}
-	}
-}
-
 void SpherePanel::draw()
 {
 	sphere->draw();
-	update();
 }
 
 void SpherePanel::onColorPickerEvent(ofxDatGuiColorPickerEvent e)
