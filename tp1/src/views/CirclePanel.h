@@ -2,14 +2,16 @@
 
 #include "ofxDatGui.h"
 #include "../primitives/Circle.h"
+#include "PrimitivePanel.h"
 
-class CirclePanel
+class CirclePanel : public PrimitivePanel
 {
 public:
 	void setup(string name);
-	void update();
-	void setup();
 	void draw();
+	void setColor(ofColor color);
+	string getPanelName();
+	void deletePanel();
 
 	void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
 	bool mDragging;

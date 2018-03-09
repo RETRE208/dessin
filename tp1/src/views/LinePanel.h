@@ -2,13 +2,17 @@
 
 #include "ofxDatGui.h"
 #include "../primitives/Ligne.h"
+#include "PrimitivePanel.h"
 
-class LinePanel
+class LinePanel : public PrimitivePanel
 {
 public:
 	void setup(string name);
-	void update();
 	void draw();
+	void setColor(ofColor color);
+	string getPanelName();
+	void deletePanel();
+
 	string panelName;
 	void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
 	bool mDragging;

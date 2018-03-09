@@ -5,7 +5,7 @@ void LinePanel::setup(string name)
 	line = new Ligne();
 	panelName = name;
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
-	gui->addHeader("Line Panel");
+	gui->addHeader(name);
 	sp1x = gui->addSlider("LINE POINT 1 X", 0, ofGetWidth());
 	sp1y = gui->addSlider("LINE POINT 1 Y", 0, ofGetHeight());
 	sp2x = gui->addSlider("LINE POINT 2 X", 0, ofGetWidth());
@@ -34,5 +34,18 @@ void LinePanel::draw()
 void LinePanel::onColorPickerEvent(ofxDatGuiColorPickerEvent e)
 {
 	line->color = e.color;
+}
+
+void LinePanel::setColor(ofColor color) {
+	line->color = color;
+}
+
+string LinePanel::getPanelName() {
+	return panelName;
+}
+
+void LinePanel::deletePanel()
+{
+	gui->~ofxDatGui();
 }
 

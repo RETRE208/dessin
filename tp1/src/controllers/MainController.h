@@ -50,12 +50,9 @@ public:
 	float center_y;
 
 	std::vector<ModelPanel*> modelsPanels;
-	std::vector<CirclePanel*> circlePrimivites;
-	std::vector<RectanglePanel*> rectanglePrimivites;
-	std::vector<LinePanel*> linePrimivites;
-	std::vector<EllipsePanel*> ellipsePrimivites;
 	std::vector<SpherePanel*> spherePrimivites;
 	std::vector<CubePanel*> cubePrimivites;
+	std::vector<PrimitivePanel*> primitives2DPanels;
 
 	SelectorPanel selectorPanel;
 	controllerPanel controlPanel;

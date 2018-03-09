@@ -42,67 +42,26 @@ void MainController::draw()
         imageWidth,
         imageHeight);
 		}
-		for (int i = 0; i < circlePrimivites.size(); i++) {
-			if (selectorPanel.getIfSelected(circlePrimivites[i]->panelName)) {
-				circlePrimivites[i]->circle->color.r = selectorPanel.redSlider;
-				circlePrimivites[i]->circle->color.g = selectorPanel.greenSlider;
-				circlePrimivites[i]->circle->color.b = selectorPanel.blueSlider;
+		for (int i = 0; i < primitives2DPanels.size(); i++) {
+			if (selectorPanel.getIfSelected(primitives2DPanels[i]->getPanelName())) {
+				ofLog() << "toggle" << primitives2DPanels[i]->getPanelName();
+				ofColor color;
+				color.r = selectorPanel.redSlider;
+				color.g = selectorPanel.greenSlider;
+				color.b = selectorPanel.blueSlider;
+				primitives2DPanels[i]->setColor(color);
 			}
-			circlePrimivites[i] -> draw();
-		}
-		for (int i = 0; i < rectanglePrimivites.size(); i++) {
-			if (selectorPanel.getIfSelected(rectanglePrimivites[i]->panelName)) {
-				rectanglePrimivites[i]->rectangle->color.r = selectorPanel.redSlider;
-				rectanglePrimivites[i]->rectangle->color.g = selectorPanel.greenSlider;
-				rectanglePrimivites[i]->rectangle->color.b = selectorPanel.blueSlider;
-			}
-			rectanglePrimivites[i]->draw();
-		}
-		for (int i = 0; i < linePrimivites.size(); i++) {
-			if (selectorPanel.getIfSelected(linePrimivites[i]->panelName)) {
-				linePrimivites[i]->line->color.r = selectorPanel.redSlider;
-				linePrimivites[i]->line->color.g = selectorPanel.greenSlider;
-				linePrimivites[i]->line->color.b = selectorPanel.blueSlider;
-			}
-			linePrimivites[i]->draw();
-		}
-		for (int i = 0; i < ellipsePrimivites.size(); i++) {
-			if (selectorPanel.getIfSelected(ellipsePrimivites[i]->panelName)) {
-				ellipsePrimivites[i]->ellipse->color.r = selectorPanel.redSlider;
-				ellipsePrimivites[i]->ellipse->color.g = selectorPanel.greenSlider;
-				ellipsePrimivites[i]->ellipse->color.b = selectorPanel.blueSlider;
-			}
-			ellipsePrimivites[i]->draw();
+			primitives2DPanels[i] -> draw();
 		}
 	}
 }
 
 void MainController::removeSelectedPrimitives() {
-	for (int i = 0; i < circlePrimivites.size(); i++) {
-		if (selectorPanel.getIfSelected(circlePrimivites[i]->panelName)) {
-			selectorPanel.removeToggle(circlePrimivites[i]->panelName);
-			circlePrimivites.erase(circlePrimivites.begin() + i);
-		}
-	}
-
-	for (int i = 0; i < rectanglePrimivites.size(); i++) {
-		if (selectorPanel.getIfSelected(rectanglePrimivites[i]->panelName)) {
-			selectorPanel.removeToggle(rectanglePrimivites[i]->panelName);
-			rectanglePrimivites.erase(rectanglePrimivites.begin() + i);
-		}
-	}
-
-	for (int i = 0; i < linePrimivites.size(); i++) {
-		if (selectorPanel.getIfSelected(linePrimivites[i]->panelName)) {
-			selectorPanel.removeToggle(linePrimivites[i]->panelName);
-			linePrimivites.erase(linePrimivites.begin() + i);
-		}
-	}
-
-	for (int i = 0; i < ellipsePrimivites.size(); i++) {
-		if (selectorPanel.getIfSelected(ellipsePrimivites[i]->panelName)) {
-			selectorPanel.removeToggle(ellipsePrimivites[i]->panelName);
-			ellipsePrimivites.erase(ellipsePrimivites.begin() + i);
+	for (int i = 0; i < primitives2DPanels.size(); i++) {
+		if (selectorPanel.getIfSelected(primitives2DPanels[i]->getPanelName())) {
+			selectorPanel.removeToggle(primitives2DPanels[i]->getPanelName());
+			primitives2DPanels[i]->deletePanel();
+			primitives2DPanels.erase(primitives2DPanels.begin() + i);
 		}
 	}
 }
@@ -220,28 +179,27 @@ void MainController::openNewPrimitvePanel(string primitiveName) {
 
 	if (primitiveName == "Circle") {
 		CirclePanel* circlePanel = new CirclePanel();
-		circlePanel->setup("Circle " + to_string(circlePrimivites.size()));
-		circlePrimivites.push_back(circlePanel);
-		selectorPanel.addToggle("Circle " + to_string(circlePrimivites.size() - 1));
-
+		circlePanel->setup("Circle " + to_string(primitives2DPanels.size()));
+		primitives2DPanels.push_back(circlePanel);
+		selectorPanel.addToggle("Circle " + to_string(primitives2DPanels.size() - 1));
 	}
 	if (primitiveName == "Rectangle") {
 		RectanglePanel* rectanglePanel = new RectanglePanel();
-		rectanglePanel->setup("Rectangle " + to_string(rectanglePrimivites.size()));
-		rectanglePrimivites.push_back(rectanglePanel);
-		selectorPanel.addToggle("Rectangle " + to_string(rectanglePrimivites.size() - 1));
+		rectanglePanel->setup("Rectangle " + to_string(primitives2DPanels.size()));
+		primitives2DPanels.push_back(rectanglePanel);
+		selectorPanel.addToggle("Rectangle " + to_string(primitives2DPanels.size() - 1));
 	}
 	if (primitiveName == "Line") {
 		LinePanel* linePanel = new LinePanel();
-		linePanel->setup("Line " + to_string(linePrimivites.size()));
-		linePrimivites.push_back(linePanel);
-		selectorPanel.addToggle("Line " + to_string(linePrimivites.size() - 1));
+		linePanel->setup("Line " + to_string(primitives2DPanels.size()));
+		primitives2DPanels.push_back(linePanel);
+		selectorPanel.addToggle("Line " + to_string(primitives2DPanels.size() - 1));
 	}
 	if (primitiveName == "Ellipse") {
 		EllipsePanel* ellipsePanel = new EllipsePanel();
-		ellipsePanel->setup("Ellipse " + to_string(ellipsePrimivites.size()));
-		ellipsePrimivites.push_back(ellipsePanel);
-		selectorPanel.addToggle("Ellipse " + to_string(ellipsePrimivites.size() - 1));
+		ellipsePanel->setup("Ellipse " + to_string(primitives2DPanels.size()));
+		primitives2DPanels.push_back(ellipsePanel);
+		selectorPanel.addToggle("Ellipse " + to_string(primitives2DPanels.size() - 1));
 	}
 	if (primitiveName == "Sqaure") {
 	}
