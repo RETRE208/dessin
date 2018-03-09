@@ -17,6 +17,12 @@
     <ClCompile Include="src\views\controllerPanel.cpp" />
     <ClCompile Include="src\views\CirclePanel.cpp" />
     <ClCompile Include="CIRCLEPANEL.CPP" />
+    <ClCompile Include="src\primitives\Rectangle.cpp" />
+    <ClCompile Include="src\views\RectanglePanel.cpp" />
+    <ClCompile Include="src\primitives\Ligne.cpp" />
+    <ClCompile Include="src\views\LinePanel.cpp" />
+    <ClCompile Include="src\primitives\Ellipse.cpp" />
+    <ClCompile Include="src\views\EllipsePanel.cpp" />
     <ClCompile Include="..\..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.cpp">
       <Filter>addons\ofxAssimpModelLoader\src</Filter>
     </ClCompile>
@@ -74,12 +80,8 @@
     <ClCompile Include="..\..\..\..\addons\ofxDatGui\src\libs\ofxSmartFont\ofxSmartFont.cpp">
       <Filter>addons\ofxDatGui\src\libs\ofxSmartFont</Filter>
     </ClCompile>
-    <ClCompile Include="src\primitives\Rectangle.cpp" />
-    <ClCompile Include="src\views\RectanglePanel.cpp" />
-    <ClCompile Include="src\primitives\Ligne.cpp" />
-    <ClCompile Include="src\views\LinePanel.cpp" />
-    <ClCompile Include="src\primitives\Ellipse.cpp" />
-    <ClCompile Include="src\views\EllipsePanel.cpp" />
+    <ClCompile Include="src\views\SpherePanel.cpp" />
+    <ClCompile Include="src\views\CubePanel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -89,61 +91,61 @@
       <UniqueIdentifier>{db15fa8e-dbe0-4d02-9b36-a8147add7f76}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader">
-      <UniqueIdentifier>{ce4198d0-060e-48de-82b1-0965bb06e299}</UniqueIdentifier>
+      <UniqueIdentifier>{b0aaa574-91d8-4533-a293-686433cebd8e}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader\src">
-      <UniqueIdentifier>{fad0021e-838a-4436-805e-ff2a15491e95}</UniqueIdentifier>
+      <UniqueIdentifier>{48d401c3-7ff4-4807-8680-2ce0d59a8f49}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader\libs">
-      <UniqueIdentifier>{abab4994-3407-407e-9d8c-ef591812d380}</UniqueIdentifier>
+      <UniqueIdentifier>{973ed2c1-4e66-4918-8f01-d649381fec96}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader\libs\assimp">
-      <UniqueIdentifier>{10bc6fd8-b0df-420b-9b86-5e3442025c48}</UniqueIdentifier>
+      <UniqueIdentifier>{9e0c12f9-e1cc-49e1-8297-308e50aab673}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\include">
-      <UniqueIdentifier>{b40459c7-b650-4504-9279-0fca261a9787}</UniqueIdentifier>
+      <UniqueIdentifier>{e9f8a2bf-83a1-40a3-810f-aae4c87270df}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\include\assimp">
-      <UniqueIdentifier>{2a4bf1b6-5e77-4a64-a4df-d379ed55f6c3}</UniqueIdentifier>
+      <UniqueIdentifier>{e347db4e-c5da-4bce-adcc-7e928ba0af99}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler">
-      <UniqueIdentifier>{0bc359c8-bcd5-4f22-886f-2e5e2f5ad070}</UniqueIdentifier>
+      <UniqueIdentifier>{ba773a9a-20d4-4e71-891d-d8720305290f}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxGui">
-      <UniqueIdentifier>{9cc4dccb-4baf-4933-9c35-dea94041972d}</UniqueIdentifier>
+      <UniqueIdentifier>{508d44e4-d797-4c2f-8d48-e3d1abe3d913}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxGui\src">
-      <UniqueIdentifier>{5a8db7ca-bfee-4095-838f-ed867d068810}</UniqueIdentifier>
+      <UniqueIdentifier>{622bb1d2-9dd8-4e7f-a2b8-e3bb55b98938}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxXmlSettings">
-      <UniqueIdentifier>{e189b48a-dc66-45d6-ba2e-4a2cdab3a4bd}</UniqueIdentifier>
+      <UniqueIdentifier>{b5fb6d1d-9a02-4c7c-948a-5bb56dfcdcfb}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxXmlSettings\src">
-      <UniqueIdentifier>{5c5c919f-ecfd-440c-8cb2-990632466266}</UniqueIdentifier>
+      <UniqueIdentifier>{6a81f6d2-dad1-4937-88e4-0c2cc108bf08}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxXmlSettings\libs">
-      <UniqueIdentifier>{309ae791-8442-4d4b-b31e-d8e6feddb31a}</UniqueIdentifier>
+      <UniqueIdentifier>{d5ffea3b-08ed-4da7-8ae4-f667c8f7e7d8}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxDatGui">
-      <UniqueIdentifier>{1ad181cf-29ca-4282-a29a-b2803ee31d54}</UniqueIdentifier>
+      <UniqueIdentifier>{4b155fe6-dee1-4b75-9cb6-afc3e7879464}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxDatGui\src">
-      <UniqueIdentifier>{4dc652f2-c9dd-4508-8998-d9caafd18888}</UniqueIdentifier>
+      <UniqueIdentifier>{37cc8c6a-f36b-44e3-9a52-c5ad39d48095}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxDatGui\src\components">
-      <UniqueIdentifier>{8ec5eb55-00ce-42fe-970c-13fa62eab4b4}</UniqueIdentifier>
+      <UniqueIdentifier>{b4d171bd-0ed2-4d9b-8ecc-128066c2cf54}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxDatGui\src\core">
-      <UniqueIdentifier>{245576fd-27fd-4883-8f0a-bae5659ca78e}</UniqueIdentifier>
+      <UniqueIdentifier>{d1f42c54-6670-4574-867f-548bbcb3961a}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxDatGui\src\libs">
-      <UniqueIdentifier>{7b81d27f-d585-4645-9955-f8182f45e041}</UniqueIdentifier>
+      <UniqueIdentifier>{7609ba7c-f6d5-48cd-9b2c-1349f7c00408}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxDatGui\src\libs\ofxSmartFont">
-      <UniqueIdentifier>{451163ff-a23c-4086-8aff-52dca1ddc9d6}</UniqueIdentifier>
+      <UniqueIdentifier>{bee92435-54cb-4165-a92c-ed40302c0d11}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxDatGui\src\themes">
-      <UniqueIdentifier>{98db9d00-a91b-4e7f-aa7a-2cccb5778ee7}</UniqueIdentifier>
+      <UniqueIdentifier>{673a2be0-e038-4d5d-b643-74a5f2941162}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -159,6 +161,12 @@
     <ClInclude Include="src\primitives3D\Cube.h" />
     <ClInclude Include="src\views\controllerPanel.h" />
     <ClInclude Include="src\views\CirclePanel.h" />
+    <ClInclude Include="src\primitives\Rectangle.h" />
+    <ClInclude Include="src\views\RectanglePanel.h" />
+    <ClInclude Include="src\primitives\Ligne.h" />
+    <ClInclude Include="src\views\LinePanel.h" />
+    <ClInclude Include="src\primitives\Ellipse.h" />
+    <ClInclude Include="src\views\EllipsePanel.h" />
     <ClInclude Include="..\..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.h">
       <Filter>addons\ofxAssimpModelLoader\src</Filter>
     </ClInclude>
@@ -378,12 +386,8 @@
     <ClInclude Include="..\..\..\..\addons\ofxDatGui\src\themes\ofxDatGuiThemes.h">
       <Filter>addons\ofxDatGui\src\themes</Filter>
     </ClInclude>
-    <ClInclude Include="src\primitives\Rectangle.h" />
-    <ClInclude Include="src\views\RectanglePanel.h" />
-    <ClInclude Include="src\primitives\Ligne.h" />
-    <ClInclude Include="src\views\LinePanel.h" />
-    <ClInclude Include="src\primitives\Ellipse.h" />
-    <ClInclude Include="src\views\EllipsePanel.h" />
+    <ClInclude Include="src\views\SpherePanel.h" />
+    <ClInclude Include="src\views\CubePanel.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

@@ -5,22 +5,23 @@
 class Cube
 {
 public:
-	void setup();
+	Cube(int cubeWidth, int cubeHeight, int cubeDepth);
+	bool inside(ofPoint mouse);
 	void draw();
 
-	ofParameterGroup cubeParameters;
-	ofParameter<int> red;
-	ofParameter<int> green;
-	ofParameter<int> blue;
+	float x;
+	float y;
+	float z;
 
-	ofParameter<int> posX;
-	ofParameter<int> posY;
-	ofParameter<int> posZ;
-	ofParameter<int> height;
-	ofParameter<int> width;
-	ofParameter<int> depth;
-	ofParameter<int> rotateX;
-	ofParameter<int> rotateY;
-	ofParameter<int> rotateZ;
+	int width;
+	int height;
+	int depth;
+
+	float angleX;
+	float angleY;
+	float angleZ;
+
+	int size;
+	ofColor color;
 };
 

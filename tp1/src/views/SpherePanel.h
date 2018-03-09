@@ -1,9 +1,9 @@
 #pragma once
 
 #include "ofxDatGui.h"
-#include "../primitives/Circle.h"
+#include "../primitives3D/Sphere.h"
 
-class CirclePanel
+class SpherePanel
 {
 public:
 	void setup();
@@ -12,11 +12,12 @@ public:
 
 	void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
 	bool mDragging;
-	Circle* circle;
+	Sphere* sphere;
 	ofxDatGui* gui;
 	ofxDatGuiColorPicker* picker;
 	ofxDatGuiSlider* sx;
 	ofxDatGuiSlider* sy;
+	ofxDatGuiSlider* sz;
 	ofxDatGuiSlider* sr;
 };
 

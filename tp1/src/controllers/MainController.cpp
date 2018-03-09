@@ -34,6 +34,12 @@ void MainController::draw()
 				models[i].draw(OF_MESH_POINTS);
 			}
 		}
+		for (int i = 0; i < spherePrimivites.size(); i++) {
+			spherePrimivites[i]->draw();
+		}
+		for (int i = 0; i < cubePrimivites.size(); i++) {
+			cubePrimivites[i]->draw();
+		}
 		ofDisableDepthTest();
 	}
 	else {
@@ -157,7 +163,7 @@ void MainController::instanciateNewModel() {
 }
 
 void MainController::openNewPrimitvePanel(string primitiveName) {
-	cout << "the primitive " << primitiveName << " was selected " << endl;
+	cout << "The primitive " << primitiveName << " was selected " << endl;
 
 	if (primitiveName == "Circle") {
 		CirclePanel* circlePanel = new CirclePanel();
@@ -181,5 +187,19 @@ void MainController::openNewPrimitvePanel(string primitiveName) {
 	}
 	if (primitiveName == "Sqaure") {
 	}
-	
+}
+
+void MainController::openNewPrimitve3DPanel(string primitiveName) {
+	cout << "The primitive 3D " << primitiveName << " was selected " << endl;
+
+	if (primitiveName == "Cube") {
+		CubePanel* cubePanel = new CubePanel();
+		cubePanel->setup();
+		cubePrimivites.push_back(cubePanel);
+	}
+	if (primitiveName == "Sphere") {
+		SpherePanel* spherePanel = new SpherePanel();
+		spherePanel->setup();
+		spherePrimivites.push_back(spherePanel);
+	}
 }
