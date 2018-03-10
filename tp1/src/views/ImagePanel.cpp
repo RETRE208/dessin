@@ -26,6 +26,7 @@ void ImagePanel::setup(string path, MainController* mainController)
 	blurBtn = gui->addButton("Blur");
 	sliderAlpha = gui->addSlider("Alpha", 0, 255, 255);
 	alphaBtn = gui->addButton("Apply opacity");
+	inverseBtn = gui->addButton("Inverse color");
 
 	sliderX->bind(x);
 	sliderY->bind(y);
@@ -57,11 +58,14 @@ void ImagePanel::onButtonEvent(ofxDatGuiButtonEvent e) {
 		ofLog() << "Button alpha pressed";
 		mainControllerInstance->changeImageOpacity(&newImage, alpha);
 	}
+	else if (e.target == inverseBtn) {
+		ofLog() << "Button inversion pressed";
+		mainControllerInstance->inversionImageColor(&newImage);
+	}
 }
 
 void ImagePanel::draw()
 {
-	
 	newImage.draw(
 		x,
 		y,

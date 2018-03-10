@@ -35,6 +35,7 @@ public:
 	ofxDatGuiButton* edgeDetectBtn;
 	ofxDatGuiButton* blurBtn;
 	ofxDatGuiButton* alphaBtn;
+	ofxDatGuiButton* inverseBtn;
 };
 #endif
 

@@ -46,6 +46,7 @@ public:
 	void openNewPrimitve3DPanel(string primitiveName);
 	void changeImageOpacity(ofImage* image, int alpha);
 	void removeSelectedPrimitives();
+	void MainController::inversionImageColor(ofImage* image);
 
 	ofLight light;
 	float center_x;
