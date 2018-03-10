@@ -27,6 +27,7 @@ void ImagePanel::setup(string path, MainController* mainController)
 	sliderAlpha = gui->addSlider("Alpha", 0, 255, 255);
 	alphaBtn = gui->addButton("Apply opacity");
 	inverseBtn = gui->addButton("Inverse color");
+	gridBtn = gui->addButton("Apply grid texture");
 
 	sliderX->bind(x);
 	sliderY->bind(y);
@@ -61,6 +62,10 @@ void ImagePanel::onButtonEvent(ofxDatGuiButtonEvent e) {
 	else if (e.target == inverseBtn) {
 		ofLog() << "Button inversion pressed";
 		mainControllerInstance->inversionImageColor(&newImage);
+	}
+	else if (e.target == gridBtn) {
+		ofLog() << "Button grid pressed";
+		mainControllerInstance->proceduralGridTexture(&newImage);
 	}
 }
 

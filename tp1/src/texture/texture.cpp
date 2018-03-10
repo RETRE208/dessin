@@ -295,3 +295,101 @@ void Texture::inversionFilter(ofImage* image)
 	// écrire les pixels dans l'image de destination
 	image->setFromPixels(pixel_array_dst);
 }
+
+void Texture::proceduralTexture(ofImage* image) {
+	// dimensions de l'image source
+	image_width = image->getWidth();
+	image_height = image->getHeight();
+
+	// nombre de composantes de couleur (RGB)
+	const int color_component_count = 4;
+
+	// indices de l'image
+	int x, y;
+
+	// index des composantes de couleur
+	int c;
+
+	// index du pixel de l'image source utilisé pour le filtrage
+	int pixel_index_img_src;
+
+	// index du pixel de l'image de destination en cours de filtrage
+	int pixel_index_img_dst;
+
+	// extraire les pixels de l'image source
+	ofPixels pixel_array_src = image->getPixels();
+
+	// extraire les pixels de l'image de destination
+	ofPixels pixel_array_dst = image->getPixels();
+
+	// couleur du pixel lu dans l'image source
+	ofColor pixel_color_src;
+
+	// couleur du pixel à écrire dans l'image de destination
+	ofColor pixel_color_dst;
+
+	int row = 0;
+	// itération sur les rangées des pixels de l'image source
+	for (y = 0; y < image_height - 1; ++y)
+	{
+		// itération sur les colonnes des pixels de l'image source
+		for (x = 0; x < image_width - 1; ++x)
+		{
+			// déterminer l'index du pixel de l'image de destination
+			pixel_index_img_dst = (image_width * y + x) * color_component_count;
+
+			// déterminer l'index du pixel de l'image source à lire
+			pixel_index_img_src = (image_width * y + x) * color_component_count;
+
+			// lire la couleur du pixel de l'image source
+			pixel_color_src = pixel_array_src.getColor(pixel_index_img_src);
+
+
+			pixel_color_dst[0] = 0;
+			pixel_color_dst[1] = 0;
+			pixel_color_dst[2] = 0;
+
+
+			// écrire la couleur à l'index du pixel en cours de filtrage
+			pixel_array_dst.setColor(pixel_index_img_dst, pixel_color_dst);
+		}
+		row += 1;
+		if (row >= 5) {
+			row = 0;
+			y += 5;
+		}
+	}
+
+	int column = 0;
+	for (x = 0; x < image_width - 1; ++x)
+	{
+		for (y = 0; y < image_height - 1; ++y)
+		{
+			// déterminer l'index du pixel de l'image de destination
+			pixel_index_img_dst = (image_width * y + x) * color_component_count;
+
+			// déterminer l'index du pixel de l'image source à lire
+			pixel_index_img_src = (image_width * y + x) * color_component_count;
+
+			// lire la couleur du pixel de l'image source
+			pixel_color_src = pixel_array_src.getColor(pixel_index_img_src);
+
+
+			pixel_color_dst[0] = 0;
+			pixel_color_dst[1] = 0;
+			pixel_color_dst[2] = 0;
+
+
+			// écrire la couleur à l'index du pixel en cours de filtrage
+			pixel_array_dst.setColor(pixel_index_img_dst, pixel_color_dst);
+		}
+		column += 1;
+		if (column >= 5) {
+			column = 0;
+			x += 5;
+		}
+	}
+
+	// écrire les pixels dans l'image de destination
+	image->setFromPixels(pixel_array_dst);
+}
