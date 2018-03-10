@@ -56,26 +56,17 @@ const std::array<float, 9> convolution_kernel_blur
 class Texture
 {
 public:
-	Texture();
-	~Texture();
-
 	ConvolutionKernel kernel_type;
 
 	string kernel_name;
-
-	ofImage image_source;
-	ofImage image_destination;
-
 	int image_width;
 	int image_height;
-
 	int offset_vertical;
 	int offset_horizontal;
-	ofImage imageSource;
-	ofImage imageDest;
 
-	void setup();
 	void filter(ofImage* image);
 	void changeOpacity(ofImage* image, int alpha);
+	void inversionFilter(ofImage* image);
+	void proceduralTexture(ofImage* image);
 };
 

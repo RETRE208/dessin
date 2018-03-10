@@ -220,3 +220,11 @@ void MainController::openNewPrimitve3DPanel(string primitiveName) {
 void MainController::changeImageOpacity(ofImage* image, int alpha) {
 	texture.changeOpacity(image, alpha);
 }
+
+void MainController::inversionImageColor(ofImage* image) {
+	texture.inversionFilter(image);
+}
+
+void MainController::proceduralGridTexture(ofImage* image) {
+	texture.proceduralTexture(image);
+}

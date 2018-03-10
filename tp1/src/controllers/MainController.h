@@ -46,6 +46,8 @@ public:
 	void openNewPrimitve3DPanel(string primitiveName);
 	void changeImageOpacity(ofImage* image, int alpha);
 	void removeSelectedPrimitives();
+	void inversionImageColor(ofImage* image);
+	void proceduralGridTexture(ofImage* image);
 
 	ofLight light;
 	float center_x;
