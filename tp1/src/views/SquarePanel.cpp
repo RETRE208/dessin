@@ -5,6 +5,7 @@ void SquarePanel::setup(string name)
 	square = new Square();
 	panelName = name;
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
+	gui->setWidth(200);
 	gui->addHeader(name);
 	sx = gui->addSlider("SQUARE X", 0, ofGetWidth());
 	sy = gui->addSlider("SQUARE Y", 0, ofGetHeight());

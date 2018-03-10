@@ -46,6 +46,7 @@ void MainController::draw()
 			}
 			primitives2DPanels[i] -> draw();
 		}
+		ofSetColor(255,255,255);
 	}
 }
 

@@ -14,6 +14,7 @@ void ImagePanel::setup(string path, MainController* mainController)
 	alpha = 255;
 
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
+	gui->setWidth(200);
 	gui->addHeader("Image Panel");
 	sliderX = gui->addSlider("Image X", 0, ofGetWidth(), 200);
 	sliderY = gui->addSlider("Image Y", 0, ofGetHeight(), 200);

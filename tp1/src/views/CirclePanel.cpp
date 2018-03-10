@@ -5,10 +5,11 @@ void CirclePanel::setup(string name)
 	circle = new Circle(150);
 	panelName = name;
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
+	gui->setWidth(200);
 	gui->addHeader(name);
 	sx = gui->addSlider("CIRCLE X", 0, ofGetWidth());
 	sy = gui->addSlider("CIRCLE Y", 0, ofGetHeight());
-	sr = gui->addSlider("CIRCLE RADUIS", 0, ofGetWidth()/2);
+	sr = gui->addSlider("CIRCLE RADIUS", 0, ofGetWidth()/2);
 	slineWidth = gui->addSlider("LINE WIDTH", 0.1, 8.0);
 	primaryPicker = gui->addColorPicker("PRIMARY COLOR", ofColor::fromHex(0xCECECE));
 	primaryPicker->onColorPickerEvent(this, &CirclePanel::onColorPickerEvent);

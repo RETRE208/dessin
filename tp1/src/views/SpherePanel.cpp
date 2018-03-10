@@ -5,6 +5,7 @@ void SpherePanel::setup()
 	sphere = new Sphere(10);
 
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
+	gui->setWidth(200);
 	gui->addHeader("Sphere Panel");
 	sx = gui->addSlider("SPHERE X", 0, ofGetWidth());
 	sy = gui->addSlider("SPHERE Y", 0, ofGetHeight());

@@ -5,6 +5,7 @@ void CubePanel::setup()
 	cube = new Cube(10,10,10);
 
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
+	gui->setWidth(200);
 	gui->addHeader("Cube Panel");
 	sx = gui->addSlider("POSITION X", 0, ofGetWidth());
 	sy = gui->addSlider("POSITION Y", 0, ofGetHeight());

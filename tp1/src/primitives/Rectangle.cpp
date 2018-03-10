@@ -13,7 +13,7 @@ Rectangle::Rectangle() {
 }
 
 void Rectangle::draw() {
-	ofRectangle myRect(x, y, height, width);
+	ofRectangle myRect(x, y, width, height);
 
 	if (isFill)
 	{

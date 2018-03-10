@@ -7,6 +7,7 @@ void ModelPanel::setup(MainController* mainController, string modelPath)
 	model.loadModel(modelPath);
 
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
+	gui->setWidth(200);
 	gui->addHeader("Model Panel");
 	sx = gui->addSlider("POSITION X", 0, ofGetWidth());
 	sy = gui->addSlider("POSITION Y", 0, ofGetHeight());
@@ -40,9 +41,9 @@ void ModelPanel::draw()
 {
 	model.setPosition(x, y, z);
 	model.setScale(size/100, size/100, size/100);
-	model.setRotation(0.0f, angleX, 1.0f, 0.0f, 0.0f);
-	model.setRotation(0.0f, angleY, 0.0f, 1.0f, 0.0f);
-	model.setRotation(0.0f, angleZ, 0.0f, 0.0f, 1.0f);
+	model.setRotation(0, angleX, 1.0f, 0.0f, 0.0f);
+	model.setRotation(1, angleY, 0.0f, 1.0f, 0.0f);
+	model.setRotation(2, angleZ, 0.0f, 0.0f, 1.0f);
 
 	switch (mesh_render_mode)
 	{

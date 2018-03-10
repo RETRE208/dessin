@@ -5,6 +5,7 @@ void RectanglePanel::setup(string name)
 	rectangle = new tp1::Rectangle();
 	panelName = name;
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
+	gui->setWidth(200);
 	gui->addHeader(name);
 	sx = gui->addSlider("RECTANLGLE X", 0, ofGetWidth());
 	sy = gui->addSlider("RECTANLGLE Y", 0, ofGetHeight());

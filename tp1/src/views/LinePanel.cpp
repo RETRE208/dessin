@@ -5,6 +5,7 @@ void LinePanel::setup(string name)
 	line = new Ligne();
 	panelName = name;
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
+	gui->setWidth(200);
 	gui->addHeader(name);
 	sp1x = gui->addSlider("LINE POINT 1 X", 0, ofGetWidth());
 	sp1y = gui->addSlider("LINE POINT 1 Y", 0, ofGetHeight());

@@ -27,9 +27,9 @@ public:
 	bool mode3DState = false;
 
 	int DRAWING_ZONE_X_LIMIT = 200;
-	int DRAWING_ZONE_Y_LIMIT = 200;
+	int DRAWING_ZONE_Y_LIMIT = 0;
 	int DRAWING_ZONE_WIDTH = 964;
-	int DRAWING_ZONE_HEIGHT = 539;
+	int DRAWING_ZONE_HEIGHT = 700;
 
 	void setup();
 	void draw();

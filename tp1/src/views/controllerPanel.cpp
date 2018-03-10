@@ -4,12 +4,14 @@
 void controllerPanel::setup(MainController* mainController)
 {	
 	mainControllerInstance = mainController;
+	gui->setWidth(200);
 	gui->addLabel("Control Panel");
 	importBtn = gui->addButton("Import");
 	exportBtn = gui->addButton("Export");
 	removeSelected = gui->addButton("Remove selected");
 	mode3DToggle = gui->addToggle("3D Mode");
-	backgroundPicker = gui->addColorPicker("BACKGROUND COLOR", ofColor::fromHex(0xCECECE));
+	gui->addLabel("Background Color : ");
+	backgroundPicker = gui->addColorPicker("", ofColor::fromHex(0xCECECE));
 	backgroundPicker->onColorPickerEvent(this, &controllerPanel::onColorPickerEvent);
 
 	primitives2D = gui->addDropdown("Primitives 2D", options);

@@ -42,9 +42,9 @@ public:
 	int x;
 	int y;
 	int z;
-	int angleX;
-	int angleY;
-	int angleZ;
+	float angleX;
+	float angleY;
+	float angleZ;
 	float size;
 };
 
