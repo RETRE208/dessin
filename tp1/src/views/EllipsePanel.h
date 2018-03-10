@@ -16,13 +16,17 @@ public:
 
 	string panelName;
 	void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
+	void onButtonEvent(ofxDatGuiButtonEvent e);
 	bool mDragging;
 	tp1::Ellipse* ellipse;
 	ofxDatGui* gui;
-	ofxDatGuiColorPicker* picker;
+	ofxDatGuiColorPicker* primaryPicker;
+	ofxDatGuiColorPicker* secondaryPicker;
 	ofxDatGuiSlider* sx;
 	ofxDatGuiSlider* sy;
 	ofxDatGuiSlider* swidth;
 	ofxDatGuiSlider* sheight;
+	ofxDatGuiSlider* slineWidth;
+	ofxDatGuiToggle* isFillToggle;
 };
 

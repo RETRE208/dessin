@@ -1,19 +1,17 @@
-#include "Rectangle.h"
-using namespace tp1;
+#include "Square.h"
 
-Rectangle::Rectangle() {
+Square::Square() {
 	x = 100;
 	y = 100;
 	height = 100;
-	width = 100;
 	lineWidth = 1.0;
 	primaryColor = ofColor::red;
 	secondaryColor = ofColor::red;
 	isFill = false;
 }
 
-void Rectangle::draw() {
-	ofRectangle myRect(x, y, height, width);
+void Square::draw() {
+	ofRectangle myRect(x, y, height, height);
 
 	if (isFill)
 	{

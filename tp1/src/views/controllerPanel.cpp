@@ -9,6 +9,8 @@ void controllerPanel::setup(MainController* mainController)
 	exportBtn = gui->addButton("Export");
 	removeSelected = gui->addButton("Remove selected");
 	mode3DToggle = gui->addToggle("3D Mode");
+	backgroundPicker = gui->addColorPicker("BACKGROUND COLOR", ofColor::fromHex(0xCECECE));
+	backgroundPicker->onColorPickerEvent(this, &controllerPanel::onColorPickerEvent);
 
 	primitives2D = gui->addDropdown("Primitives 2D", options);
 	primitives3D = gui->addDropdown("Primitives 3D", options3D);
@@ -57,4 +59,9 @@ void controllerPanel::onPrimitiveDropdownEvent(ofxDatGuiDropdownEvent e)
 		string primitive = options3D.at(e.child);
 		mainControllerInstance->openNewPrimitve3DPanel(primitive);
 	}
+}
+
+void controllerPanel::onColorPickerEvent(ofxDatGuiColorPickerEvent e)
+{	
+	ofBackground(e.color);
 }

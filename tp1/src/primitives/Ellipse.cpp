@@ -6,10 +6,21 @@ Ellipse::Ellipse() {
 	y = 100;
 	width = 100;
 	height = 100;
-	color = ofColor::green;
+	primaryColor = ofColor::green;
+	secondaryColor = ofColor::green;
+	isFill = false;
 }
 
 void Ellipse::draw() {
-	ofSetColor(color);
+	if (isFill)
+	{
+		ofFill();
+		ofSetColor(primaryColor);
+		ofDrawEllipse(x, y, width, height);
+	}
+
+	ofNoFill();
+	ofSetColor(secondaryColor);
+	ofSetLineWidth(lineWidth);
 	ofDrawEllipse(x, y, width, height);
 }

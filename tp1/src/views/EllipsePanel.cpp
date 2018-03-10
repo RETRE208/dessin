@@ -10,13 +10,20 @@ void EllipsePanel::setup(string name)
 	sy = gui->addSlider("Ellipse Y", 0, ofGetHeight());
 	swidth = gui->addSlider("Ellipse width", 0, ofGetWidth() / 2);
 	sheight = gui->addSlider("Ellipse height", 0, ofGetHeight() / 2);
-	picker = gui->addColorPicker("COLOR PICKER", ofColor::fromHex(0xCECECE));
-	picker->onColorPickerEvent(this, &EllipsePanel::onColorPickerEvent);
+	slineWidth = gui->addSlider("LINE WIDTH", 0.1, 8.0);
+	primaryPicker = gui->addColorPicker("PRIMARY COLOR", ofColor::fromHex(0xCECECE));
+	primaryPicker->onColorPickerEvent(this, &EllipsePanel::onColorPickerEvent);
+	secondaryPicker = gui->addColorPicker("SECONDARY COLOR", ofColor::fromHex(0xCECECE));
+	secondaryPicker->onColorPickerEvent(this, &EllipsePanel::onColorPickerEvent);
+	isFillToggle = gui->addToggle("Fill");
+
+	gui->onButtonEvent(this, &EllipsePanel::onButtonEvent);
 
 	sx->bind(ellipse->x);
 	sy->bind(ellipse->y);
 	swidth->bind(ellipse->width);
 	sheight->bind(ellipse->height);
+	slineWidth->bind(ellipse->lineWidth);
 
 	ellipse->x = ofGetWidth() / 2;
 	ellipse->y = ofGetHeight() / 2;
@@ -29,11 +36,25 @@ void EllipsePanel::draw()
 
 void EllipsePanel::onColorPickerEvent(ofxDatGuiColorPickerEvent e)
 {
-	ellipse->color = e.color;
+	if (e.target == primaryPicker) {
+		ellipse->primaryColor = e.color;
+	}
+	if (e.target == secondaryPicker) {
+		ellipse->secondaryColor = e.color;
+	}
+}
+
+void EllipsePanel::onButtonEvent(ofxDatGuiButtonEvent e) {
+	if (ellipse->isFill == false) {
+		ellipse->isFill = true;
+	}
+	else {
+		ellipse->isFill = false;
+	}
 }
 
 void EllipsePanel::setColor(ofColor color) {
-	ellipse->color = color;
+	ellipse->primaryColor = color;
 }
 
 string EllipsePanel::getPanelName() {

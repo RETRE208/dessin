@@ -19,6 +19,7 @@
 #include "../views/ModelPanel.h"
 #include "ofxAssimpModelLoader.h"
 #include "../views/SelectorPanel.h"
+#include "../views/SquarePanel.h"
 
 class MainController
 {

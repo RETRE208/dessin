@@ -9,11 +9,15 @@ namespace tp1{
 		Rectangle();
 		void draw();
 
+		bool isFill;
 		float x;
 		float y;
 		int width;
 		int height;
-		ofColor color;
+		float lineWidth;
+		ofColor primaryColor;
+		ofColor secondaryColor;
+
 	};
 }
 

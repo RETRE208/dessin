@@ -22,15 +22,17 @@ public:
 	ofxDatGuiButton* removeSelected;
 	ofxDatGuiButton* instanciate;
 	ofxDatGuiToggle* mode3DToggle;
+	ofxDatGuiColorPicker* backgroundPicker;
 
 	bool mode2D = true;
 	void onButtonEvent(ofxDatGuiButtonEvent e);
 
 	ofxDatGuiDropdown* primitives2D;
 	ofxDatGuiDropdown* primitives3D;
-	std::vector<std::string> options = { "Circle", "Rectangle", "Ellipse", "Line", "Triangle" };
+	std::vector<std::string> options = { "Circle", "Rectangle", "Ellipse", "Line", "Square" };
 	std::vector<std::string> options3D = { "Cube", "Sphere"};
 	void onPrimitiveDropdownEvent(ofxDatGuiDropdownEvent e);
+	void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
 };
 #endif
 
