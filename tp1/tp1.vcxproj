@@ -430,6 +430,7 @@ C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\li
     <ClInclude Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxml.h" />
     <ClInclude Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
     <ClInclude Include="src\primitives\Square.h" />
+    <ClInclude Include="src\views\ImagePanel.h" />
     <ClInclude Include="src\views\ModelPanel.h" />
     <ClInclude Include="src\views\CubePanel.h" />
     <ClInclude Include="src\views\SelectorPanel.h" />
@@ -463,6 +464,9 @@ C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\li
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
       <AdditionalIncludeDirectories>$(OF_ROOT)\libs\openFrameworksCompiled\project\vs</AdditionalIncludeDirectories>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="addons.make" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ProjectExtensions>
