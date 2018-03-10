@@ -15,6 +15,7 @@
 #include "../views/EllipsePanel.h"
 #include "../views/SpherePanel.h"
 #include "../views/CubePanel.h"
+#include "../views/ImagePanel.h"
 #include "../views/ModelPanel.h"
 #include "ofxAssimpModelLoader.h"
 #include "../views/SelectorPanel.h"
@@ -35,16 +36,15 @@ public:
 
 	void exportImage();
 	void importImage();
-	void applyTexture(int keyPressed);
+	void applyTexture(int typeTexture, ofImage* image);
 
 	Files files;
-	std::vector<ofImage*> images;
 	void switch3DMode();
 	void switch2DMode();
 	void instanciateNewModel(ofxAssimpModelLoader model);
 	void openNewPrimitvePanel(string primitiveName);
 	void openNewPrimitve3DPanel(string primitiveName);
-	void removeSelectedPrimitives();
+	void changeImageOpacity(ofImage* image, int alpha);
 
 	ofLight light;
 	float center_x;
@@ -53,7 +53,7 @@ public:
 	std::vector<ModelPanel*> modelsPanels;
 	std::vector<SpherePanel*> spherePrimivites;
 	std::vector<CubePanel*> cubePrimivites;
-	std::vector<PrimitivePanel*> primitives2DPanels;
+	std::vector<ImagePanel*> imagesPanels;
 
 	SelectorPanel selectorPanel;
 	controllerPanel controlPanel;
