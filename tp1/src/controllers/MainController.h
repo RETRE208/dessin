@@ -45,6 +45,8 @@ public:
 	void openNewPrimitvePanel(string primitiveName);
 	void openNewPrimitve3DPanel(string primitiveName);
 	void changeImageOpacity(ofImage* image, int alpha);
+	void removeSelectedPrimitives();
+
 
 	ofLight light;
 	float center_x;
@@ -54,6 +56,8 @@ public:
 	std::vector<SpherePanel*> spherePrimivites;
 	std::vector<CubePanel*> cubePrimivites;
 	std::vector<ImagePanel*> imagesPanels;
+	std::vector<PrimitivePanel*> primitives2DPanels;
+
 
 	SelectorPanel selectorPanel;
 	controllerPanel controlPanel;
