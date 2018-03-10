@@ -454,6 +454,8 @@
     </ClInclude>
     <ClInclude Include="src\primitives\Square.h" />
     <ClInclude Include="src\views\SquarePanel.h" />
+    <ClInclude Include="src\views\ModelPanel.h" />
+    <ClInclude Include="src\views\ImagePanel.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />
