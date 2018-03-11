@@ -1,6 +1,4 @@
-﻿# Dessin
-
-## Installation
+﻿## Installation
 Prendre note que cette application n'est pas utilisable sur Mac et linux. Elle fonctionne uniquement sur Windows Vista et plus.
  Pour pull le projet vous devez faire les étapes suivantes :
 1. Avoir les librairies d'openframeWorks sur votre ordinateur.
