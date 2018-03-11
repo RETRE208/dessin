@@ -1,6 +1,7 @@
 # Dessin
 
 ## Installation
+Prendre note que cette application n'est pas utilisable sur Mac et linux. Fonctionne uniquement sur windows vista et plus.
 1. Pour pull le projet vous devez faire les étapes suivantes :
 2. Faire un clone du projet dans ...\of_v0.9.8_vs_release\apps\myApps
 3. Modifier le path d'importation du of_v0.9.8_vs_release. Pour ce faire, faites un clique droit sur le projet Tp1 puis "edit". 
