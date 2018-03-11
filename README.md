@@ -1,5 +1,3 @@
-# Dessin
-
 ## Installation
 Prendre note que cette application n'est pas utilisable sur Mac et linux. Fonctionne uniquement sur windows vista et plus.
 Pour pull le projet vous devez faire les étapes suivantes :
