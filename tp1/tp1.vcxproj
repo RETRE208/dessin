@@ -219,6 +219,7 @@ C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\theme
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxmlerror.cpp" />
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp" />
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.cpp" />
+    <ClCompile Include="src\Curves\Bezier.cpp" />
     <ClCompile Include="src\Camera\Camera.cpp" />
     <ClCompile Include="src\views\CameraPanel.cpp" />
     <ClCompile Include="src\views\ImagePanel.cpp" />
@@ -320,6 +321,7 @@ C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\theme
     <ClInclude Include="..\..\..\..\addons\ofxGui\src\ofxToggle.h" />
     <ClInclude Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxml.h" />
     <ClInclude Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
+    <ClInclude Include="src\Curves\Bezier.h" />
     <ClInclude Include="src\Camera\Camera.h" />
     <ClInclude Include="src\views\CameraPanel.h" />
     <ClInclude Include="src\primitives\Square.h" />

@@ -90,6 +90,7 @@
     </ClCompile>
     <ClCompile Include="src\views\CameraPanel.cpp" />
     <ClCompile Include="src\Camera\Camera.cpp" />
+    <ClCompile Include="src\Curves\Bezier.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -459,6 +460,7 @@
     </ClInclude>
     <ClInclude Include="src\views\CameraPanel.h" />
     <ClInclude Include="src\Camera\Camera.h" />
+    <ClInclude Include="src\Curves\Bezier.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />
