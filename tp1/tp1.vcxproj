@@ -49,19 +49,19 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+    <Import Project="C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+    <Import Project="C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+    <Import Project="C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+    <Import Project="C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -95,13 +95,13 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
@@ -110,7 +110,8 @@ C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;%(
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32\assimp.lib%3b
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32\assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32\assimp.lib%3b
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32\assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
     </PostBuildEvent>
@@ -124,20 +125,21 @@ C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\li
       <WarningLevel>Level3</WarningLevel>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64\assimp.lib;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64\assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64\assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
     </PostBuildEvent>
@@ -148,13 +150,13 @@ C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;%(
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -167,7 +169,8 @@ C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;%(
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32\assimp.lib%3b
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32\assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32\assimp.lib%3b
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32\assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
     </PostBuildEvent>
@@ -178,13 +181,13 @@ C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\li
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\include\assimp\Compiler;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxGui\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxXmlSettings\src;C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxXmlSettings\libs;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\components;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\core;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\libs\ofxSmartFont;
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
@@ -196,7 +199,8 @@ C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxDatGui\src\themes;%(
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32\assimp.lib%3b
-C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64\assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\Win32\assimp.lib%3b
+C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\libs\assimp\lib\vs\x64\assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
     </PostBuildEvent>
@@ -221,6 +225,8 @@ C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\li
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxmlerror.cpp" />
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp" />
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.cpp" />
+    <ClCompile Include="src\Camera\Camera.cpp" />
+    <ClCompile Include="src\views\CameraPanel.cpp" />
     <ClCompile Include="src\views\ImagePanel.cpp" />
     <ClCompile Include="src\primitives\Square.cpp" />
     <ClCompile Include="src\views\SquarePanel.cpp" />
@@ -320,6 +326,8 @@ C:\Users\Marc-André\Desktop\of_v0.9.8_vs_release\addons\ofxAssimpModelLoader\li
     <ClInclude Include="..\..\..\..\addons\ofxGui\src\ofxToggle.h" />
     <ClInclude Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxml.h" />
     <ClInclude Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
+    <ClInclude Include="src\Camera\Camera.h" />
+    <ClInclude Include="src\views\CameraPanel.h" />
     <ClInclude Include="src\primitives\Square.h" />
     <ClInclude Include="src\views\ImagePanel.h" />
     <ClInclude Include="src\views\ModelPanel.h" />

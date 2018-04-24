@@ -20,6 +20,7 @@
 #include "ofxAssimpModelLoader.h"
 #include "../views/SelectorPanel.h"
 #include "../views/SquarePanel.h"
+#include "../views/CameraPanel.h"
 
 class MainController
 {
@@ -62,6 +63,7 @@ public:
 	SelectorPanel selectorPanel;
 	controllerPanel controlPanel;
 	PrimitivePanel primitivePanel;
+	CameraPanel cameraPanel;
 	Texture texture;
 };
 
