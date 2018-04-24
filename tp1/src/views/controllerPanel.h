@@ -29,8 +29,10 @@ public:
 
 	ofxDatGuiDropdown* primitives2D;
 	ofxDatGuiDropdown* primitives3D;
+	ofxDatGuiDropdown* lights;
 	std::vector<std::string> options = { "Circle", "Rectangle", "Ellipse", "Line", "Square" };
 	std::vector<std::string> options3D = { "Cube", "Sphere"};
+	std::vector<std::string> optionsLights = { "Ambiant", "Directional", "Point", "Spot" };
 	void onPrimitiveDropdownEvent(ofxDatGuiDropdownEvent e);
 	void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
 };

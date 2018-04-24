@@ -11,10 +11,8 @@ class noModelsExeption : public exception
 
 void MainController::setup()
 {
-	cameraPanel.setup();
 	controlPanel.setup(this);
 	selectorPanel.setup();
-	ofSetVerticalSync(true);
 }
 
 void MainController::draw()
@@ -22,9 +20,6 @@ void MainController::draw()
 	selectorPanel.draw();
 	if (mode3DState) {
 		ofEnableDepthTest();
-		cameraPanel.begin();
-		cameraPanel.draw();
-		
 		for (int i = 0; i < modelsPanels.size(); i++) {
 			modelsPanels[i]->draw();
 		}
@@ -34,9 +29,15 @@ void MainController::draw()
 		for (int i = 0; i < cubePrimivites.size(); i++) {
 			cubePrimivites[i]->draw();
 		}
-		cameraPanel.end();
+		for (auto i : ambiantLightPanels)
+			i->draw();
+		for (auto i : directionalLightPanels)
+			i->draw();
+		for (auto i : pointLightPanels)
+			i->draw();
+		for (auto i : spotLightPanels)
+			i->draw();
 		ofDisableDepthTest();
-
 	}
 	else {
 		for (int i = 0; i < imagesPanels.size(); i++) {
@@ -55,7 +56,6 @@ void MainController::draw()
 		}
 		ofSetColor(255,255,255);
 	}
-
 }
 
 void MainController::removeSelectedPrimitives() {
@@ -147,12 +147,6 @@ void MainController::switch2DMode() {
 
 void MainController::switch3DMode() {
 	mode3DState = true;
-	ofEnableLighting();
-
-	light.setAmbientColor(ofColor(255, 255, 255));
-	light.setDiffuseColor(ofColor(255, 255, 255));
-	light.setPosition(0.0f, 0.0f, 1000.0f);
-	light.enable();
 }
 
 void MainController::instanciateNewModel(ofxAssimpModelLoader model) {
@@ -222,6 +216,31 @@ void MainController::openNewPrimitve3DPanel(string primitiveName) {
 		SpherePanel* spherePanel = new SpherePanel();
 		spherePanel->setup();
 		spherePrimivites.push_back(spherePanel);
+	}
+}
+
+void MainController::openNewLightPanel(string primitiveName) {
+	cout << "The light " << primitiveName << " was selected " << endl;
+
+	if (primitiveName == "Ambiant") {
+		AmbiantLightPanel* ambiantLightPanel = new AmbiantLightPanel();
+		ambiantLightPanel->setup(this);
+		ambiantLightPanels.push_back(ambiantLightPanel);
+	}
+	if (primitiveName == "Directional") {
+		DirectionalLightPanel* directionalLightPanel = new DirectionalLightPanel();
+		directionalLightPanel->setup(this);
+		directionalLightPanels.push_back(directionalLightPanel);
+	}
+	if (primitiveName == "Point") {
+		PointLightPanel* pointLightPanel = new PointLightPanel();
+		pointLightPanel->setup(this);
+		pointLightPanels.push_back(pointLightPanel);
+	}
+	if (primitiveName == "Spot") {
+		SpotLightPanel* spotLightPanel = new SpotLightPanel();
+		spotLightPanel->setup(this);
+		spotLightPanels.push_back(spotLightPanel);
 	}
 }
 

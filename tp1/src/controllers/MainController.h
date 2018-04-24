@@ -20,7 +20,10 @@
 #include "ofxAssimpModelLoader.h"
 #include "../views/SelectorPanel.h"
 #include "../views/SquarePanel.h"
-#include "../views/CameraPanel.h"
+#include "../views/AmbiantLightPanel.h"
+#include "../views/DirectionalLightPanel.h"
+#include "../views/SpotLightPanel.h"
+#include "../views/PointLightPanel.h"
 
 class MainController
 {
@@ -45,6 +48,7 @@ public:
 	void instanciateNewModel(ofxAssimpModelLoader model);
 	void openNewPrimitvePanel(string primitiveName);
 	void openNewPrimitve3DPanel(string primitiveName);
+	void openNewLightPanel(string primitiveName);
 	void changeImageOpacity(ofImage* image, int alpha);
 	void removeSelectedPrimitives();
 	void inversionImageColor(ofImage* image);
@@ -53,17 +57,21 @@ public:
 	ofLight light;
 	float center_x;
 	float center_y;
-
+	
 	std::vector<ModelPanel*> modelsPanels;
 	std::vector<SpherePanel*> spherePrimivites;
 	std::vector<CubePanel*> cubePrimivites;
 	std::vector<ImagePanel*> imagesPanels;
 	std::vector<PrimitivePanel*> primitives2DPanels;
 
+	std::vector<AmbiantLightPanel*> ambiantLightPanels;
+	std::vector<DirectionalLightPanel*> directionalLightPanels;
+	std::vector<PointLightPanel*> pointLightPanels;
+	std::vector<SpotLightPanel*> spotLightPanels;
+
 	SelectorPanel selectorPanel;
 	controllerPanel controlPanel;
 	PrimitivePanel primitivePanel;
-	CameraPanel cameraPanel;
 	Texture texture;
 };
 

@@ -16,6 +16,7 @@ void controllerPanel::setup(MainController* mainController)
 
 	primitives2D = gui->addDropdown("Primitives 2D", options);
 	primitives3D = gui->addDropdown("Primitives 3D", options3D);
+	lights = gui->addDropdown("Lumières", optionsLights);
 	gui->addBreak();
 
 	gui->onButtonEvent(this, &controllerPanel::onButtonEvent);
@@ -60,6 +61,11 @@ void controllerPanel::onPrimitiveDropdownEvent(ofxDatGuiDropdownEvent e)
 		cout << "the option at index # " << e.child << " was selected " << endl;
 		string primitive = options3D.at(e.child);
 		mainControllerInstance->openNewPrimitve3DPanel(primitive);
+	}
+	else if (e.target == lights) {
+		cout << "the option at index # " << e.child << " was selected " << endl;
+		string primitive = optionsLights.at(e.child);
+		mainControllerInstance->openNewLightPanel(primitive);
 	}
 }
 
