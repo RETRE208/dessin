@@ -199,6 +199,9 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxBezierSurface\src;%(AdditionalIncl
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxmlerror.cpp" />
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp" />
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.cpp" />
+    <ClCompile Include="src\views\CubicBezierPanel3D.cpp" />
+    <ClCompile Include="src\views\CubicHermitePanel3D.cpp" />
+    <ClCompile Include="src\views\ParametriqueBezierPanel3D.cpp" />
     <ClCompile Include="src\views\BezierSurfacePanel.cpp" />
     <ClCompile Include="src\Curves\BezierSurface.cpp" />
     <ClCompile Include="src\views\ParametriqueBezierPanel2D.cpp" />
@@ -309,6 +312,9 @@ C:\Users\Rémy\of_v0.9.8_vs_release\addons\ofxBezierSurface\src;%(AdditionalIncl
     <ClInclude Include="..\..\..\..\addons\ofxGui\src\ofxToggle.h" />
     <ClInclude Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxml.h" />
     <ClInclude Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
+    <ClInclude Include="src\views\CubicBezierPanel3D.h" />
+    <ClInclude Include="src\views\CubicHermitePanel3D.h" />
+    <ClInclude Include="src\views\ParametriqueBezierPanel3D.h" />
     <ClInclude Include="src\views\BezierSurfacePanel.h" />
     <ClInclude Include="src\Curves\BezierSurface.h" />
     <ClInclude Include="src\views\ParametriqueBezierPanel2D.h" />

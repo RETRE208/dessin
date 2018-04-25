@@ -101,6 +101,9 @@
     <ClCompile Include="src\views\CubicBezierPanel2D.cpp" />
     <ClCompile Include="src\views\CubicHermitePanel2D.cpp" />
     <ClCompile Include="src\views\ParametriqueBezierPanel2D.cpp" />
+    <ClCompile Include="src\views\CubicBezierPanel3D.cpp" />
+    <ClCompile Include="src\views\CubicHermitePanel3D.cpp" />
+    <ClCompile Include="src\views\ParametriqueBezierPanel3D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -487,6 +490,9 @@
     <ClInclude Include="src\views\CubicBezierPanel2D.h" />
     <ClInclude Include="src\views\CubicHermitePanel2D.h" />
     <ClInclude Include="src\views\ParametriqueBezierPanel2D.h" />
+    <ClInclude Include="src\views\CubicBezierPanel3D.h" />
+    <ClInclude Include="src\views\CubicHermitePanel3D.h" />
+    <ClInclude Include="src\views\ParametriqueBezierPanel3D.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

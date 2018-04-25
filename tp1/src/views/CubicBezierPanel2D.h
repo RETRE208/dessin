@@ -22,7 +22,6 @@ public:
 	ofxDatGuiColorPicker* picker;
 	ofxDatGuiSlider* ctrl_point_x;
 	ofxDatGuiSlider* ctrl_point_y;
-	ofxDatGuiSlider* ctrl_point_z;
 
 	ofxDatGuiDropdown* ctrl_points_choice;
 	std::vector<std::string> options = { "Control Point 1", "Control Point 2" , "Control Point 3" , "Control Point 4" };

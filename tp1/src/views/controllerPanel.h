@@ -29,8 +29,8 @@ public:
 
 	ofxDatGuiDropdown* primitives2D;
 	ofxDatGuiDropdown* primitives3D;
-	std::vector<std::string> options = { "Circle", "Rectangle", "Ellipse", "Line", "Square", "Cubic Bezier Curve", "Cubic Hermite Curve", "6 Points Bezier Curve" };
-	std::vector<std::string> options3D = { "Cube", "Sphere", "Surface Bezier"};
+	std::vector<std::string> options = {"Circle", "Rectangle", "Ellipse", "Line", "Square", "Cubic Bezier Curve", "Cubic Hermite Curve", "6 Points Bezier Curve"};
+	std::vector<std::string> options3D = {"Cube", "Sphere", "Surface Bezier", "Cubic Bezier Curve", "Cubic Hermite Curve", "6 Points Bezier Curve"};
 	void onPrimitiveDropdownEvent(ofxDatGuiDropdownEvent e);
 	void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
 };

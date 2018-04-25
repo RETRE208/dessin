@@ -4,7 +4,7 @@
 #include "../views/PrimitivePanel.h"
 #include "../Curves/ParametriqueBezier.h"
 
-class ParametriqueBezierPanel2D : public PrimitivePanel
+class ParametriqueBezierPanel3D : public PrimitivePanel
 {
 public:
 	void setup(string name);
@@ -22,6 +22,7 @@ public:
 	ofxDatGuiSlider* slineWidth;
 	ofxDatGuiSlider* ctrl_point_x;
 	ofxDatGuiSlider* ctrl_point_y;
+	ofxDatGuiSlider* ctrl_point_z;
 
 	ofxDatGuiDropdown* ctrl_points_choice;
 	std::vector<std::string> options = { "Control Point 1", "Control Point 2" , "Control Point 3" , "Control Point 4", "Control Point 5", "Control Point 6" };
@@ -31,6 +32,4 @@ public:
 	bool drawCtrlPoints = false;
 	void onButtonEvent(ofxDatGuiButtonEvent e);
 };
-
-
 

@@ -1,7 +1,7 @@
 #include "ParametriqueBezier.h"
 
 ParametriqueBezier::ParametriqueBezier() {
-	line_resolution = 50;
+	line_resolution = 100;
 	line_width = 8.0f;
 	radius = 12.0f;
 
