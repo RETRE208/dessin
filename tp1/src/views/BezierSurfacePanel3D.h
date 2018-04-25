@@ -4,7 +4,7 @@
 #include "../views/PrimitivePanel.h"
 #include "../Curves/BezierSurface.h"
 
-class BezierSurfacePanel : public PrimitivePanel
+class BezierSurfacePanel3D : public PrimitivePanel
 {
 public:
 	void setup(string name);

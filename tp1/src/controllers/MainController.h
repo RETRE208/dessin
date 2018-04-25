@@ -28,7 +28,8 @@
 #include "../views/CubicHermitePanel3D.h"
 #include "../views/ParametriqueBezierPanel3D.h"
 #include "../Curves/BezierSurface.h"
-#include "../views/BezierSurfacePanel.h"
+#include "../views/BezierSurfacePanel3D.h"
+#include "../views/BezierSurfacePanel2D.h"
 
 class MainController
 {
@@ -64,7 +65,7 @@ public:
 
 	std::vector<ModelPanel*> modelsPanels;
 	std::vector<SpherePanel*> spherePrimivites;
-	std::vector<BezierSurfacePanel*> surfaceBezierPrimitives;
+	std::vector<BezierSurfacePanel3D*> surfaceBezierPrimitives;
 	std::vector<CubicBezierPanel3D*> cubicBezier3DPrimitives;
 	std::vector<CubicHermitePanel3D*> cubicHermite3DPrimitives;
 	std::vector<ParametriqueBezierPanel3D*> parametriqueBezier3DPrimitives;

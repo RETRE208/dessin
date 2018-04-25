@@ -238,6 +238,12 @@ void MainController::openNewPrimitvePanel(string primitiveName) {
 		primitives2DPanels.push_back(parametriqueBezierPanel);
 		selectorPanel.addToggle("6 Points Bezier Curve " + to_string(primitives2DPanels.size() - 1));
 	}
+	if (primitiveName == "Surface Bezier") {
+		BezierSurfacePanel2D* bezierSurfacePanel = new BezierSurfacePanel2D();
+		bezierSurfacePanel->setup("Surface Bezier " + to_string(primitives2DPanels.size()));
+		primitives2DPanels.push_back(bezierSurfacePanel);
+		selectorPanel.addToggle("Surface Bezier " + to_string(primitives2DPanels.size() - 1));
+	}
 }
 
 void MainController::openNewPrimitve3DPanel(string primitiveName) {
@@ -254,7 +260,7 @@ void MainController::openNewPrimitve3DPanel(string primitiveName) {
 		spherePrimivites.push_back(spherePanel);
 	}
 	if (primitiveName == "Surface Bezier") {
-		BezierSurfacePanel* bezierSurfacePanel = new BezierSurfacePanel();
+		BezierSurfacePanel3D* bezierSurfacePanel = new BezierSurfacePanel3D();
 		bezierSurfacePanel->setup("Surface Bezier " + to_string(primitives2DPanels.size()));
 		surfaceBezierPrimitives.push_back(bezierSurfacePanel);
 	}

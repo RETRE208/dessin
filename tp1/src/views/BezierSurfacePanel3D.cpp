@@ -1,6 +1,6 @@
-#include "BezierSurfacePanel.h"
+#include "BezierSurfacePanel3D.h"
 
-void BezierSurfacePanel::setup(string name)
+void BezierSurfacePanel3D::setup(string name)
 {
 	bezier = new BezierSurface();
 	panelName = name;
@@ -21,44 +21,44 @@ void BezierSurfacePanel::setup(string name)
 	hideSurfaceToggle = gui->addToggle("Hide Surface");
 	drawCtrlPointsTogle = gui->addToggle("Draw Control Points");
 	
-	picker->onColorPickerEvent(this, &BezierSurfacePanel::onColorPickerEvent);
-	gui->onDropdownEvent(this, &BezierSurfacePanel::onDropdownEvent);
-	gui->onButtonEvent(this, &BezierSurfacePanel::onButtonEvent);
+	picker->onColorPickerEvent(this, &BezierSurfacePanel3D::onColorPickerEvent);
+	gui->onDropdownEvent(this, &BezierSurfacePanel3D::onDropdownEvent);
+	gui->onButtonEvent(this, &BezierSurfacePanel3D::onButtonEvent);
 }
 
-void BezierSurfacePanel::onDropdownEvent(ofxDatGuiDropdownEvent e)
+void BezierSurfacePanel3D::onDropdownEvent(ofxDatGuiDropdownEvent e)
 {
 	cout << "the option at index # " << e.child << " was selected " << endl;
 	string choice = options.at(e.child);
 	bezier->modifyControlPointNumber(choice);
 }
 
-void BezierSurfacePanel::draw()
+void BezierSurfacePanel3D::draw()
 {
 	bezier->draw();
 }
 
-void BezierSurfacePanel::onColorPickerEvent(ofxDatGuiColorPickerEvent e)
+void BezierSurfacePanel3D::onColorPickerEvent(ofxDatGuiColorPickerEvent e)
 {
 	if (e.target == picker) {
 		bezier->color = e.color;
 	}
 }
 
-void BezierSurfacePanel::setColor(ofColor color) {
+void BezierSurfacePanel3D::setColor(ofColor color) {
 	bezier->color = color;
 }
 
-string BezierSurfacePanel::getPanelName() {
+string BezierSurfacePanel3D::getPanelName() {
 	return panelName;
 }
 
-void BezierSurfacePanel::deletePanel()
+void BezierSurfacePanel3D::deletePanel()
 {
 	gui->~ofxDatGui();
 }
 
-void BezierSurfacePanel::onButtonEvent(ofxDatGuiButtonEvent e) {
+void BezierSurfacePanel3D::onButtonEvent(ofxDatGuiButtonEvent e) {
 	if (e.target == hideSurfaceToggle) {
 		if (hideSurface == true) {
 			bezier->drawSurface = false;

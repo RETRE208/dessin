@@ -97,13 +97,14 @@
       <Filter>addons\ofxBezierSurface\src</Filter>
     </ClCompile>
     <ClCompile Include="src\Curves\BezierSurface.cpp" />
-    <ClCompile Include="src\views\BezierSurfacePanel.cpp" />
     <ClCompile Include="src\views\CubicBezierPanel2D.cpp" />
     <ClCompile Include="src\views\CubicHermitePanel2D.cpp" />
     <ClCompile Include="src\views\ParametriqueBezierPanel2D.cpp" />
     <ClCompile Include="src\views\CubicBezierPanel3D.cpp" />
     <ClCompile Include="src\views\CubicHermitePanel3D.cpp" />
     <ClCompile Include="src\views\ParametriqueBezierPanel3D.cpp" />
+    <ClCompile Include="src\views\BezierSurfacePanel3D.cpp" />
+    <ClCompile Include="src\views\BezierSurfacePanel2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -486,13 +487,14 @@
       <Filter>addons\ofxBezierSurface\src</Filter>
     </ClInclude>
     <ClInclude Include="src\Curves\BezierSurface.h" />
-    <ClInclude Include="src\views\BezierSurfacePanel.h" />
     <ClInclude Include="src\views\CubicBezierPanel2D.h" />
     <ClInclude Include="src\views\CubicHermitePanel2D.h" />
     <ClInclude Include="src\views\ParametriqueBezierPanel2D.h" />
     <ClInclude Include="src\views\CubicBezierPanel3D.h" />
     <ClInclude Include="src\views\CubicHermitePanel3D.h" />
     <ClInclude Include="src\views\ParametriqueBezierPanel3D.h" />
+    <ClInclude Include="src\views\BezierSurfacePanel3D.h" />
+    <ClInclude Include="src\views\BezierSurfacePanel2D.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

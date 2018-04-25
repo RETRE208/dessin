@@ -5,9 +5,7 @@ BezierSurface::BezierSurface()
 	width = 1024;
 	height = 768;
 
-	ofImage image;
-	image.load("1024_768.jpg");
-	image.resize(width, height);
+	ctrl_point_z = 0;
 
 	surface.setup(width, height, 4, 20);
 	color = ofColor::red;
