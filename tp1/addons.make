@@ -1,5 +1,0 @@
-ofxAssimpModelLoader
-ofxGui
-ofxXmlSettings
-ofxBezierSurface
-ofxDatGui
