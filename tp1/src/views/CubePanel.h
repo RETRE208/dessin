@@ -10,8 +10,12 @@ public:
 	void draw();
 
 	void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
+	void onToggleEvent(ofxDatGuiToggleEvent e);
+	void onSliderEvent(ofxDatGuiSliderEvent e);
 	bool mDragging;
+	int shinyness;
 	Cube* cube;
+	ofMaterial material;
 	ofxDatGui* gui;
 	ofxDatGuiColorPicker* picker;
 	ofxDatGuiSlider* sx;
@@ -23,5 +27,7 @@ public:
 	ofxDatGuiSlider* rx;
 	ofxDatGuiSlider* ry;
 	ofxDatGuiSlider* rz;
+	ofxDatGuiToggle* materialToggle;
+	ofxDatGuiSlider* shininessSlider;
 };
 

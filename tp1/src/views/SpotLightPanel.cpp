@@ -32,7 +32,6 @@ void SpotLightPanel::draw()
 {
 	ofEnableDepthTest();
 	ofEnableLighting();
-	light.setSpotlight();
 	light.enable();	
 }
 

@@ -18,6 +18,11 @@ void CubePanel::setup()
 	rz = gui->addSlider("ROTATION Z", 0, 360);
 	picker = gui->addColorPicker("COLOR PICKER", ofColor::fromHex(0xCECECE));
 	picker->onColorPickerEvent(this, &CubePanel::onColorPickerEvent);
+	materialToggle = gui->addToggle("ENABLE MATERIAL", false);
+	shininessSlider = gui->addSlider("SNININESS", 0, 255);
+	shininessSlider->setEnabled(false);
+	shininessSlider->onSliderEvent(this, &CubePanel::onSliderEvent);
+	materialToggle->onToggleEvent(this, &CubePanel::onToggleEvent);
 
 	sx->bind(cube->x);
 	sy->bind(cube->y);
@@ -28,6 +33,7 @@ void CubePanel::setup()
 	rx->bind(cube->angleX);
 	ry->bind(cube->angleY);
 	rz->bind(cube->angleZ);
+	shininessSlider->bind(shinyness);
 
 	cube->x = ofGetWidth() / 2;
 	cube->y = ofGetHeight() / 2;
@@ -35,11 +41,32 @@ void CubePanel::setup()
 
 void CubePanel::draw()
 {
-	cube->draw();
+	if (materialToggle->getChecked()) {
+		material.setShininess(shinyness);
+		material.begin();
+		cube->draw();
+		material.end();
+	}
+	else {
+		cube->draw();
+	}
+}
+
+void CubePanel::onToggleEvent(ofxDatGuiToggleEvent e)
+{
+	shininessSlider->setEnabled(materialToggle->getChecked());
 }
 
 void CubePanel::onColorPickerEvent(ofxDatGuiColorPickerEvent e)
 {
 	cube->color = e.color;
+	material.setSpecularColor(e.color);
+	material.setDiffuseColor(e.color);
+	material.setAmbientColor(e.color);
+}
+
+void CubePanel::onSliderEvent(ofxDatGuiSliderEvent e)
+{
+	material.setShininess(e.value);
 }
 

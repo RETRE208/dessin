@@ -20,6 +20,14 @@ void MainController::draw()
 	selectorPanel.draw();
 	if (mode3DState) {
 		ofEnableDepthTest();
+		for (auto i : ambiantLightPanels)
+			i->draw();
+		for (auto i : directionalLightPanels)
+			i->draw();
+		for (auto i : pointLightPanels)
+			i->draw();
+		for (auto i : spotLightPanels)
+			i->draw();
 		for (int i = 0; i < modelsPanels.size(); i++) {
 			modelsPanels[i]->draw();
 		}
@@ -29,14 +37,6 @@ void MainController::draw()
 		for (int i = 0; i < cubePrimivites.size(); i++) {
 			cubePrimivites[i]->draw();
 		}
-		for (auto i : ambiantLightPanels)
-			i->draw();
-		for (auto i : directionalLightPanels)
-			i->draw();
-		for (auto i : pointLightPanels)
-			i->draw();
-		for (auto i : spotLightPanels)
-			i->draw();
 		ofDisableDepthTest();
 	}
 	else {
