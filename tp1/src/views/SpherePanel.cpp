@@ -19,8 +19,8 @@ void SpherePanel::setup()
 	sz->bind(sphere->z);
 	sr->bind(sphere->mRadius);
 
-	sphere -> x = ofGetWidth() / 2;
-	sphere -> y = ofGetHeight() / 2;
+	sphere -> x = 0;
+	sphere -> y = 0;
 }
 
 void SpherePanel::draw()

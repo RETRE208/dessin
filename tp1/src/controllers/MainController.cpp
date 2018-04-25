@@ -11,7 +11,6 @@ class noModelsExeption : public exception
 
 void MainController::setup()
 {
-	cameraPanel.setup();
 	controlPanel.setup(this);
 	selectorPanel.setup();
 	ofSetVerticalSync(true);
@@ -21,7 +20,6 @@ void MainController::draw()
 {
 	selectorPanel.draw();
 	if (mode3DState) {
-		ofEnableDepthTest();
 		cameraPanel.begin();
 		cameraPanel.draw();
 		
@@ -36,7 +34,6 @@ void MainController::draw()
 		}
 		cameraPanel.end();
 		ofDisableDepthTest();
-
 	}
 	else {
 		for (int i = 0; i < imagesPanels.size(); i++) {
@@ -148,6 +145,7 @@ void MainController::switch2DMode() {
 void MainController::switch3DMode() {
 	mode3DState = true;
 	ofEnableLighting();
+	cameraPanel.setup();
 
 	light.setAmbientColor(ofColor(255, 255, 255));
 	light.setDiffuseColor(ofColor(255, 255, 255));

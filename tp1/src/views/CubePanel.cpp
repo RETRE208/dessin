@@ -29,8 +29,8 @@ void CubePanel::setup()
 	ry->bind(cube->angleY);
 	rz->bind(cube->angleZ);
 
-	cube->x = ofGetWidth() / 2;
-	cube->y = ofGetHeight() / 2;
+	cube->x = 0;
+	cube->y = 0;
 }
 
 void CubePanel::draw()
