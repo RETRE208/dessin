@@ -23,6 +23,7 @@
 #include "../views/CameraPanel.h"
 #include "../views/CubicBezierPanel.h"
 #include "../views/CubicHermitePanel.h"
+#include "../views/ParametriqueBezierPanel.h"
 
 class MainController
 {

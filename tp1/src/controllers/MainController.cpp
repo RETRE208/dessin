@@ -220,6 +220,12 @@ void MainController::openNewPrimitvePanel(string primitiveName) {
 		primitives2DPanels.push_back(cubicHermitePanel);
 		selectorPanel.addToggle("Cubic Hermite Curve " + to_string(primitives2DPanels.size() - 1));
 	}
+	if (primitiveName == "6 Points Bezier Curve") {
+		ParametriqueBezierPanel* parametriqueBezierPanel = new ParametriqueBezierPanel();
+		parametriqueBezierPanel->setup("6 Points Bezier Curve " + to_string(primitives2DPanels.size()));
+		primitives2DPanels.push_back(parametriqueBezierPanel);
+		selectorPanel.addToggle("6 Points Bezier Curve " + to_string(primitives2DPanels.size() - 1));
+	}
 }
 
 void MainController::openNewPrimitve3DPanel(string primitiveName) {
