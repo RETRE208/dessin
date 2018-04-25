@@ -91,11 +91,16 @@
     <ClCompile Include="src\views\CameraPanel.cpp" />
     <ClCompile Include="src\Camera\Camera.cpp" />
     <ClCompile Include="src\Curves\CubicBezier.cpp" />
-    <ClCompile Include="src\views\CubicBezierPanel.cpp" />
     <ClCompile Include="src\Curves\CubicHermite.cpp" />
-    <ClCompile Include="src\views\CubicHermitePanel.cpp" />
     <ClCompile Include="src\Curves\ParametriqueBezier.cpp" />
-    <ClCompile Include="src\views\ParametriqueBezierPanel.cpp" />
+    <ClCompile Include="..\..\..\..\addons\ofxBezierSurface\src\ofxBezierSurface.cpp">
+      <Filter>addons\ofxBezierSurface\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Curves\BezierSurface.cpp" />
+    <ClCompile Include="src\views\BezierSurfacePanel.cpp" />
+    <ClCompile Include="src\views\CubicBezierPanel2D.cpp" />
+    <ClCompile Include="src\views\CubicHermitePanel2D.cpp" />
+    <ClCompile Include="src\views\ParametriqueBezierPanel2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -214,6 +219,12 @@
     </Filter>
     <Filter Include="addons\ofxDatGui\src\themes">
       <UniqueIdentifier>{09181a89-73d9-4b5d-a1f9-7a2e6fbaef19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBezierSurface">
+      <UniqueIdentifier>{6c897126-88a7-4d2c-8da2-0a011cb09d93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBezierSurface\src">
+      <UniqueIdentifier>{798f62f1-5876-47d3-9f38-4206094679dc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -466,11 +477,16 @@
     <ClInclude Include="src\views\CameraPanel.h" />
     <ClInclude Include="src\Camera\Camera.h" />
     <ClInclude Include="src\Curves\CubicBezier.h" />
-    <ClInclude Include="src\views\CubicBezierPanel.h" />
     <ClInclude Include="src\Curves\CubicHermite.h" />
-    <ClInclude Include="src\views\CubicHermitePanel.h" />
     <ClInclude Include="src\Curves\ParametriqueBezier.h" />
-    <ClInclude Include="src\views\ParametriqueBezierPanel.h" />
+    <ClInclude Include="..\..\..\..\addons\ofxBezierSurface\src\ofxBezierSurface.h">
+      <Filter>addons\ofxBezierSurface\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Curves\BezierSurface.h" />
+    <ClInclude Include="src\views\BezierSurfacePanel.h" />
+    <ClInclude Include="src\views\CubicBezierPanel2D.h" />
+    <ClInclude Include="src\views\CubicHermitePanel2D.h" />
+    <ClInclude Include="src\views\ParametriqueBezierPanel2D.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

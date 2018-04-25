@@ -10,19 +10,19 @@ public:
 
 	ofPolyline line_renderer;
 
-	float ctrl_point1x;
-	float ctrl_point2x;
-	float ctrl_point3x;
-	float ctrl_point4x;
-	float ctrl_point5x;
-	float ctrl_point6x;
+	float radius;
 
-	float ctrl_point1y;
-	float ctrl_point2y;
-	float ctrl_point3y;
-	float ctrl_point4y;
-	float ctrl_point5y;
-	float ctrl_point6y;
+	ofVec3f ctrl_point1;
+	ofVec3f ctrl_point2;
+	ofVec3f ctrl_point3;
+	ofVec3f ctrl_point4;
+	ofVec3f ctrl_point5;
+	ofVec3f ctrl_point6;
+
+	int ctrlPointNumber = 1;
+	float ctrl_point_x;
+	float ctrl_point_y;
+	float ctrl_point_z;
 
 	ofVec3f position;
 
@@ -35,15 +35,20 @@ public:
 	ofColor color;
 
 	void evaluate(float t,
-		float p1x, float p1y,
-		float p2x, float p2y,
-		float p3x, float p3y,
-		float p4x, float p4y,
-		float p5x, float p5y,
-		float p6x, float p6y,
-		float&  x, float& y, float& z);
+		float p1x, float p1y, float p1z,
+		float p2x, float p2y, float p2z,
+		float p3x, float p3y, float p3z,
+		float p4x, float p4y, float p4z,
+		float p5x, float p5y, float p5z,
+		float p6x, float p6y, float p6z,
+		float&  x, float& y, float&  z);
 
 	void update();
 	void draw();
+
+	bool drawCtrlPoints = false;
+
+	void modifyControlPointNumber(string ctrlPoint);
+	void modifyControlPoint();
 };
 

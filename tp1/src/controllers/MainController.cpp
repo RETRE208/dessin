@@ -24,7 +24,7 @@ void MainController::draw()
 		ofEnableDepthTest();
 		cameraPanel.begin();
 		cameraPanel.draw();
-		
+
 		for (int i = 0; i < modelsPanels.size(); i++) {
 			modelsPanels[i]->draw();
 		}
@@ -33,6 +33,9 @@ void MainController::draw()
 		}
 		for (int i = 0; i < cubePrimivites.size(); i++) {
 			cubePrimivites[i]->draw();
+		}
+		for (int i = 0; i < surfaceBezierPrimitives.size(); i++) {
+			surfaceBezierPrimitives[i]->draw();
 		}
 		cameraPanel.end();
 		ofDisableDepthTest();
@@ -209,19 +212,19 @@ void MainController::openNewPrimitvePanel(string primitiveName) {
 		selectorPanel.addToggle("Square " + to_string(primitives2DPanels.size() - 1));
 	}
 	if (primitiveName == "Cubic Bezier Curve") {
-		CubicBezierPanel* cubicBezierPanel = new CubicBezierPanel();
+		CubicBezierPanel2D* cubicBezierPanel = new CubicBezierPanel2D();
 		cubicBezierPanel->setup("Cubic Bezier Curve " + to_string(primitives2DPanels.size()));
 		primitives2DPanels.push_back(cubicBezierPanel);
 		selectorPanel.addToggle("Cubic Bezier Curve " + to_string(primitives2DPanels.size() - 1));
 	}
 	if (primitiveName == "Cubic Hermite Curve") {
-		CubicHermitePanel* cubicHermitePanel = new CubicHermitePanel();
+		CubicHermitePanel2D* cubicHermitePanel = new CubicHermitePanel2D();
 		cubicHermitePanel->setup("Cubic Hermite Curve " + to_string(primitives2DPanels.size()));
 		primitives2DPanels.push_back(cubicHermitePanel);
 		selectorPanel.addToggle("Cubic Hermite Curve " + to_string(primitives2DPanels.size() - 1));
 	}
 	if (primitiveName == "6 Points Bezier Curve") {
-		ParametriqueBezierPanel* parametriqueBezierPanel = new ParametriqueBezierPanel();
+		ParametriqueBezierPanel2D* parametriqueBezierPanel = new ParametriqueBezierPanel2D();
 		parametriqueBezierPanel->setup("6 Points Bezier Curve " + to_string(primitives2DPanels.size()));
 		primitives2DPanels.push_back(parametriqueBezierPanel);
 		selectorPanel.addToggle("6 Points Bezier Curve " + to_string(primitives2DPanels.size() - 1));
@@ -240,6 +243,11 @@ void MainController::openNewPrimitve3DPanel(string primitiveName) {
 		SpherePanel* spherePanel = new SpherePanel();
 		spherePanel->setup();
 		spherePrimivites.push_back(spherePanel);
+	}
+	if (primitiveName == "Surface Bezier") {
+		BezierSurfacePanel* bezierSurfacePanel = new BezierSurfacePanel();
+		bezierSurfacePanel->setup("Surface Bezier " + to_string(primitives2DPanels.size()));
+		surfaceBezierPrimitives.push_back(bezierSurfacePanel);
 	}
 }
 

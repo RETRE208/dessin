@@ -21,9 +21,11 @@
 #include "../views/SelectorPanel.h"
 #include "../views/SquarePanel.h"
 #include "../views/CameraPanel.h"
-#include "../views/CubicBezierPanel.h"
-#include "../views/CubicHermitePanel.h"
-#include "../views/ParametriqueBezierPanel.h"
+#include "../views/CubicBezierPanel2D.h"
+#include "../views/CubicHermitePanel2D.h"
+#include "../views/ParametriqueBezierPanel2D.h"
+#include "../Curves/BezierSurface.h"
+#include "../views/BezierSurfacePanel.h"
 
 class MainController
 {
@@ -59,6 +61,7 @@ public:
 
 	std::vector<ModelPanel*> modelsPanels;
 	std::vector<SpherePanel*> spherePrimivites;
+	std::vector<BezierSurfacePanel*> surfaceBezierPrimitives;
 	std::vector<CubePanel*> cubePrimivites;
 	std::vector<ImagePanel*> imagesPanels;
 	std::vector<PrimitivePanel*> primitives2DPanels;
