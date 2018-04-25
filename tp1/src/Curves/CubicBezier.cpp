@@ -1,7 +1,7 @@
-#include "Bezier.h"
+#include "CubicBezier.h"
 #include <iostream>
 
-Bezier::Bezier() {
+CubicBezier::CubicBezier() {
 	line_resolution = 50;
 	line_width = 8.0f;
 
@@ -16,16 +16,18 @@ Bezier::Bezier() {
 
 	ctrl_point4x = 600;
 	ctrl_point4y = 500;
+
+	color = ofColor::green;
 }
 
-void Bezier::draw() {
+void CubicBezier::draw() {
 	update();
-	ofSetColor(0, 255, 0);
+	ofSetColor(color);
 	ofSetLineWidth(line_width);
 	line_renderer.draw();
 }
 
-void Bezier::update()
+void CubicBezier::update()
 {
 	line_renderer.clear();
 	for (index = 0; index < line_resolution; ++index)
@@ -41,7 +43,7 @@ void Bezier::update()
 	}
 }
 
-inline void Bezier::evaluate(
+inline void CubicBezier::evaluate(
 	float t,
 	float p1x, float p1y,
 	float p2x, float p2y,

@@ -208,6 +208,12 @@ void MainController::openNewPrimitvePanel(string primitiveName) {
 		primitives2DPanels.push_back(squarePanel);
 		selectorPanel.addToggle("Square " + to_string(primitives2DPanels.size() - 1));
 	}
+	if (primitiveName == "Cubic Bezier") {
+		CubicBezierPanel* cubicBezierPanel = new CubicBezierPanel();
+		cubicBezierPanel->setup("Cubic Bezier " + to_string(primitives2DPanels.size()));
+		primitives2DPanels.push_back(cubicBezierPanel);
+		selectorPanel.addToggle("Cubic Bezier " + to_string(primitives2DPanels.size() - 1));
+	}
 }
 
 void MainController::openNewPrimitve3DPanel(string primitiveName) {

@@ -21,6 +21,7 @@
 #include "../views/SelectorPanel.h"
 #include "../views/SquarePanel.h"
 #include "../views/CameraPanel.h"
+#include "../views/CubicBezierPanel.h"
 
 class MainController
 {

@@ -2,10 +2,10 @@
 
 #include "ofMain.h"
 
-class Bezier
+class CubicBezier
 {
 public:
-	Bezier();
+	CubicBezier();
 
 	ofPolyline line_renderer;
 
@@ -26,6 +26,8 @@ public:
 	int line_resolution;
 
 	int index;
+
+	ofColor color;
 
 	void evaluate(float t,
 		float p1x, float p1y,
