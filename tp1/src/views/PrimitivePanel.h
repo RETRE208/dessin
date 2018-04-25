@@ -7,6 +7,7 @@
 #include "../primitives/Ligne.h"
 #include "../primitives/Ellipse.h"
 #include "../Curves/CubicBezier.h"
+#include "../Curves/CubicHermite.h"
 
 class PrimitivePanel
 {

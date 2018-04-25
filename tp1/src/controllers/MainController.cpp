@@ -208,11 +208,17 @@ void MainController::openNewPrimitvePanel(string primitiveName) {
 		primitives2DPanels.push_back(squarePanel);
 		selectorPanel.addToggle("Square " + to_string(primitives2DPanels.size() - 1));
 	}
-	if (primitiveName == "Cubic Bezier") {
+	if (primitiveName == "Cubic Bezier Curve") {
 		CubicBezierPanel* cubicBezierPanel = new CubicBezierPanel();
-		cubicBezierPanel->setup("Cubic Bezier " + to_string(primitives2DPanels.size()));
+		cubicBezierPanel->setup("Cubic Bezier Curve " + to_string(primitives2DPanels.size()));
 		primitives2DPanels.push_back(cubicBezierPanel);
-		selectorPanel.addToggle("Cubic Bezier " + to_string(primitives2DPanels.size() - 1));
+		selectorPanel.addToggle("Cubic Bezier Curve " + to_string(primitives2DPanels.size() - 1));
+	}
+	if (primitiveName == "Cubic Hermite Curve") {
+		CubicHermitePanel* cubicHermitePanel = new CubicHermitePanel();
+		cubicHermitePanel->setup("Cubic Hermite Curve " + to_string(primitives2DPanels.size()));
+		primitives2DPanels.push_back(cubicHermitePanel);
+		selectorPanel.addToggle("Cubic Hermite Curve " + to_string(primitives2DPanels.size() - 1));
 	}
 }
 

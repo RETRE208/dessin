@@ -1,6 +1,6 @@
-#include "CubicBezier.h"
+#include "CubicHermite.h"
 
-CubicBezier::CubicBezier() {
+CubicHermite::CubicHermite() {
 	line_resolution = 50;
 	line_width = 8.0f;
 
@@ -19,30 +19,37 @@ CubicBezier::CubicBezier() {
 	color = ofColor::green;
 }
 
-void CubicBezier::draw() {
+void CubicHermite::draw() {
 	update();
 	ofSetColor(color);
 	ofSetLineWidth(line_width);
 	line_renderer.draw();
 }
 
-void CubicBezier::update()
+void CubicHermite::update()
 {
 	line_renderer.clear();
 	for (index = 0; index < line_resolution; ++index)
 	{
+		ofVec2f ctrl_point1 = { ctrl_point1x, ctrl_point1y };
+		ofVec2f ctrl_point2 = { ctrl_point2x, ctrl_point2y };
+		ofVec2f ctrl_point3 = { ctrl_point3x, ctrl_point3y };
+		ofVec2f ctrl_point4 = { ctrl_point4x, ctrl_point4y };
+		tangent1 = ctrl_point2 - ctrl_point1;
+		tangent2 = ctrl_point3 - ctrl_point4;
+
 		evaluate(
 			index / (float)line_resolution,
 			ctrl_point1x, ctrl_point1y,
-			ctrl_point2x, ctrl_point2y,
-			ctrl_point3x, ctrl_point3y,
+			tangent1.x, tangent1.y,
+			tangent2.x, tangent2.y,
 			ctrl_point4x, ctrl_point4y,
 			position.x, position.y, position.z);
 		line_renderer.addVertex(position);
 	}
 }
 
-inline void CubicBezier::evaluate(
+inline void CubicHermite::evaluate(
 	float t,
 	float p1x, float p1y,
 	float p2x, float p2y,
@@ -56,7 +63,7 @@ inline void CubicBezier::evaluate(
 	float tt = t * t;
 	float ttt = tt * t;
 
-	x = uuu * p1x + 3 * uu * t * p2x + 3 * u * tt * p3x + ttt * p4x;
-	y = uuu * p1y + 3 * uu * t * p2y + 3 * u * tt * p3y + ttt * p4y;
+	x = (2 * ttt - 3 * tt + 1) * p1x + (ttt - 2 * tt + t) * p2x + (ttt - tt) * p3x + (-2 * ttt + 3 * tt) * p4x;
+	y = (2 * ttt - 3 * tt + 1) * p1y + (ttt - 2 * tt + t) * p2y + (ttt - tt) * p3y + (-2 * ttt + 3 * tt) * p4y;
 	z = 0;
 }

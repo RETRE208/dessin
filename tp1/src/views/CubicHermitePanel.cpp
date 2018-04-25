@@ -1,8 +1,8 @@
-#include "CubicBezierPanel.h"
+#include "CubicHermitePanel.h"
 
-void CubicBezierPanel::setup(string name)
+void CubicHermitePanel::setup(string name)
 {
-	bezier = new CubicBezier();
+	hermite = new CubicHermite();
 	panelName = name;
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
 	gui->setWidth(300);
@@ -17,40 +17,40 @@ void CubicBezierPanel::setup(string name)
 	ctrl_point4y = gui->addSlider("Control Point 4 Y", 0, ofGetHeight());
 	slineWidth = gui->addSlider("LINE WIDTH", 0.1, 8.0);
 	picker = gui->addColorPicker("COLOR", ofColor::fromHex(0xCECECE));
-	picker->onColorPickerEvent(this, &CubicBezierPanel::onColorPickerEvent);
+	picker->onColorPickerEvent(this, &CubicHermitePanel::onColorPickerEvent);
 
-	ctrl_point1x->bind(bezier->ctrl_point1x);
-	ctrl_point1y->bind(bezier->ctrl_point1y);
-	ctrl_point2x->bind(bezier->ctrl_point2x);
-	ctrl_point2y->bind(bezier->ctrl_point2y);
-	ctrl_point3x->bind(bezier->ctrl_point3x);
-	ctrl_point3y->bind(bezier->ctrl_point3y);
-	ctrl_point4x->bind(bezier->ctrl_point4x);
-	ctrl_point4y->bind(bezier->ctrl_point4y);
-	slineWidth->bind(bezier->line_width);
+	ctrl_point1x->bind(hermite->ctrl_point1x);
+	ctrl_point1y->bind(hermite->ctrl_point1y);
+	ctrl_point2x->bind(hermite->ctrl_point2x);
+	ctrl_point2y->bind(hermite->ctrl_point2y);
+	ctrl_point3x->bind(hermite->ctrl_point3x);
+	ctrl_point3y->bind(hermite->ctrl_point3y);
+	ctrl_point4x->bind(hermite->ctrl_point4x);
+	ctrl_point4y->bind(hermite->ctrl_point4y);
+	slineWidth->bind(hermite->line_width);
 }
 
-void CubicBezierPanel::draw()
+void CubicHermitePanel::draw()
 {
-	bezier->draw();
+	hermite->draw();
 }
 
-void CubicBezierPanel::onColorPickerEvent(ofxDatGuiColorPickerEvent e)
+void CubicHermitePanel::onColorPickerEvent(ofxDatGuiColorPickerEvent e)
 {
 	if (e.target == picker) {
-		bezier->color = e.color;
+		hermite->color = e.color;
 	}
 }
 
-void CubicBezierPanel::setColor(ofColor color) {
-	bezier->color = color;
+void CubicHermitePanel::setColor(ofColor color) {
+	hermite->color = color;
 }
 
-string CubicBezierPanel::getPanelName() {
+string CubicHermitePanel::getPanelName() {
 	return panelName;
 }
 
-void CubicBezierPanel::deletePanel()
+void CubicHermitePanel::deletePanel()
 {
 	gui->~ofxDatGui();
 }

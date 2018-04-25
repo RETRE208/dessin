@@ -92,6 +92,8 @@
     <ClCompile Include="src\Camera\Camera.cpp" />
     <ClCompile Include="src\Curves\CubicBezier.cpp" />
     <ClCompile Include="src\views\CubicBezierPanel.cpp" />
+    <ClCompile Include="src\Curves\CubicHermite.cpp" />
+    <ClCompile Include="src\views\CubicHermitePanel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -463,6 +465,8 @@
     <ClInclude Include="src\Camera\Camera.h" />
     <ClInclude Include="src\Curves\CubicBezier.h" />
     <ClInclude Include="src\views\CubicBezierPanel.h" />
+    <ClInclude Include="src\Curves\CubicHermite.h" />
+    <ClInclude Include="src\views\CubicHermitePanel.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

@@ -219,6 +219,8 @@ C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\theme
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxmlerror.cpp" />
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp" />
     <ClCompile Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.cpp" />
+    <ClCompile Include="src\views\CubicHermitePanel.cpp" />
+    <ClCompile Include="src\Curves\CubicHermite.cpp" />
     <ClCompile Include="src\views\CubicBezierPanel.cpp" />
     <ClCompile Include="src\Curves\CubicBezier.cpp" />
     <ClCompile Include="src\Camera\Camera.cpp" />
@@ -322,6 +324,8 @@ C:\Users\Utilisateur\Desktop\Dev\of_v0.9.8_vs_release\addons\ofxDatGui\src\theme
     <ClInclude Include="..\..\..\..\addons\ofxGui\src\ofxToggle.h" />
     <ClInclude Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxml.h" />
     <ClInclude Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
+    <ClInclude Include="src\views\CubicHermitePanel.h" />
+    <ClInclude Include="src\Curves\CubicHermite.h" />
     <ClInclude Include="src\views\CubicBezierPanel.h" />
     <ClInclude Include="src\Curves\CubicBezier.h" />
     <ClInclude Include="src\Camera\Camera.h" />
