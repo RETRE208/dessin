@@ -34,6 +34,7 @@
 #*.modelproj merge=binary
 #*.sqlproj   merge=binary
 #*.wwaproj   merge=binary
+*.vcxproj.filters merge=union
 
 ###############################################################################
 # behavior for image files
