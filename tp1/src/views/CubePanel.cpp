@@ -18,8 +18,15 @@ void CubePanel::setup()
 	rz = gui->addSlider("ROTATION Z", 0, 360);
 	picker = gui->addColorPicker("COLOR PICKER", ofColor::fromHex(0xCECECE));
 	picker->onColorPickerEvent(this, &CubePanel::onColorPickerEvent);
+
+	leatherToggle = gui->addToggle("ENABLE LEATHER MATERIAL", false);
+	goldToggle = gui->addToggle("ENABLE METAL MATERIAL", false);
+	concreteToggle = gui->addToggle("ENABLE VELVET MATERIAL", false);
+	leatherToggle->onToggleEvent(this, &CubePanel::onToggleLeatherEvent);
+	goldToggle->onToggleEvent(this, &CubePanel::onToggleGoldEvent);
+	concreteToggle->onToggleEvent(this, &CubePanel::onToggleConcreteEvent);
 	materialToggle = gui->addToggle("ENABLE MATERIAL", false);
-	shininessSlider = gui->addSlider("SNININESS", 0, 255);
+	shininessSlider = gui->addSlider("SNININESS", 5, 126);
 	shininessSlider->setEnabled(false);
 	shininessSlider->onSliderEvent(this, &CubePanel::onSliderEvent);
 	materialToggle->onToggleEvent(this, &CubePanel::onToggleEvent);
@@ -37,6 +44,11 @@ void CubePanel::setup()
 
 	cube->x = ofGetWidth() / 2;
 	cube->y = ofGetHeight() / 2;
+
+	ofDisableArbTex();
+	ofLoadImage(leatherTexture, "leather.jpg");
+	ofLoadImage(goldTexture, "metal.jpg");
+	ofLoadImage(concreteTexture, "velvet.jpg");
 }
 
 void CubePanel::draw()
@@ -47,6 +59,30 @@ void CubePanel::draw()
 		cube->draw();
 		material.end();
 	}
+	else if (leatherToggle->getChecked()) {
+		material.setShininess(50);
+		leatherTexture.bind();
+		leatherMaterial.begin();
+		cube->draw();
+		leatherTexture.unbind();
+		leatherMaterial.end();
+	}
+	else if (goldToggle->getChecked()) {
+		material.setShininess(110);
+		goldTexture.bind();
+		goldMaterial.begin();
+		cube->draw();
+		goldTexture.unbind();
+		goldMaterial.end();
+	}
+	else if (concreteToggle->getChecked()) {
+		concreteMaterial.setShininess(0);
+		concreteTexture.bind();
+		concreteMaterial.begin();
+		cube->draw();
+		concreteTexture.unbind();
+		concreteMaterial.end();
+	}
 	else {
 		cube->draw();
 	}
@@ -55,6 +91,9 @@ void CubePanel::draw()
 void CubePanel::onToggleEvent(ofxDatGuiToggleEvent e)
 {
 	shininessSlider->setEnabled(materialToggle->getChecked());
+	leatherToggle->setChecked(false);
+	goldToggle->setChecked(false);
+	concreteToggle->setChecked(false);
 }
 
 void CubePanel::onColorPickerEvent(ofxDatGuiColorPickerEvent e)
@@ -63,10 +102,48 @@ void CubePanel::onColorPickerEvent(ofxDatGuiColorPickerEvent e)
 	material.setSpecularColor(e.color);
 	material.setDiffuseColor(e.color);
 	material.setAmbientColor(e.color);
+	material.setSpecularColor(e.color);
 }
 
 void CubePanel::onSliderEvent(ofxDatGuiSliderEvent e)
 {
 	material.setShininess(e.value);
 }
+
+void CubePanel::onToggleLeatherEvent(ofxDatGuiToggleEvent e)
+{
+	if (leatherToggle->getChecked())
+		cube->color = (200, 200, 200);
+	else
+		cube->color = picker->getColor();
+	shininessSlider->setEnabled(false);
+	materialToggle->setChecked(false);
+	goldToggle->setChecked(false);
+	concreteToggle->setChecked(false);
+}
+
+void CubePanel::onToggleGoldEvent(ofxDatGuiToggleEvent e)
+{
+	if (goldToggle->getChecked())
+		cube->color = (255, 255, 255);
+	else
+		cube->color = picker->getColor();
+	shininessSlider->setEnabled(false);
+	materialToggle->setChecked(false);
+	leatherToggle->setChecked(false);
+	concreteToggle->setChecked(false);
+}
+
+void CubePanel::onToggleConcreteEvent(ofxDatGuiToggleEvent e)
+{
+	if (concreteToggle->getChecked())
+		cube->color = (255, 255, 255);
+	else
+		cube->color = picker->getColor();
+	shininessSlider->setEnabled(false);
+	materialToggle->setChecked(false);
+	goldToggle->setChecked(false);
+	leatherToggle->setChecked(false);
+}
+
 

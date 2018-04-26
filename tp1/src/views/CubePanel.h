@@ -16,6 +16,22 @@ public:
 	int shinyness;
 	Cube* cube;
 	ofMaterial material;
+
+	ofxDatGuiToggle* leatherToggle;
+	ofTexture leatherTexture;
+	ofMaterial leatherMaterial;
+	void onToggleLeatherEvent(ofxDatGuiToggleEvent e);
+
+	ofxDatGuiToggle* goldToggle;
+	ofTexture goldTexture;
+	ofMaterial goldMaterial;
+	void onToggleGoldEvent(ofxDatGuiToggleEvent e);
+
+	ofxDatGuiToggle* concreteToggle;
+	ofTexture concreteTexture;
+	ofMaterial concreteMaterial;
+	void onToggleConcreteEvent(ofxDatGuiToggleEvent e);
+
 	ofxDatGui* gui;
 	ofxDatGuiColorPicker* picker;
 	ofxDatGuiSlider* sx;

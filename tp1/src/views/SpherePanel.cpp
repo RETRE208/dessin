@@ -107,8 +107,6 @@ void SpherePanel::onSliderEvent(ofxDatGuiSliderEvent e)
 	material.setShininess(e.value);
 }
 
-
-
 void SpherePanel::onToggleLeatherEvent(ofxDatGuiToggleEvent e)
 {
 	if (leatherToggle->getChecked())

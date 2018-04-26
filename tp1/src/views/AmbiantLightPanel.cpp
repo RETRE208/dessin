@@ -16,6 +16,7 @@ void AmbiantLightPanel::draw()
 {
 	ofEnableDepthTest();
 	ofEnableLighting();
+	light.setDirectional();
 	light.enable();
 }
 

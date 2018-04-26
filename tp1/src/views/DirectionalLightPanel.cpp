@@ -28,7 +28,6 @@ void DirectionalLightPanel::draw()
 {
 	ofEnableDepthTest();
 	ofEnableLighting();
-	light.setDirectional();
 	light.setPosition(x, y, z);
 	light.enable();
 }
