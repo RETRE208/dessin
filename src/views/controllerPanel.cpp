@@ -16,7 +16,7 @@ void controllerPanel::setup(MainController* mainController)
 
 	primitives2D = gui->addDropdown("Primitives 2D", options);
 	primitives3D = gui->addDropdown("Primitives 3D", options3D);
-	lights = gui->addDropdown("Lumières", optionsLights);
+	lights = gui->addDropdown("Lights", optionsLights);
 	gui->addBreak();
 
 	gui->onButtonEvent(this, &controllerPanel::onButtonEvent);

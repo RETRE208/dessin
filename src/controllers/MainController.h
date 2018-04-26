@@ -87,6 +87,7 @@ public:
 	controllerPanel controlPanel;
 	PrimitivePanel primitivePanel;
 	Texture texture;
+	CameraPanel cameraPanel;
 };
 
 #endif
