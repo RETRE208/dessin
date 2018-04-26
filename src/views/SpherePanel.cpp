@@ -39,13 +39,14 @@ void SpherePanel::setup()
 	rz->bind(sphere->angleZ);
 	shininessSlider->bind(shininess);
 
-	sphere -> x = ofGetWidth() / 2;
-	sphere -> y = ofGetHeight() / 2;
+	sphere -> x = 0;
+	sphere -> y = 0;
 
 	ofDisableArbTex();
 	ofLoadImage(leatherTexture, "leather.jpg");
 	ofLoadImage(goldTexture, "metal.jpg");
 	ofLoadImage(concreteTexture, "velvet.jpg");
+	
 }
 
 void SpherePanel::draw()

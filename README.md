@@ -15,6 +15,8 @@ Prendre note que cette application n'est pas utilisable sur Mac et linux. Elle f
 
 7. (Cette étape est optionnelle si elle a déja été faite) Aller à la page suivante: https://github.com/braitsch/ofxDatGui. Copiez l'url du repo et le cloner dans of_v0.9.8_vs_release\addons. Ensuite, ouvrir le dossier ofxDatGui nouvellement créé dans addons et copier le dossier ofxbraitsch. Coller ce dossier dans of_v0.9.8_vs_release\apps\myApps\infographie-tp1\tp1\bin\data. L'option d'ajout de ce addon sera dans la section community addons.
 
+8. (Cette étape est optionnelle si elle a déja été faite) Aller à la page suivante: https://github.com/charlesveasey/ofxBezierSurface. Copiez l'url du repo et le cloner dans of_v0.9.8_vs_release\addons. Cocher l'option d'ajout de ce addon dans la section community addons en cliquant droit sur le projet et en allant dans openFrameworks addons.
+
 ## Exécution
 Exécuter tp1/bin/tp1_debug.exe ou compiler et exécuter le projet dans Visual Studio 2015.
 

@@ -42,8 +42,8 @@ void CubePanel::setup()
 	rz->bind(cube->angleZ);
 	shininessSlider->bind(shinyness);
 
-	cube->x = ofGetWidth() / 2;
-	cube->y = ofGetHeight() / 2;
+	cube->x = 0;
+	cube->y = 0;
 
 	ofDisableArbTex();
 	ofLoadImage(leatherTexture, "leather.jpg");
