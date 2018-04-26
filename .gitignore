@@ -247,13 +247,6 @@ FakesAssemblies/
 *.out
 *.app
 
-### OpenFrameworks ###
-# ignore generated binaries
-# but not the data folder
-
-/bin/*
-!/bin/data/
-
 # general
 
 [Bb]uild/
