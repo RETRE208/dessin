@@ -636,3 +636,4 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+tp1/tp1.vcxproj

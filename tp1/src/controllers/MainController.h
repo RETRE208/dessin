@@ -21,7 +21,7 @@
 #include "../views/SelectorPanel.h"
 #include "../views/SquarePanel.h"
 #include "../views/AmbiantLightPanel.h"
-#include "../views/DirectionalLightPanel.h"
+#include "../views/DirectionallightPanel.h"
 #include "../views/SpotLightPanel.h"
 #include "../views/PointLightPanel.h"
 
