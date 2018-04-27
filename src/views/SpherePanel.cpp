@@ -7,9 +7,9 @@ void SpherePanel::setup()
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
 	gui->setWidth(200);
 	gui->addHeader("Sphere Panel");
-	sx = gui->addSlider("SPHERE X", 0, ofGetWidth());
-	sy = gui->addSlider("SPHERE Y", 0, ofGetHeight());
-	sz = gui->addSlider("SPHERE Z", -500, 500);
+	sx = gui->addSlider("SPHERE X", -ofGetWidth(), ofGetWidth());
+	sy = gui->addSlider("SPHERE Y", -ofGetHeight(), ofGetHeight());
+	sz = gui->addSlider("SPHERE Z", -1000, 1000);
 	sr = gui->addSlider("SPHERE RADUIS", 0, ofGetWidth() / 2);
 	rx = gui->addSlider("ROTATION X", 0, 360);
 	ry = gui->addSlider("ROTATION Y", 0, 360);

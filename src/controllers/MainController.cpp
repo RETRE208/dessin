@@ -259,22 +259,22 @@ void MainController::openNewPrimitve3DPanel(string primitiveName) {
 	}
 	if (primitiveName == "Surface Bezier") {
 		BezierSurfacePanel3D* bezierSurfacePanel = new BezierSurfacePanel3D();
-		bezierSurfacePanel->setup("Surface Bezier " + to_string(primitives2DPanels.size()));
+		bezierSurfacePanel->setup("Surface Bezier " + to_string(surfaceBezierPrimitives.size()));
 		surfaceBezierPrimitives.push_back(bezierSurfacePanel);
 	}
 	if (primitiveName == "Cubic Bezier Curve") {
 		CubicBezierPanel3D* cubicBezierPanel = new CubicBezierPanel3D();
-		cubicBezierPanel->setup("Cubic Bezier Curve " + to_string(primitives2DPanels.size()));
+		cubicBezierPanel->setup("Cubic Bezier Curve " + to_string(cubicBezier3DPrimitives.size()));
 		cubicBezier3DPrimitives.push_back(cubicBezierPanel);
 	}
 	if (primitiveName == "Cubic Hermite Curve") {
 		CubicHermitePanel3D* cubicHermitePanel = new CubicHermitePanel3D();
-		cubicHermitePanel->setup("Cubic Hermite Curve " + to_string(primitives2DPanels.size()));
+		cubicHermitePanel->setup("Cubic Hermite Curve " + to_string(cubicHermite3DPrimitives.size()));
 		cubicHermite3DPrimitives.push_back(cubicHermitePanel);
 	}
 	if (primitiveName == "6 Points Bezier Curve") {
 		ParametriqueBezierPanel3D* parametriqueBezierPanel = new ParametriqueBezierPanel3D();
-		parametriqueBezierPanel->setup("Cubic Hermite Curve " + to_string(primitives2DPanels.size()));
+		parametriqueBezierPanel->setup("6 Points Bezier Curve " + to_string(parametriqueBezier3DPrimitives.size()));
 		parametriqueBezier3DPrimitives.push_back(parametriqueBezierPanel);
 	}
 }

@@ -7,7 +7,7 @@ void AmbiantLightPanel::setup(MainController* mainController)
 
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
 	gui->setWidth(200);
-	gui->addHeader("Light Panel");
+	gui->addHeader("Ambiant light Panel");
 	picker = gui->addColorPicker("COLOR PICKER", ofColor::fromHex(0xCECECE));
 	picker->onColorPickerEvent(this, &AmbiantLightPanel::onColorPickerEvent);
 }

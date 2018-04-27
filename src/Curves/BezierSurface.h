@@ -5,7 +5,7 @@
 class BezierSurface
 {
 public:
-	BezierSurface();
+	BezierSurface(string dimension);
 	
 	ofXml xml;
 
@@ -19,12 +19,13 @@ public:
 	bool drawCtrlPoints;
 	bool drawSurface;
 
-	int ctrlPointNumber = 1;
+	int ctrlPointNumber = 0;
 	float ctrl_point_x;
 	float ctrl_point_y;
 	float ctrl_point_z;
 
-	void loadPoints();
+	void loadPoints2D();
+	void loadPoints3D();
 	void draw();
 	void modifyControlPointNumber(string ctrlPoint);
 	void modifyControlPoint();

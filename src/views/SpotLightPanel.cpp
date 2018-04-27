@@ -7,11 +7,11 @@ void SpotLightPanel::setup(MainController* mainController)
 
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
 	gui->setWidth(200);
-	gui->addHeader("Light Panel");
+	gui->addHeader("Spotlight Panel");
 
 	sliderX = gui->addSlider("Image X", -ofGetHeight(), ofGetWidth());
 	sliderY = gui->addSlider("Image Y", -ofGetHeight(), ofGetHeight());
-	sliderZ = gui->addSlider("Image Z", -500, 500);
+	sliderZ = gui->addSlider("Image Z", -1000, 1000);
 	sliderAngle = gui->addSlider("Angle", 1, 360, 180);
 	picker = gui->addColorPicker("COLOR PICKER", ofColor::fromHex(0xCECECE));
 
