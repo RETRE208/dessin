@@ -131,3 +131,7 @@ void CameraPanel::end()
 {
 	cam.end();
 }
+
+ofCamera* CameraPanel::getCamera() {
+	return &cam;
+}
