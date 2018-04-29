@@ -2,7 +2,7 @@
 
 void CubicHermitePanel2D::setup(string name)
 {
-	hermite = new CubicHermite();
+	hermite = new CubicHermite("2D");
 	panelName = name;
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
 	gui->setWidth(300);

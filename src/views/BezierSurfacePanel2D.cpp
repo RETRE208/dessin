@@ -2,7 +2,7 @@
 
 void BezierSurfacePanel2D::setup(string name)
 {
-	bezier = new BezierSurface();
+	bezier = new BezierSurface("2D");
 	panelName = name;
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
 	gui->setWidth(200);

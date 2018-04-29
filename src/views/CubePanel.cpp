@@ -7,9 +7,9 @@ void CubePanel::setup()
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
 	gui->setWidth(200);
 	gui->addHeader("Cube Panel");
-	sx = gui->addSlider("POSITION X", 0, ofGetWidth());
-	sy = gui->addSlider("POSITION Y", 0, ofGetHeight());
-	sz = gui->addSlider("POSITION Z", -500, 500);
+	sx = gui->addSlider("POSITION X", -ofGetWidth(), ofGetWidth());
+	sy = gui->addSlider("POSITION Y", -ofGetHeight(), ofGetHeight());
+	sz = gui->addSlider("POSITION Z", -1000, 1000);
 	w = gui->addSlider("WIDTH", 0, ofGetWidth() / 2);
 	h = gui->addSlider("HEIGHT", 0, ofGetWidth() / 2);
 	d = gui->addSlider("DEPTH", 0, ofGetWidth() / 2);

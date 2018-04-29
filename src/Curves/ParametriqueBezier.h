@@ -6,7 +6,7 @@
 class ParametriqueBezier
 {
 public:
-	ParametriqueBezier();
+	ParametriqueBezier(string dimension);
 
 	ofPolyline line_renderer;
 

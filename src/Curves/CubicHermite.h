@@ -5,7 +5,7 @@
 class CubicHermite
 {
 public:
-	CubicHermite();
+	CubicHermite(string dimension);
 
 	ofPolyline line_renderer;
 

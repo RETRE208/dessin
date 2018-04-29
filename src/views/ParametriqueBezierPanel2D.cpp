@@ -2,7 +2,7 @@
 
 void ParametriqueBezierPanel2D::setup(string name)
 {
-	bezier = new ParametriqueBezier();
+	bezier = new ParametriqueBezier("2D");
 	panelName = name;
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
 	gui->setWidth(300);

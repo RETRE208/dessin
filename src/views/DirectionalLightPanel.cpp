@@ -7,11 +7,11 @@ void DirectionalLightPanel::setup(MainController* mainController)
 
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
 	gui->setWidth(200);
-	gui->addHeader("Light Panel");
+	gui->addHeader("Directionnal light Panel");
 
-	sliderX = gui->addSlider("Image X", 0, ofGetWidth(), 200);
-	sliderY = gui->addSlider("Image Y", 0, ofGetHeight(), 200);
-	sliderZ = gui->addSlider("Image Z", -500, 500);
+	sliderX = gui->addSlider("Image X", -ofGetWidth(), ofGetWidth(), 200);
+	sliderY = gui->addSlider("Image Y", -ofGetHeight(), ofGetHeight(), 200);
+	sliderZ = gui->addSlider("Image Z", -1000, 1000);
 	picker = gui->addColorPicker("COLOR PICKER", ofColor::fromHex(0xCECECE));
 
 	sliderX->bind(x);
