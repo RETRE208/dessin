@@ -17,6 +17,8 @@ Prendre note que cette application n'est pas utilisable sur Mac et linux. Elle f
 
 8. (Cette étape est optionnelle si elle a déja été faite) Aller à la page suivante: https://github.com/charlesveasey/ofxBezierSurface. Copiez l'url du repo et le cloner dans of_v0.9.8_vs_release\addons. Cocher l'option d'ajout de ce addon dans la section community addons en cliquant droit sur le projet et en allant dans openFrameworks addons.
 
+9. (Cette étape est optionnelle si elle a déja été faite) Aller à la page suivante: https://github.com/neilmendoza/ofxPostProcessing. Copiez l'url du repo et le cloner dans of_v0.9.8_vs_release\addons. Cocher l'option d'ajout de ce addon dans la section community addons en cliquant droit sur le projet et en allant dans openFrameworks addons.
+
 ## Exécution
 Exécuter tp1/bin/tp1_debug.exe ou compiler et exécuter le projet dans Visual Studio 2015.
 
