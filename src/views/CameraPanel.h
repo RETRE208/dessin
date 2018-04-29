@@ -14,6 +14,7 @@ public:
 	void onButtonEvent(ofxDatGuiButtonEvent e);
 	void reset();
 	void setup_camera();
+	ofCamera* getCamera();
 
 	ofCamera cam;
 

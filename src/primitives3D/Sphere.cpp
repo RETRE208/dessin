@@ -10,12 +10,5 @@ Sphere::Sphere(int radius) {
 
 void Sphere::draw() {
 	ofSetColor(color);
-	ofBoxPrimitive box = ofBoxPrimitive();
-	ofSpherePrimitive sphere = ofSpherePrimitive();
-	sphere.set(mRadius, 50);
-	sphere.setPosition(x, y, z);
-	sphere.rotate(angleX, 1.0f, 0.0f, 0.0f);
-	sphere.rotate(angleY, 0.0f, 1.0f, 0.0f);
-	sphere.rotate(angleZ, 0.0f, 0.0f, 1.0f);
-	sphere.draw();
+	ofSphere(x, y, z - 1000, mRadius);
 }
