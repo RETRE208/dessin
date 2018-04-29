@@ -8,7 +8,6 @@
 #include "../system/files.h"
 #include <vector>
 #include "../texture/texture.h"
-#include "../texture/Filter.h"
 #include "../views/controllerPanel.h"
 #include "../views/CirclePanel.h"
 #include "../views/RectanglePanel.h"
@@ -21,6 +20,10 @@
 #include "ofxAssimpModelLoader.h"
 #include "../views/SelectorPanel.h"
 #include "../views/SquarePanel.h"
+#include "../views/AmbiantLightPanel.h"
+#include "../views/DirectionallightPanel.h"
+#include "../views/SpotLightPanel.h"
+#include "../views/PointLightPanel.h"
 #include "../views/CameraPanel.h"
 #include "../views/CubicBezierPanel2D.h"
 #include "../views/CubicHermitePanel2D.h"
@@ -31,7 +34,6 @@
 #include "../Curves/BezierSurface.h"
 #include "../views/BezierSurfacePanel3D.h"
 #include "../views/BezierSurfacePanel2D.h"
-#include "ofxPostProcessing.h"
 
 class MainController
 {
@@ -56,6 +58,7 @@ public:
 	void instanciateNewModel(ofxAssimpModelLoader model);
 	void openNewPrimitvePanel(string primitiveName);
 	void openNewPrimitve3DPanel(string primitiveName);
+	void openNewLightPanel(string primitiveName);
 	void changeImageOpacity(ofImage* image, int alpha);
 	void removeSelectedPrimitives();
 	void inversionImageColor(ofImage* image);
@@ -64,16 +67,7 @@ public:
 	ofLight light;
 	float center_x;
 	float center_y;
-	bool blurIsActive;
-	bool AntiAliasingIsActive;
-	bool bloomIsActive;
-	bool contrastIsActive;
-	ofCamera* cam;
-	ofxPostProcessing* blurFilter;
-	ofxPostProcessing* AAFilter;
-	ofxPostProcessing* bloomFilter;
-	ofxPostProcessing* contrastFilter;
-
+	
 	std::vector<ModelPanel*> modelsPanels;
 	std::vector<SpherePanel*> spherePrimivites;
 	std::vector<BezierSurfacePanel3D*> surfaceBezierPrimitives;
@@ -84,12 +78,16 @@ public:
 	std::vector<ImagePanel*> imagesPanels;
 	std::vector<PrimitivePanel*> primitives2DPanels;
 
+	std::vector<AmbiantLightPanel*> ambiantLightPanels;
+	std::vector<DirectionalLightPanel*> directionalLightPanels;
+	std::vector<PointLightPanel*> pointLightPanels;
+	std::vector<SpotLightPanel*> spotLightPanels;
+
 	SelectorPanel selectorPanel;
 	controllerPanel controlPanel;
 	PrimitivePanel primitivePanel;
-	CameraPanel cameraPanel;
 	Texture texture;
-	Filter filterInstance;
+	CameraPanel cameraPanel;
 };
 
 #endif
