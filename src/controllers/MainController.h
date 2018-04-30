@@ -34,6 +34,8 @@
 #include "../Curves/BezierSurface.h"
 #include "../views/BezierSurfacePanel3D.h"
 #include "../views/BezierSurfacePanel2D.h"
+#include "../views/DelaunayPanel3D.h"
+#include "../views/DelaunayPanel2D.h"
 #include "../texture/Filter.h"
 #include "ofxPostProcessing.h"
 
@@ -79,6 +81,8 @@ public:
 	std::vector<CubePanel*> cubePrimivites;
 	std::vector<ImagePanel*> imagesPanels;
 	std::vector<PrimitivePanel*> primitives2DPanels;
+	std::vector<DelaunayPanel3D*> delaunayPanels3D;
+	std::vector<DelaunayPanel2D*> delaunayPanels2D;
 
 	std::vector<AmbiantLightPanel*> ambiantLightPanels;
 	std::vector<DirectionalLightPanel*> directionalLightPanels;
