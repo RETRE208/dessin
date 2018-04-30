@@ -10,6 +10,7 @@ void controllerPanel::setup(MainController* mainController)
 	exportBtn = gui->addButton("Export");
 	removeSelected = gui->addButton("Remove selected");
 	mode3DToggle = gui->addToggle("3D Mode");
+	modeRayTracing = gui->addToggle("Ray Tracing");
 	gui->addLabel("Background Color : ");
 	backgroundPicker = gui->addColorPicker("", ofColor::fromHex(0xCECECE));
 	backgroundPicker->onColorPickerEvent(this, &controllerPanel::onColorPickerEvent);
@@ -26,6 +27,10 @@ void controllerPanel::setup(MainController* mainController)
 
 	gui->onButtonEvent(this, &controllerPanel::onButtonEvent);
 	gui->onDropdownEvent(this, &controllerPanel::onPrimitiveDropdownEvent);
+}
+
+void controllerPanel::update()
+{
 }
 
 void controllerPanel::onButtonEvent(ofxDatGuiButtonEvent e) {
@@ -85,6 +90,19 @@ void controllerPanel::onButtonEvent(ofxDatGuiButtonEvent e) {
 		if (mode2D == true) {
 			ofLog() << "Switching to 3D mode";
 			mainControllerInstance->switch3DMode();
+			mode2D = false;
+		}
+		else {
+			ofLog() << "Switching to 2D mode";
+			mainControllerInstance->switch2DMode();
+			mode2D = true;
+		}
+	}
+	else if (e.target == modeRayTracing) {
+		if (mode2D == true) {
+			ofLog() << "Switching to ray tracing mode";
+			ofLog() << "DAB";
+			mainControllerInstance->switchRayTracingMode();
 			mode2D = false;
 		}
 		else {

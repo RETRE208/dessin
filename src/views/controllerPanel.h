@@ -12,6 +12,7 @@ class controllerPanel
 {
 public:
 	void setup(MainController * mainController);
+	void update();
 
 	MainController* mainControllerInstance;
 
@@ -22,6 +23,7 @@ public:
 	ofxDatGuiButton* removeSelected;
 	ofxDatGuiButton* instanciate;
 	ofxDatGuiToggle* mode3DToggle;
+	ofxDatGuiToggle* modeRayTracing;
 	ofxDatGuiColorPicker* backgroundPicker;
 
 	ofxDatGuiToggle* blurToggle;

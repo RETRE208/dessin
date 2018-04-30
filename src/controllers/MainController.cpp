@@ -1,4 +1,5 @@
 ﻿#include "MainController.h"
+#include "RayTracingRenderWindow.cpp"
 #include <cstdlib>
 
 class noModelsExeption : public exception
@@ -21,8 +22,17 @@ void MainController::setup()
 	contrastFilter = filterInstance.getContrastFilter();
 }
 
+void MainController::update()
+{
+	controlPanel.update();
+}
+
 void MainController::draw()
 {
+
+	//temp start
+	ofParameter<ofVec2f> speLight;
+	//temp end
 	selectorPanel.draw();
 	if (mode3DState) {
 		if (blurIsActive) {
@@ -211,12 +221,20 @@ void MainController::applyTexture(int typeTexture, ofImage* image) {
 	
 void MainController::switch2DMode() {
 	mode3DState = false;
+	modeRayTracingState = false;
 	ofDisableLighting();
 }
 
 void MainController::switch3DMode() {
 	mode3DState = true;
+	modeRayTracingState = false;
 	cameraPanel.setup();
+}
+
+void MainController::switchRayTracingMode() {
+	ofAppGlutWindow window;
+	ofSetupOpenGL(&window, 800, 600, OF_WINDOW);
+	ofRunApp(new RayTracingRenderWindow());
 }
 
 void MainController::instanciateNewModel(ofxAssimpModelLoader model) {

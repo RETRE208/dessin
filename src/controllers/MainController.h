@@ -41,6 +41,7 @@ class MainController
 {
 public:
 	bool mode3DState = false;
+	bool modeRayTracingState = false;
 
 	int DRAWING_ZONE_X_LIMIT = 200;
 	int DRAWING_ZONE_Y_LIMIT = 0;
@@ -49,6 +50,7 @@ public:
 
 	void setup();
 	void draw();
+	void update();
 
 	void exportImage();
 	void importImage();
@@ -57,6 +59,7 @@ public:
 	Files files;
 	void switch3DMode();
 	void switch2DMode();
+	void switchRayTracingMode();
 	void instanciateNewModel(ofxAssimpModelLoader model);
 	void openNewPrimitvePanel(string primitiveName);
 	void openNewPrimitve3DPanel(string primitiveName);
@@ -69,6 +72,8 @@ public:
 	ofLight light;
 	float center_x;
 	float center_y;
+
+	ofShader trace;
 	
 	std::vector<ModelPanel*> modelsPanels;
 	std::vector<SpherePanel*> spherePrimivites;
