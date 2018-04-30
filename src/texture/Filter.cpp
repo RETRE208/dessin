@@ -6,14 +6,14 @@ Filter::Filter(){}
 void Filter::setup() {
 	blur.init(ofGetWidth(), ofGetHeight());
 	blur.createPass<ConvolutionPass>();
-
 	antiAliasing.init(ofGetWidth(), ofGetHeight());
 	antiAliasing.createPass<FxaaPass>();
-	
 	bloom.init(ofGetWidth(), ofGetHeight());
 	bloom.createPass<BloomPass>();
 	contrast.init(ofGetWidth(), ofGetHeight());
 	contrast.createPass<ContrastPass>();
+	noise.init(ofGetWidth(), ofGetHeight());
+	noise.createPass<NoiseWarpPass>();
 }
 
 ofxPostProcessing* Filter::getBlurFilter() {
@@ -30,4 +30,8 @@ ofxPostProcessing* Filter::getBloomFilter() {
 
 ofxPostProcessing* Filter::getContrastFilter() {
 	return &contrast;
+}
+
+ofxPostProcessing* Filter::getNoiseFilter() {
+	return &noise;
 }

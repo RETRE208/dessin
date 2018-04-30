@@ -21,6 +21,7 @@ void controllerPanel::setup(MainController* mainController)
 	antiAliasingToggle = gui->addToggle("Anti-Aliasing");
 	bloomToggle = gui->addToggle("Bloom");
 	contrastToggle = gui->addToggle("Contrast");
+	noiseToggle = gui->addToggle("Noise");
 
 	gui->addBreak();
 
@@ -80,6 +81,16 @@ void controllerPanel::onButtonEvent(ofxDatGuiButtonEvent e) {
 			contrastFilter = true;
 		}
 		mainControllerInstance->contrastIsActive = contrastFilter;
+	}
+	else if (e.target == noiseToggle) {
+		cout << "Noise effect..." << endl;
+		if (noiseFilter) {
+			noiseFilter = false;
+		}
+		else {
+			noiseFilter = true;
+		}
+		mainControllerInstance->noiseIsActive = noiseFilter;
 	}
 	else if (e.target == mode3DToggle) {
 		if (mode2D == true) {

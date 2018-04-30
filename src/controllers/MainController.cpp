@@ -19,6 +19,7 @@ void MainController::setup()
 	AAFilter = filterInstance.getAAFilter();
 	bloomFilter = filterInstance.getBloomFilter();
 	contrastFilter = filterInstance.getContrastFilter();
+	noiseFilter = filterInstance.getNoiseFilter();
 }
 
 void MainController::draw()
@@ -36,6 +37,9 @@ void MainController::draw()
 		}
 		if (contrastIsActive) {
 			contrastFilter->begin();
+		}
+		if (noiseIsActive) {
+			noiseFilter->begin();
 		}
 		cameraPanel.begin();
 		cameraPanel.draw();
@@ -71,6 +75,9 @@ void MainController::draw()
 		}
 		cameraPanel.end();
 		ofDisableDepthTest();
+		if (noiseIsActive) {
+			noiseFilter->end();
+		}
 		if (contrastIsActive) {
 			contrastFilter->end();
 		}
@@ -97,6 +104,9 @@ void MainController::draw()
 		if (contrastIsActive) {
 			contrastFilter->begin();
 		}
+		if (noiseIsActive) {
+			noiseFilter->begin();
+		}
 		for (int i = 0; i < imagesPanels.size(); i++) {
 			imagesPanels[i]->draw();
 		}
@@ -110,6 +120,9 @@ void MainController::draw()
 				primitives2DPanels[i]->setColor(color);
 			}
 			primitives2DPanels[i] -> draw();
+		}
+		if (noiseIsActive) {
+			noiseFilter->end();
 		}
 		if (contrastIsActive) {
 			contrastFilter->end();
