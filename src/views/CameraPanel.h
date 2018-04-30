@@ -2,7 +2,6 @@
 
 #include "ofxDatGui.h"
 #include "ofMain.h"
-#include "../Camera/Camera.h"
 
 class CameraPanel
 {
@@ -12,14 +11,16 @@ public:
 	void begin();
 	void end();
 	void onButtonEvent(ofxDatGuiButtonEvent e);
+	void onDropdownEvent(ofxDatGuiDropdownEvent e);
 	void reset();
 	void setup_camera();
 
 	ofCamera cam;
+	string active_camera;
 
-	ofQuaternion camera_orientation;
+	ofQuaternion main_camera_orientation;
 
-	ofVec3f camera_position;
+	ofVec3f main_camera_position;
 	ofVec3f camera_target;
 
 	float camera_near;
@@ -37,7 +38,16 @@ public:
 	bool is_camera_fov_wide;
 
 	bool is_camera_perspective;
+	bool is_cam_top_active;
 
+	std::vector<std::string> options = { 
+		"Top Camera", 
+		"Down Camera", 
+		"Left Camera", 
+		"Right Camera",
+		"Front Camera", 
+		"Back Camera"
+	};
 
 	int x;
 	int y;
@@ -48,6 +58,7 @@ public:
 	ofxDatGui* gui;
 	ofxDatGuiToggle* orthogonalToggle;
 	ofxDatGuiToggle* orientationAxesToggle;
+	ofxDatGuiDropdown* cam_choice;
 	ofxDatGuiSlider* sx;
 	ofxDatGuiSlider* sy;
 	ofxDatGuiSlider* sz;

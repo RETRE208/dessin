@@ -16,12 +16,6 @@ void controllerPanel::setup(MainController* mainController)
 
 	primitives2D = gui->addDropdown("Primitives 2D", options);
 	primitives3D = gui->addDropdown("Primitives 3D", options3D);
-	lights = gui->addDropdown("Lights", optionsLights);
-	blurToggle = gui->addToggle("Blur");
-	antiAliasingToggle = gui->addToggle("Anti-Aliasing");
-	bloomToggle = gui->addToggle("Bloom");
-	contrastToggle = gui->addToggle("Contrast");
-
 	gui->addBreak();
 
 	gui->onButtonEvent(this, &controllerPanel::onButtonEvent);
@@ -40,46 +34,6 @@ void controllerPanel::onButtonEvent(ofxDatGuiButtonEvent e) {
 	else if (e.target == removeSelected) {
 		cout << "Removing selected..." << endl;
 		mainControllerInstance->removeSelectedPrimitives();
-	}
-	else if (e.target == blurToggle) {
-		cout << "Blur effect..." << endl;
-		if (blurFilter) {
-			blurFilter = false;
-		}
-		else {
-			blurFilter = true;
-		}
-		mainControllerInstance->blurIsActive = blurFilter;
-	}
-	else if (e.target == antiAliasingToggle) {
-		cout << "Antia Aliasing effect..." << endl;
-		if (antiAliasingFilter) {
-			antiAliasingFilter = false;
-		}
-		else {
-			antiAliasingFilter = true;
-		}
-		mainControllerInstance->AntiAliasingIsActive = antiAliasingFilter;
-	}
-	else if (e.target == bloomToggle) {
-		cout << "Bloom effect..." << endl;
-		if (bloomFilter) {
-			bloomFilter = false;
-		}
-		else {
-			bloomFilter = true;
-		}
-		mainControllerInstance->bloomIsActive = bloomFilter;
-	}
-	else if (e.target == contrastToggle) {
-		cout << "Contrast effect..." << endl;
-		if (contrastFilter) {
-			contrastFilter = false;
-		}
-		else {
-			contrastFilter = true;
-		}
-		mainControllerInstance->contrastIsActive = contrastFilter;
 	}
 	else if (e.target == mode3DToggle) {
 		if (mode2D == true) {
@@ -106,11 +60,6 @@ void controllerPanel::onPrimitiveDropdownEvent(ofxDatGuiDropdownEvent e)
 		cout << "the option at index # " << e.child << " was selected " << endl;
 		string primitive = options3D.at(e.child);
 		mainControllerInstance->openNewPrimitve3DPanel(primitive);
-	}
-	else if (e.target == lights) {
-		cout << "the option at index # " << e.child << " was selected " << endl;
-		string primitive = optionsLights.at(e.child);
-		mainControllerInstance->openNewLightPanel(primitive);
 	}
 }
 

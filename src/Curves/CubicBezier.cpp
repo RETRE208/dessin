@@ -1,28 +1,15 @@
 #include "CubicBezier.h"
 
-CubicBezier::CubicBezier(string dimension) {
+CubicBezier::CubicBezier() {
 	line_resolution = 100;
 	line_width = 8.0f;
 	radius = 12.0f;
 
-	if (dimension == "2D") {
-		ctrl_point1 = { 500, 600, 0 };
-		ctrl_point2 = { 500, 500, 0 };
-		ctrl_point3 = { 600, 500, 0 };
-		ctrl_point4 = { 600, 600, 0 };
-		ctrl_point_x = 500;
-		ctrl_point_y = 600;
-		ctrl_point_z = 0;
-	}
-	else if (dimension == "3D") {
-		ctrl_point1 = { -100, 100, 0 };
-		ctrl_point2 = { -100, -100, 0 };
-		ctrl_point3 = { 100, -100, 0 };
-		ctrl_point4 = { 100, 100, 0 };
-		ctrl_point_x = -100;
-		ctrl_point_y = 100;
-		ctrl_point_z = 0;
-	}
+	ctrl_point1 = { 500, 600, 0 };
+	ctrl_point2 = { 500, 500, 0 };
+	ctrl_point3 = { 600, 500, 0 };
+	ctrl_point4 = { 600, 600, 0 };
+	ctrl_point_z = 0;
 
 	color = ofColor::green;
 }

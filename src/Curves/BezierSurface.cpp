@@ -1,6 +1,6 @@
 #include "BezierSurface.h"
 
-BezierSurface::BezierSurface(string dimension)
+BezierSurface::BezierSurface()
 {
 	width = 1024;
 	height = 768;
@@ -13,16 +13,11 @@ BezierSurface::BezierSurface(string dimension)
 	drawSurface = true;
 	drawCtrlPoints = false;
 
-	if (dimension == "2D") {
-		loadPoints2D();
-	}
-	else if (dimension == "3D") {
-		loadPoints3D();
-	}
+	loadPoints();
 	surface.update();
 }
 
-void BezierSurface::loadPoints2D()
+void BezierSurface::loadPoints()
 {
 	string str;
 	vector<ofVec3f> vec;
@@ -36,25 +31,6 @@ void BezierSurface::loadPoints2D()
 		}
 	}
 	surface.setControlPnts(vec);
-	ctrl_point_x = 300;
-	ctrl_point_y = 200;
-}
-
-void BezierSurface::loadPoints3D()
-{
-	string str;
-	vector<ofVec3f> vec;
-	for (int i = -150; i <= 150; i += 100) {
-		for (int j = -150; j <= 150; j += 100) {
-			int x = i;
-			int y = j;
-			int z = 0;
-			vec.push_back(ofVec3f(x, y, z));
-		}
-	}
-	surface.setControlPnts(vec);
-	ctrl_point_x = -150;
-	ctrl_point_y = -150;
 }
 
 void BezierSurface::draw()
@@ -78,51 +54,51 @@ void BezierSurface::modifyControlPoint() {
 
 void BezierSurface::modifyControlPointNumber(string choice) {
 	if (choice == "Control Point (1,1)") {
-		ctrlPointNumber = 0;
-	}
-	else if (choice == "Control Point (1,2)") {
-		ctrlPointNumber = 4;
-	}
-	else if (choice == "Control Point (1,3)") {
-		ctrlPointNumber = 8;
-	}
-	else if (choice == "Control Point (1,4)") {
-		ctrlPointNumber = 12;
-	}
-	else if (choice == "Control Point (2,1)") {
-		ctrlPointNumber = 1;
-	}
-	else if (choice == "Control Point (2,2)") {
-		ctrlPointNumber = 5;
-	}
-	else if (choice == "Control Point (2,3)") {
-		ctrlPointNumber = 9;
-	}
-	else if (choice == "Control Point (2,4)") {
-		ctrlPointNumber = 13;
-	}
-	else if (choice == "Control Point (3,1)") {
-		ctrlPointNumber = 2;
-	}
-	else if (choice == "Control Point (3,2)") {
-		ctrlPointNumber = 6;
-	}
-	else if (choice == "Control Point (3,3)") {
-		ctrlPointNumber = 10;
-	}
-	else if (choice == "Control Point (3,4)") {
-		ctrlPointNumber = 14;
-	}
-	else if (choice == "Control Point (4,1)") {
 		ctrlPointNumber = 3;
 	}
-	else if (choice == "Control Point (4,2)") {
+	else if (choice == "Control Point (1,2)") {
 		ctrlPointNumber = 7;
 	}
-	else if (choice == "Control Point (4,3)") {
+	else if (choice == "Control Point (1,3)") {
 		ctrlPointNumber = 11;
 	}
-	else if (choice == "Control Point (4,4)") {
+	else if (choice == "Control Point (1,4)") {
 		ctrlPointNumber = 15;
+	}
+	else if (choice == "Control Point (2,1)") {
+		ctrlPointNumber = 2;
+	}
+	else if (choice == "Control Point (2,2)") {
+		ctrlPointNumber = 6;
+	}
+	else if (choice == "Control Point (2,3)") {
+		ctrlPointNumber = 10;
+	}
+	else if (choice == "Control Point (2,4)") {
+		ctrlPointNumber = 14;
+	}
+	else if (choice == "Control Point (3,1)") {
+		ctrlPointNumber = 1;
+	}
+	else if (choice == "Control Point (3,2)") {
+		ctrlPointNumber = 5;
+	}
+	else if (choice == "Control Point (3,3)") {
+		ctrlPointNumber = 9;
+	}
+	else if (choice == "Control Point (3,4)") {
+		ctrlPointNumber = 13;
+	}
+	else if (choice == "Control Point (4,1)") {
+		ctrlPointNumber = 0;
+	}
+	else if (choice == "Control Point (4,2)") {
+		ctrlPointNumber = 4;
+	}
+	else if (choice == "Control Point (4,3)") {
+		ctrlPointNumber = 8;
+	}
+	else if (choice == "Control Point (4,4)") {
+		ctrlPointNumber = 12;
 	}
 }

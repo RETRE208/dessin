@@ -1,4 +1,4 @@
-﻿#include "MainController.h"
+#include "MainController.h"
 #include <cstdlib>
 
 class noModelsExeption : public exception
@@ -14,40 +14,15 @@ void MainController::setup()
 	controlPanel.setup(this);
 	selectorPanel.setup();
 	ofSetVerticalSync(true);
-	filterInstance.setup();
-	blurFilter = filterInstance.getBlurFilter();
-	AAFilter = filterInstance.getAAFilter();
-	bloomFilter = filterInstance.getBloomFilter();
-	contrastFilter = filterInstance.getContrastFilter();
 }
 
 void MainController::draw()
 {
 	selectorPanel.draw();
 	if (mode3DState) {
-		if (blurIsActive) {
-			blurFilter->begin();
-		}
-		if (AntiAliasingIsActive) {
-			AAFilter->begin();
-		}
-		if (bloomIsActive) {
-			bloomFilter->begin();
-		}
-		if (contrastIsActive) {
-			contrastFilter->begin();
-		}
 		cameraPanel.begin();
 		cameraPanel.draw();
-		ofEnableDepthTest();
-		for (auto i : ambiantLightPanels)
-			i->draw();
-		for (auto i : directionalLightPanels)
-			i->draw();
-		for (auto i : pointLightPanels)
-			i->draw();
-		for (auto i : spotLightPanels)
-			i->draw();
+
 		for (int i = 0; i < modelsPanels.size(); i++) {
 			modelsPanels[i]->draw();
 		}
@@ -69,34 +44,10 @@ void MainController::draw()
 		for (int i = 0; i < parametriqueBezier3DPrimitives.size(); i++) {
 			parametriqueBezier3DPrimitives[i]->draw();
 		}
-		cameraPanel.end();
+		cameraPanel.end();	
 		ofDisableDepthTest();
-		if (contrastIsActive) {
-			contrastFilter->end();
-		}
-		if (bloomIsActive) {
-			bloomFilter->end();
-		}
-		if (AntiAliasingIsActive) {
-			AAFilter->end();
-		}
-		if (blurIsActive) {
-			blurFilter->end();
-		}
 	}
 	else {
-		if (blurIsActive) {
-			blurFilter->begin();
-		}
-		if (AntiAliasingIsActive) {
-			AAFilter->begin();
-		}
-		if (bloomIsActive) {
-			bloomFilter->begin();
-		}
-		if (contrastIsActive) {
-			contrastFilter->begin();
-		}
 		for (int i = 0; i < imagesPanels.size(); i++) {
 			imagesPanels[i]->draw();
 		}
@@ -111,20 +62,9 @@ void MainController::draw()
 			}
 			primitives2DPanels[i] -> draw();
 		}
-		if (contrastIsActive) {
-			contrastFilter->end();
-		}
-		if (bloomIsActive) {
-			bloomFilter->end();
-		}
-		if (AntiAliasingIsActive) {
-			AAFilter->end();
-		}
-		if (blurIsActive) {
-			blurFilter->end();
-		}
 		ofSetColor(255,255,255);
 	}
+
 }
 
 void MainController::removeSelectedPrimitives() {
@@ -216,7 +156,13 @@ void MainController::switch2DMode() {
 
 void MainController::switch3DMode() {
 	mode3DState = true;
+	ofEnableLighting();
 	cameraPanel.setup();
+
+	light.setAmbientColor(ofColor(255, 255, 255));
+	light.setDiffuseColor(ofColor(255, 255, 255));
+	light.setPosition(0.0f, 0.0f, 1000.0f);
+	light.enable();
 }
 
 void MainController::instanciateNewModel(ofxAssimpModelLoader model) {
@@ -313,48 +259,23 @@ void MainController::openNewPrimitve3DPanel(string primitiveName) {
 	}
 	if (primitiveName == "Surface Bezier") {
 		BezierSurfacePanel3D* bezierSurfacePanel = new BezierSurfacePanel3D();
-		bezierSurfacePanel->setup("Surface Bezier " + to_string(surfaceBezierPrimitives.size()));
+		bezierSurfacePanel->setup("Surface Bezier " + to_string(primitives2DPanels.size()));
 		surfaceBezierPrimitives.push_back(bezierSurfacePanel);
 	}
 	if (primitiveName == "Cubic Bezier Curve") {
 		CubicBezierPanel3D* cubicBezierPanel = new CubicBezierPanel3D();
-		cubicBezierPanel->setup("Cubic Bezier Curve " + to_string(cubicBezier3DPrimitives.size()));
+		cubicBezierPanel->setup("Cubic Bezier Curve " + to_string(primitives2DPanels.size()));
 		cubicBezier3DPrimitives.push_back(cubicBezierPanel);
 	}
 	if (primitiveName == "Cubic Hermite Curve") {
 		CubicHermitePanel3D* cubicHermitePanel = new CubicHermitePanel3D();
-		cubicHermitePanel->setup("Cubic Hermite Curve " + to_string(cubicHermite3DPrimitives.size()));
+		cubicHermitePanel->setup("Cubic Hermite Curve " + to_string(primitives2DPanels.size()));
 		cubicHermite3DPrimitives.push_back(cubicHermitePanel);
 	}
 	if (primitiveName == "6 Points Bezier Curve") {
 		ParametriqueBezierPanel3D* parametriqueBezierPanel = new ParametriqueBezierPanel3D();
-		parametriqueBezierPanel->setup("6 Points Bezier Curve " + to_string(parametriqueBezier3DPrimitives.size()));
+		parametriqueBezierPanel->setup("Cubic Hermite Curve " + to_string(primitives2DPanels.size()));
 		parametriqueBezier3DPrimitives.push_back(parametriqueBezierPanel);
-	}
-}
-
-void MainController::openNewLightPanel(string primitiveName) {
-	cout << "The light " << primitiveName << " was selected " << endl;
-
-	if (primitiveName == "Ambiant") {
-		AmbiantLightPanel* ambiantLightPanel = new AmbiantLightPanel();
-		ambiantLightPanel->setup(this);
-		ambiantLightPanels.push_back(ambiantLightPanel);
-	}
-	if (primitiveName == "Directional") {
-		DirectionalLightPanel* directionalLightPanel = new DirectionalLightPanel();
-		directionalLightPanel->setup(this);
-		directionalLightPanels.push_back(directionalLightPanel);
-	}
-	if (primitiveName == "Point") {
-		PointLightPanel* pointLightPanel = new PointLightPanel();
-		pointLightPanel->setup(this);
-		pointLightPanels.push_back(pointLightPanel);
-	}
-	if (primitiveName == "Spot") {
-		SpotLightPanel* spotLightPanel = new SpotLightPanel();
-		spotLightPanel->setup(this);
-		spotLightPanels.push_back(spotLightPanel);
 	}
 }
 

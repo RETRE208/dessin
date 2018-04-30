@@ -24,28 +24,13 @@ public:
 	ofxDatGuiToggle* mode3DToggle;
 	ofxDatGuiColorPicker* backgroundPicker;
 
-	ofxDatGuiToggle* blurToggle;
-	ofxDatGuiToggle* antiAliasingToggle;
-	ofxDatGuiToggle* bloomToggle;
-	ofxDatGuiToggle* contrastToggle;
-
-
-	bool antiAliasingFilter = false;
-	bool blurFilter = false;
-	bool bloomFilter = false;
-	bool contrastFilter = false;
-
 	bool mode2D = true;
 	void onButtonEvent(ofxDatGuiButtonEvent e);
 
 	ofxDatGuiDropdown* primitives2D;
 	ofxDatGuiDropdown* primitives3D;
-
-	ofxDatGuiDropdown* lights;
-	
 	std::vector<std::string> options = {"Circle", "Rectangle", "Ellipse", "Line", "Square", "Cubic Bezier Curve", "Cubic Hermite Curve", "6 Points Bezier Curve", "Surface Bezier"};
 	std::vector<std::string> options3D = {"Cube", "Sphere", "Cubic Bezier Curve", "Cubic Hermite Curve", "6 Points Bezier Curve", "Surface Bezier"};
-	std::vector<std::string> optionsLights = { "Ambiant", "Directional", "Point", "Spot" };	
 	void onPrimitiveDropdownEvent(ofxDatGuiDropdownEvent e);
 	void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
 };

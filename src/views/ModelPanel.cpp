@@ -9,9 +9,9 @@ void ModelPanel::setup(MainController* mainController, string modelPath)
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
 	gui->setWidth(200);
 	gui->addHeader("Model Panel");
-	sx = gui->addSlider("POSITION X", -ofGetWidth(), ofGetWidth());
-	sy = gui->addSlider("POSITION Y", -ofGetHeight(), ofGetHeight());
-	sz = gui->addSlider("POSITION Z", -1000, 1000);
+	sx = gui->addSlider("POSITION X", 0, ofGetWidth());
+	sy = gui->addSlider("POSITION Y", 0, ofGetHeight());
+	sz = gui->addSlider("POSITION Z", -500, 500);
 	rx = gui->addSlider("ROTATION X", 0, 360);
 	ry = gui->addSlider("ROTATION Y", 0, 360);
 	rz = gui->addSlider("ROTATION Z", 0, 360);
@@ -32,8 +32,8 @@ void ModelPanel::setup(MainController* mainController, string modelPath)
 	ssize->bind(size);
 
 	size = 100.0f;
-	x = 0;
-	y = 0;
+	x = ofGetWidth() / 2;
+	y = ofGetHeight() / 2;
 	z = 0;
 }
 

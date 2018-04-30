@@ -5,7 +5,7 @@ void CameraPanel::setup()
 {
 	ofSetFrameRate(60);
 	ofEnableDepthTest();
-	camera_position = { 0.0f, 0.0f, 0.0f };
+	main_camera_position = { 0.0f, 0.0f, 0.0f };
 	camera_target = { 0.0f, 0.0f, 0.0f };
 
 	camera_near = 50.0f;
@@ -22,7 +22,6 @@ void CameraPanel::setup()
 
 	x = 0;
 	y = 0;
-	//camera_target = { (float)(ofGetWidth() / 2) , (float)(ofGetHeight() / 2), 0.0f };
 	
 	panelName = "3D Camera";
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
@@ -33,12 +32,14 @@ void CameraPanel::setup()
 	sx = gui->addSlider("CAMERA X", (ofGetWidth() / -2), (ofGetWidth() / 2));
 	sy = gui->addSlider("CAMERA Y", (ofGetHeight() / -2), (ofGetHeight() / 2));
 	sz = gui->addSlider("CAMERA Z", -1000, 3000);
+	cam_choice = gui->addDropdown("Control Point Number", options);
 
 	sx->bind(x);
 	sy->bind(y);
 	sz->bind(z);
 
 	gui->onButtonEvent(this, &CameraPanel::onButtonEvent);
+	gui->onDropdownEvent(this, &CameraPanel::onDropdownEvent);
 
 	reset();
 
@@ -50,19 +51,38 @@ void CameraPanel::reset()
 	offset_scene =  64.0f;
 	offset_camera = offset_scene * 3.5f * -1.0f;
 	z = -offset_camera;
-	cam.setPosition(0, 0, z);
-
-	cam.lookAt(camera_target);
-
+	if (active_camera == "Back Camera") {
+		cam.setPosition(0, 0, offset_camera);
+		cam.lookAt(camera_target);
+	}
+	else if (active_camera == "Left Camera") {
+		cam.setPosition(-offset_camera, 0, 0);
+		cam.lookAt(camera_target);
+	}
+	else if (active_camera == "Top Camera") {
+		cam.setPosition(0, offset_camera, 0);
+		cam.lookAt(camera_target, ofVec3f(1, 0, 0));
+	}
+	else if (active_camera == "Right Camera") {
+		cam.setPosition(offset_camera,0 , 0);
+		cam.lookAt(camera_target);
+	}
+	else if (active_camera == "Down Camera") {
+		cam.setPosition(0, -offset_camera, 0);
+		cam.lookAt(camera_target, ofVec3f(1, 0, 0));
+	}
+	else {
+		cam.setPosition(0, 0, z);
+		cam.lookAt(camera_target);
+	}
+	
 	ofLog() << "<reset>";
 }
 
 void CameraPanel::setup_camera()
 {
-	camera_position = cam.getPosition();
-
-	camera_orientation = cam.getOrientationQuat();
-
+	main_camera_position = cam.getPosition();
+	main_camera_orientation = cam.getOrientationQuat();
 	if (is_camera_perspective)
 	{
 		cam.disableOrtho();
@@ -73,8 +93,16 @@ void CameraPanel::setup_camera()
 		cam.enableOrtho();
 	}
 
-	cam.setPosition(camera_position);
-	cam.setOrientation(camera_orientation);
+	cam.setPosition(main_camera_position);
+	cam.setOrientation(main_camera_orientation);
+}
+
+void CameraPanel::onDropdownEvent(ofxDatGuiDropdownEvent e)
+{
+	cout << "the option at index # " << e.child << " was selected " << endl;
+	string choice = options.at(e.child);
+	active_camera = choice;
+	reset();
 }
 
 void CameraPanel::onButtonEvent(ofxDatGuiButtonEvent e) {
@@ -131,3 +159,4 @@ void CameraPanel::end()
 {
 	cam.end();
 }
+

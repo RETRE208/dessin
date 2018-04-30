@@ -2,15 +2,15 @@
 
 void ParametriqueBezierPanel3D::setup(string name)
 {
-	bezier = new ParametriqueBezier("3D");
+	bezier = new ParametriqueBezier();
 	panelName = name;
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
 	gui->setWidth(300);
 	gui->addHeader(name);
 	ctrl_points_choice = gui->addDropdown("Control Point Number", options);
-	ctrl_point_x = gui->addSlider("Control Point X", -ofGetWidth(), ofGetWidth());
-	ctrl_point_y = gui->addSlider("Control Point Y", -ofGetHeight(), ofGetHeight());
-	ctrl_point_z = gui->addSlider("Control Point Z", -1000, 1000);
+	ctrl_point_x = gui->addSlider("Control Point X", 0, ofGetWidth());
+	ctrl_point_y = gui->addSlider("Control Point Y", 0, ofGetHeight());
+	ctrl_point_z = gui->addSlider("Control Point Z", 0, 1000);
 	slineWidth = gui->addSlider("LINE WIDTH", 0.1, 8.0);
 	picker = gui->addColorPicker("COLOR", ofColor::fromHex(0xCECECE));
 	drawCtrlPointsToggle = gui->addToggle("Draw Control Points");

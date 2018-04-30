@@ -12,10 +12,6 @@ public:
 	float y;
 	float z;
 
-	float angleX;
-	float angleY;
-	float angleZ;
-
 	int mRadius;
 	ofColor color;
 };

@@ -5,7 +5,7 @@
 class CubicBezier
 {
 public:
-	CubicBezier(string dimension);
+	CubicBezier();
 
 	ofPolyline line_renderer;
 

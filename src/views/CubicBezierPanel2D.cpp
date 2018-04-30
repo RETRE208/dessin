@@ -2,7 +2,7 @@
 
 void CubicBezierPanel2D::setup(string name)
 {
-	bezier = new CubicBezier("2D");
+	bezier = new CubicBezier();
 	panelName = name;
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
 	gui->setWidth(300);
