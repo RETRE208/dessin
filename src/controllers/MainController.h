@@ -34,6 +34,8 @@
 #include "../Curves/BezierSurface.h"
 #include "../views/BezierSurfacePanel3D.h"
 #include "../views/BezierSurfacePanel2D.h"
+#include "../texture/Filter.h"
+#include "ofxPostProcessing.h"
 
 class MainController
 {
@@ -88,6 +90,16 @@ public:
 	PrimitivePanel primitivePanel;
 	Texture texture;
 	CameraPanel cameraPanel;
+	Filter filterInstance;
+
+	bool blurIsActive;
+	bool AntiAliasingIsActive;
+	bool bloomIsActive;
+	bool contrastIsActive;
+	ofxPostProcessing* blurFilter;
+	ofxPostProcessing* AAFilter;
+	ofxPostProcessing* bloomFilter;
+	ofxPostProcessing* contrastFilter;
 };
 
 #endif

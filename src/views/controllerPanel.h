@@ -24,6 +24,17 @@ public:
 	ofxDatGuiToggle* mode3DToggle;
 	ofxDatGuiColorPicker* backgroundPicker;
 
+	ofxDatGuiToggle* blurToggle;
+	ofxDatGuiToggle* antiAliasingToggle;
+	ofxDatGuiToggle* bloomToggle;
+	ofxDatGuiToggle* contrastToggle;
+
+
+	bool antiAliasingFilter = false;
+	bool blurFilter = false;
+	bool bloomFilter = false;
+	bool contrastFilter = false;
+
 	bool mode2D = true;
 	void onButtonEvent(ofxDatGuiButtonEvent e);
 
