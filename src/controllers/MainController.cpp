@@ -13,12 +13,30 @@ void MainController::setup()
 {
 	controlPanel.setup(this);
 	selectorPanel.setup();
+	ofSetVerticalSync(true);
+	filterInstance.setup();
+	blurFilter = filterInstance.getBlurFilter();
+	AAFilter = filterInstance.getAAFilter();
+	bloomFilter = filterInstance.getBloomFilter();
+	contrastFilter = filterInstance.getContrastFilter();
 }
 
 void MainController::draw()
 {
 	selectorPanel.draw();
 	if (mode3DState) {
+		if (blurIsActive) {
+			blurFilter->begin();
+		}
+		if (AntiAliasingIsActive) {
+			AAFilter->begin();
+		}
+		if (bloomIsActive) {
+			bloomFilter->begin();
+		}
+		if (contrastIsActive) {
+			contrastFilter->begin();
+		}
 		cameraPanel.begin();
 		cameraPanel.draw();
 		ofEnableDepthTest();
@@ -53,8 +71,32 @@ void MainController::draw()
 		}
 		cameraPanel.end();
 		ofDisableDepthTest();
+		if (contrastIsActive) {
+			contrastFilter->end();
+		}
+		if (bloomIsActive) {
+			bloomFilter->end();
+		}
+		if (AntiAliasingIsActive) {
+			AAFilter->end();
+		}
+		if (blurIsActive) {
+			blurFilter->end();
+		}
 	}
 	else {
+		if (blurIsActive) {
+			blurFilter->begin();
+		}
+		if (AntiAliasingIsActive) {
+			AAFilter->begin();
+		}
+		if (bloomIsActive) {
+			bloomFilter->begin();
+		}
+		if (contrastIsActive) {
+			contrastFilter->begin();
+		}
 		for (int i = 0; i < imagesPanels.size(); i++) {
 			imagesPanels[i]->draw();
 		}
@@ -68,6 +110,18 @@ void MainController::draw()
 				primitives2DPanels[i]->setColor(color);
 			}
 			primitives2DPanels[i] -> draw();
+		}
+		if (contrastIsActive) {
+			contrastFilter->end();
+		}
+		if (bloomIsActive) {
+			bloomFilter->end();
+		}
+		if (AntiAliasingIsActive) {
+			AAFilter->end();
+		}
+		if (blurIsActive) {
+			blurFilter->end();
 		}
 		ofSetColor(255,255,255);
 	}
