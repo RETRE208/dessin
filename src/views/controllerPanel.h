@@ -28,12 +28,14 @@ public:
 	ofxDatGuiToggle* antiAliasingToggle;
 	ofxDatGuiToggle* bloomToggle;
 	ofxDatGuiToggle* contrastToggle;
+	ofxDatGuiToggle* noiseToggle;
 
 
 	bool antiAliasingFilter = false;
 	bool blurFilter = false;
 	bool bloomFilter = false;
 	bool contrastFilter = false;
+	bool noiseFilter = false;
 
 	bool mode2D = true;
 	void onButtonEvent(ofxDatGuiButtonEvent e);

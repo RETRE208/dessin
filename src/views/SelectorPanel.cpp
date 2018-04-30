@@ -5,7 +5,7 @@ void SelectorPanel::setup() {
 	selectorPanel.add(redSlider.setup("red", 0, 0, 255));
 	selectorPanel.add(greenSlider.setup("green", 0, 0, 255));
 	selectorPanel.add(blueSlider.setup("blue", 0, 0, 255));
-	selectorPanel.setPosition(0, 310);
+	selectorPanel.setPosition(0, 500);
 }
 
 void SelectorPanel::draw() {

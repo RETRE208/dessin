@@ -100,10 +100,13 @@ public:
 	bool AntiAliasingIsActive;
 	bool bloomIsActive;
 	bool contrastIsActive;
+	bool noiseIsActive;
 	ofxPostProcessing* blurFilter;
 	ofxPostProcessing* AAFilter;
 	ofxPostProcessing* bloomFilter;
 	ofxPostProcessing* contrastFilter;
+	ofxPostProcessing* noiseFilter;
+	ofCamera* cam;
 };
 
 #endif

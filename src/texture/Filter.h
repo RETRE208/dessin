@@ -12,10 +12,12 @@ class Filter
 		ofxPostProcessing* getAAFilter();
 		ofxPostProcessing* getBloomFilter();
 		ofxPostProcessing* getContrastFilter();
+		ofxPostProcessing* getNoiseFilter();
 
 		ofxPostProcessing blur;
 		ofxPostProcessing antiAliasing;
 		ofxPostProcessing bloom;
 		ofxPostProcessing contrast;
+		ofxPostProcessing noise;
 };
 
