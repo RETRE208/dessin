@@ -69,6 +69,9 @@ void MainController::draw()
 		for (int i = 0; i < parametriqueBezier3DPrimitives.size(); i++) {
 			parametriqueBezier3DPrimitives[i]->draw();
 		}
+		for (int i = 0; i < delaunayPanels3D.size(); i++) {
+			delaunayPanels3D[i]->draw();
+		}
 		cameraPanel.end();
 		ofDisableDepthTest();
 		if (contrastIsActive) {
@@ -110,6 +113,9 @@ void MainController::draw()
 				primitives2DPanels[i]->setColor(color);
 			}
 			primitives2DPanels[i] -> draw();
+		}
+		for (int i = 0; i < delaunayPanels2D.size(); i++) {
+			delaunayPanels2D[i]->draw();
 		}
 		if (contrastIsActive) {
 			contrastFilter->end();
@@ -296,6 +302,11 @@ void MainController::openNewPrimitvePanel(string primitiveName) {
 		primitives2DPanels.push_back(bezierSurfacePanel);
 		selectorPanel.addToggle("Surface Bezier " + to_string(primitives2DPanels.size() - 1));
 	}
+	if (primitiveName == "Custom Delaunay Polygon") {
+		DelaunayPanel2D* delaunayPanel = new DelaunayPanel2D();
+		delaunayPanel->setup("Custom Delaunay Polygon " + to_string(delaunayPanels2D.size()));
+		delaunayPanels2D.push_back(delaunayPanel);
+	}
 }
 
 void MainController::openNewPrimitve3DPanel(string primitiveName) {
@@ -330,6 +341,11 @@ void MainController::openNewPrimitve3DPanel(string primitiveName) {
 		ParametriqueBezierPanel3D* parametriqueBezierPanel = new ParametriqueBezierPanel3D();
 		parametriqueBezierPanel->setup("6 Points Bezier Curve " + to_string(parametriqueBezier3DPrimitives.size()));
 		parametriqueBezier3DPrimitives.push_back(parametriqueBezierPanel);
+	}
+	if (primitiveName == "Custom Delaunay Polygon") {
+		DelaunayPanel3D* delaunayPanel = new DelaunayPanel3D();
+		delaunayPanel->setup("Custom Delaunay Polygon " + to_string(delaunayPanels3D.size()));
+		delaunayPanels3D.push_back(delaunayPanel);
 	}
 }
 
