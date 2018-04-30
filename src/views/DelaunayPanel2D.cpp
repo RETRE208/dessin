@@ -7,8 +7,8 @@ void DelaunayPanel2D::setup(string name)
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
 	gui->setWidth(200);
 	gui->addHeader(name);
-	sx = gui->addSlider("POSITION X", -ofGetWidth(), ofGetWidth());
-	sy = gui->addSlider("POSITION Y", -ofGetHeight(), ofGetHeight());
+	sx = gui->addSlider("POSITION X", 0, ofGetWidth());
+	sy = gui->addSlider("POSITION Y", 0, ofGetHeight());
 	picker = gui->addColorPicker("COLOR PICKER", ofColor::fromHex(0xCECECE));
 	picker->onColorPickerEvent(this, &DelaunayPanel2D::onColorPickerEvent);
 	addPointBtn = gui->addButton("Add point");
