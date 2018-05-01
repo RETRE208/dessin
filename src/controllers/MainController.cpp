@@ -30,9 +30,6 @@ void MainController::update()
 void MainController::draw()
 {
 
-	//temp start
-	ofParameter<ofVec2f> speLight;
-	//temp end
 	selectorPanel.draw();
 	if (mode3DState) {
 		if (blurIsActive) {

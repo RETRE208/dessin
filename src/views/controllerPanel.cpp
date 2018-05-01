@@ -31,6 +31,19 @@ void controllerPanel::setup(MainController* mainController)
 
 void controllerPanel::update()
 {
+	if (mode3DToggle->getChecked()) {
+		modeRayTracing->setChecked(false);
+		modeRayTracing->setEnabled(false);
+	}
+	else if (!mode3DToggle->getChecked())
+		modeRayTracing->setEnabled(true);
+
+	if (modeRayTracing->getChecked()) {
+		mode3DToggle->setChecked(false);
+		mode3DToggle->setEnabled(false);
+	}
+	else if (!modeRayTracing->getChecked())
+		mode3DToggle->setEnabled(true);
 }
 
 void controllerPanel::onButtonEvent(ofxDatGuiButtonEvent e) {
@@ -101,7 +114,6 @@ void controllerPanel::onButtonEvent(ofxDatGuiButtonEvent e) {
 	else if (e.target == modeRayTracing) {
 		if (mode2D == true) {
 			ofLog() << "Switching to ray tracing mode";
-			ofLog() << "DAB";
 			mainControllerInstance->switchRayTracingMode();
 			mode2D = false;
 		}
