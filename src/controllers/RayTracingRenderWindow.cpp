@@ -8,12 +8,6 @@ using namespace std;
 
 class RayTracingRenderWindow : public ofBaseApp {
 public:
-	ofxPanel gui;
-	ofParameter<float>     intLight;
-	ofParameter<ofVec2f>   speLight;
-	ofParameter<ofVec3f>   colLight;
-	ofParameter<float>     ambient;
-
 	ofFbo fbo;
 	int w, h;
 	ofShader trace;
@@ -41,11 +35,8 @@ public:
 
 	void draw() {
 		ofBackgroundGradient(255, 0);
-
 		trace.begin();
-
 		trace.setUniform1f("u_aspect_ratio", w / h);
-
 		for (int i = 0; i < spheres.size(); i++) {
 			Sphere* sphere = spheres[i]->sphere;
 			float convertedRadius = float(sphere->mRadius) / 636;
@@ -54,19 +45,15 @@ public:
 			trace.setUniform3f("sphere_position_" + to_string(i), get<0>(convertedCoordinates), get<1>(convertedCoordinates), get<2>(convertedCoordinates));
 			trace.setUniform3f("sphere_color_" + to_string(i), sphere->color.r, sphere->color.g, sphere->color.b);
 		}
-
 		trace.setUniform3f("plane_position", 0., -.5, 0.);
 		trace.setUniform3f("plane_normal", 0., 1., 0.043);
-
 		trace.setUniform1f("light_intensity", 0.4);
 		trace.setUniform2f("light_specular", 0, 50);
 		trace.setUniform3f("light_position", 5., 5., -5.);
 		trace.setUniform3f("light_color", 0, 0, 0);
 		trace.setUniform1f("ambient", 0.2);
 		trace.setUniform3f("O", 0., 0., -1.);
-
 		fbo.draw(-100, -100);
-
 		trace.end();
 		gui.draw();
 	}
