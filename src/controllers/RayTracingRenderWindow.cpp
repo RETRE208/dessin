@@ -1,24 +1,28 @@
 #include "ofMain.h"
 #include "ofAppGlutWindow.h"
 #include "ofxGui.h"
+#include <tuple>
+#include "../views/SpherePanel.h"
+
+using namespace std;
 
 class RayTracingRenderWindow : public ofBaseApp {
 public:
 	ofxPanel gui;
-	ofParameter<ofVec3f> color1;
-	ofParameter<ofVec3f> color2;
-	ofParameter<float>     radius1;
-	ofParameter<float>     radius2;
 	ofParameter<float>     intLight;
 	ofParameter<ofVec2f>   speLight;
 	ofParameter<ofVec3f>   colLight;
 	ofParameter<float>     ambient;
-	ofParameter<ofVec3f>   posSphere1;
-	ofParameter<ofVec3f>   posSphere2;
 
 	ofFbo fbo;
 	int w, h;
 	ofShader trace;
+
+	vector<SpherePanel*> spheres;
+
+	RayTracingRenderWindow(vector<SpherePanel*> spheres) {
+		this->spheres = spheres;
+	}
 
 	void setup() {
 		ofSetFrameRate(150);
@@ -29,18 +33,6 @@ public:
 		fbo.begin();
 		ofClear(0, 0, 0, 0);
 		fbo.end();
-		gui.setup();
-		gui.add(color1.set("color sphere 1", ofVec3f(0.), ofVec3f(0.), ofVec3f(1.)));
-		gui.add(color2.set("color sphere 2", ofVec3f(0.), ofVec3f(0.), ofVec3f(1.)));
-		gui.add(radius1.set("radius sphere 1", .6, .0, 10.));
-		gui.add(radius2.set("radius sphere 2", .6, .0, 10.));
-		gui.add(intLight.set("intensity light", .4, .0, 5.));
-		gui.add(speLight.set("specular light", ofVec2f(1., 50.), ofVec2f(0., 0.), ofVec2f(100., 100.)));
-		gui.add(colLight.set("color light", ofVec3f(0.), ofVec3f(0.), ofVec3f(1.)));
-		gui.add(ambient.set("ambient light", .2, .0, 1.));
-
-		gui.add(posSphere1.set("position sphere 1", ofVec3f(.75, .1, 1.), ofVec3f(-5., -5., -5.), ofVec3f(5., 5., 5.)));
-		gui.add(posSphere2.set("position sphere 2", ofVec3f(-.75, .1, 2.25), ofVec3f(-5., -5., -5.), ofVec3f(5., 5., 5.)));
 	}
 
 	void update() {
@@ -54,13 +46,14 @@ public:
 
 		trace.setUniform1f("u_aspect_ratio", w / h);
 
-		trace.setUniform1f("sphere_radius_0", radius1);
-		trace.setUniform3f("sphere_position_0", posSphere1->x, posSphere1->y, posSphere1->z);
-		trace.setUniform3f("sphere_color_0", color1->x, color1->y, color1->z);
-
-		trace.setUniform3f("sphere_position_1", posSphere2->x, posSphere2->y, posSphere2->z);
-		trace.setUniform1f("sphere_radius_1", radius2);
-		trace.setUniform3f("sphere_color_1", color2->x, color2->y, color2->z);
+		for (int i = 0; i < spheres.size(); i++) {
+			Sphere* sphere = spheres[i]->sphere;
+			int convertedRadius = (sphere->mRadius * 1) / 700;
+			tuple<int, int, int> convertedCoordinates = this->converter(sphere->x, sphere->y, sphere->z);
+			trace.setUniform1f("sphere_radius_" + i, convertedRadius);
+			trace.setUniform3f("sphere_position_0", get<0>(convertedCoordinates), get<1>(convertedCoordinates), get<2>(convertedCoordinates));
+			trace.setUniform3f("sphere_color_0", sphere->color.r, sphere->color.g, sphere->color.b);
+		}
 
 		trace.setUniform3f("plane_position", 0., -.5, 0.);
 		trace.setUniform3f("plane_normal", 0., 1., 0.043);
@@ -78,8 +71,11 @@ public:
 		gui.draw();
 	}
 
-	void keyPressed(int key) {
-		if (key == 'f')
-			ofToggleFullscreen();
+	tuple<int, int, int> converter(int x, int y, int z) {
+		int convertedX, convertedY, convertedZ;
+		convertedX = (x * 5) / 1366;
+		convertedY = (y * 5) / 700;
+		convertedZ = (y * 5) / 360;
+		return make_tuple(convertedX, convertedY, convertedZ);
 	}
 };
