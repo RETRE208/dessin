@@ -234,7 +234,7 @@ void MainController::switch3DMode() {
 void MainController::switchRayTracingMode() {
 	ofAppGlutWindow window;
 	ofSetupOpenGL(&window, 800, 600, OF_WINDOW);
-	ofRunApp(new RayTracingRenderWindow());
+	ofRunApp(new RayTracingRenderWindow(spherePrimivites));
 }
 
 void MainController::instanciateNewModel(ofxAssimpModelLoader model) {

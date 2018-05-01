@@ -48,8 +48,10 @@ public:
 
 		for (int i = 0; i < spheres.size(); i++) {
 			Sphere* sphere = spheres[i]->sphere;
-			int convertedRadius = (sphere->mRadius * 1) / 700;
-			tuple<int, int, int> convertedCoordinates = this->converter(sphere->x, sphere->y, sphere->z);
+			float convertedRadius = float(sphere->mRadius) / 316;
+			ofLog() << float(sphere->mRadius);
+			ofLog() << float(sphere->mRadius) / 316;
+			tuple<float, float, float> convertedCoordinates = this->converter(sphere->x, sphere->y, sphere->z);
 			trace.setUniform1f("sphere_radius_" + i, convertedRadius);
 			trace.setUniform3f("sphere_position_0", get<0>(convertedCoordinates), get<1>(convertedCoordinates), get<2>(convertedCoordinates));
 			trace.setUniform3f("sphere_color_0", sphere->color.r, sphere->color.g, sphere->color.b);
@@ -71,8 +73,8 @@ public:
 		gui.draw();
 	}
 
-	tuple<int, int, int> converter(int x, int y, int z) {
-		int convertedX, convertedY, convertedZ;
+	tuple<float, float, float> converter(int x, int y, int z) {
+		float convertedX, convertedY, convertedZ;
 		convertedX = (x * 5) / 1366;
 		convertedY = (y * 5) / 700;
 		convertedZ = (y * 5) / 360;
